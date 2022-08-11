@@ -31,7 +31,8 @@ const Sphere = ({planetName}) => {
     uranus: {args:[1.97, 32, 32]},
     saturn: {args:[4.5, 32, 32]},
     jupiter: {args:[5.5, 32, 32]},
-    mars: {args:[.22, 32, 32]}
+    mars: {args:[.22, 32, 32]},
+    venus: {args:[.45, 32, 32]},
   }
 
 

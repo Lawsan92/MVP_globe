@@ -2,11 +2,19 @@
 require('dotenv').config();
 const express = require('express');
 const path =require('path');
-
+const {getData} = require('./db/postgres.js');
 
 const app = express();
-app.get('/globe', (req,res) => {
-  res.status(200).send('Hello');
+app.get('/planet', (req, res) => {
+  console.log('req:', req.query);
+  if (req.query.name) {
+  getData(req.query)
+    .then((data) => {
+      console.log('data:', data.rows);
+      res.send(data.rows);
+    })
+  }
+  // res.status(200).send('Hello');
 });
 // ----- Middleware -----
 app.use(express.json())
