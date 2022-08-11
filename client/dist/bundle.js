@@ -51,13 +51,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _react_three_fiber__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @react-three/fiber */ "./node_modules/@react-three/fiber/dist/index-212b30d8.esm.js");
-/* harmony import */ var three__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! three */ "./node_modules/three/build/three.module.js");
-/* harmony import */ var _react_three_drei__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @react-three/drei */ "./node_modules/@react-three/drei/core/OrbitControls.js");
+/* harmony import */ var _react_three_fiber__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @react-three/fiber */ "./node_modules/@react-three/fiber/dist/index-212b30d8.esm.js");
+/* harmony import */ var three__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! three */ "./node_modules/three/build/three.module.js");
+/* harmony import */ var _react_three_drei__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @react-three/drei */ "./node_modules/@react-three/drei/core/OrbitControls.js");
 /* harmony import */ var _dist_assets_8k_earth_daymap_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../../dist/assets/8k_earth_daymap.jpg */ "./client/dist/assets/8k_earth_daymap.jpg");
 /* harmony import */ var _dist_assets_8k_earth_normal_map_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../../dist/assets/8k_earth_normal_map.jpg */ "./client/dist/assets/8k_earth_normal_map.jpg");
 /* harmony import */ var _dist_assets_8k_earth_specular_map_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./../../dist/assets/8k_earth_specular_map.jpg */ "./client/dist/assets/8k_earth_specular_map.jpg");
 /* harmony import */ var _dist_assets_8k_earth_clouds_jpg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./../../dist/assets/8k_earth_clouds.jpg */ "./client/dist/assets/8k_earth_clouds.jpg");
+/* harmony import */ var _dist_assets_8k_earth_nightmap_jpg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./../../dist/assets/8k_earth_nightmap.jpg */ "./client/dist/assets/8k_earth_nightmap.jpg");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -79,33 +80,41 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
+
+
 var Sphere = function Sphere() {
   // overlays the 2D map over the 3D sphere
   var mesh = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)();
 
-  var _useLoader = (0,_react_three_fiber__WEBPACK_IMPORTED_MODULE_5__.z)(three__WEBPACK_IMPORTED_MODULE_6__.TextureLoader, [_dist_assets_8k_earth_daymap_jpg__WEBPACK_IMPORTED_MODULE_1__["default"], _dist_assets_8k_earth_normal_map_jpg__WEBPACK_IMPORTED_MODULE_2__["default"], _dist_assets_8k_earth_specular_map_jpg__WEBPACK_IMPORTED_MODULE_3__["default"], _dist_assets_8k_earth_clouds_jpg__WEBPACK_IMPORTED_MODULE_4__["default"]]),
+  var _useLoader = (0,_react_three_fiber__WEBPACK_IMPORTED_MODULE_6__.z)(three__WEBPACK_IMPORTED_MODULE_7__.TextureLoader, [_dist_assets_8k_earth_daymap_jpg__WEBPACK_IMPORTED_MODULE_1__["default"], _dist_assets_8k_earth_normal_map_jpg__WEBPACK_IMPORTED_MODULE_2__["default"], _dist_assets_8k_earth_specular_map_jpg__WEBPACK_IMPORTED_MODULE_3__["default"], _dist_assets_8k_earth_clouds_jpg__WEBPACK_IMPORTED_MODULE_4__["default"]]),
       _useLoader2 = _slicedToArray(_useLoader, 4),
       colorMap = _useLoader2[0],
       normalMap = _useLoader2[1],
       specularMap = _useLoader2[2],
-      cloudsMap = _useLoader2[3];
+      cloudsMap = _useLoader2[3]; // useFrame((state, delta) => (mesh.current.rotation.y += 0.01));
 
-  (0,_react_three_fiber__WEBPACK_IMPORTED_MODULE_5__.x)(function (state, delta) {
-    return mesh.current.rotation.y += 0.01;
-  });
+
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ambientLight", {
     intensity: 1
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("mesh", {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("mesh", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("sphereBufferGeometry", {
+    args: [1.005, 32, 32]
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("meshPhongMaterial", {
+    map: cloudsMap,
+    opacity: 0.4,
+    depthWrite: true,
+    transparent: true,
+    side: three__WEBPACK_IMPORTED_MODULE_7__.DoubleSide
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("mesh", {
     ref: mesh
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("sphereBufferGeometry", {
-    args: [1, 50, 50],
+    args: [1, 32, 32],
     attach: "geometry"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("meshPhongMaterial", {
     specularMap: specularMap
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("meshStandardMaterial", {
     map: colorMap,
     normalMap: normalMap
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_react_three_drei__WEBPACK_IMPORTED_MODULE_7__.OrbitControls, {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_react_three_drei__WEBPACK_IMPORTED_MODULE_8__.OrbitControls, {
     enableZoom: true,
     enablePan: true,
     zoomSpeed: 0.6,
@@ -19542,6 +19551,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "54672c1f3ba121d804700bd6e76a8135.jpg");
+
+/***/ }),
+
+/***/ "./client/dist/assets/8k_earth_nightmap.jpg":
+/*!**************************************************!*\
+  !*** ./client/dist/assets/8k_earth_nightmap.jpg ***!
+  \**************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "c0e138e9bf380cafd2c23503f5310e94.jpg");
 
 /***/ }),
 
