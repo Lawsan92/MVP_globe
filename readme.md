@@ -10,6 +10,8 @@ npm install react react-dom
 # threejs dependencies
 npm install three three @react-three/fiber
 
+# dependencies to interact with the globe, zoom, pan, rotate etc...
+npm install @react-three/fiber
 # if you need to load images files to use as meshes
 
 # cli command to install loader for images
