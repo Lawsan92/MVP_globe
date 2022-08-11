@@ -1,25 +1,35 @@
-#  This is a a 3-D globe rendered on the page using react, threejs and react-three/fiber
+##  This is a a 3-D globe rendered on the broswer using a combination of react, threejs and react-three/fiber libraries
 
-# initial setup
+package.json setup
 
-  npm init -y : creates package.json
+  npm init -y
 
-# react dependencies
+react dependencies
+
+```sh
 npm install react react-dom
+```
 
-# threejs dependencies
+threejs dependencies
+
+```sh
 npm install three three @react-three/fiber
+```
 
-# dependencies to interact with the globe, zoom, pan, rotate etc...
+threejs dependencies to interact with the globe, zoom, pan, rotate etc...
+```sh
 npm install @react-three/fiber
-# if you need to load images files to use as meshes
+```
 
-# cli command to install loader for images
+webpack loader to load image files
 
+```sh
  npm install file-loader --save-dev
+ ```
 
-# webpack.config additions
+additions to webpack
 
+```sh
 module.exports = {
   module: {
     rules: [
@@ -34,3 +44,4 @@ module.exports = {
     ],
   },
 };
+```
