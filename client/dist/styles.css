@@ -5,10 +5,20 @@ html,#root,body, main, #app {
 }
 #root {
   background-color: black;
+  width: 100%;
 }
 
-/* .canvas {
-  height: 500px;
-  background: blue;
-  position: relative;
-} */
+#app {
+  display: flex;
+  flex-direction: row;
+}
+
+#info {
+  width: 50%;
+  color: white;
+  text-align: center;
+}
+
+#canvas{
+  width: 50%;
+}

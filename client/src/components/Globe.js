@@ -3,20 +3,13 @@ import styled , { css }from 'styled-components';
 import {Scene, PerspectiveCamera, WebGLRenderer, Mesh} from 'three';
 import { Canvas } from '@react-three/fiber';
 import Sphere from './Sphere.js';
-const Globe = () => {
-
-  const Container = styled.div`
-    width: 100%;
-    height: 100%;
-  `;
+const Globe = ({planetName}) => {
   return (
-    <Container>
-      <Canvas>
-        <Suspense fallback={null}>
-          <Sphere/>
-        </Suspense>
-      </Canvas>
-    </Container>
+    <Canvas id='canvas'>
+      <Suspense fallback={null}>
+        <Sphere planetName={planetName}/>
+      </Suspense>
+    </Canvas>
   )
 }
 
