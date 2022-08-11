@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 import { useLoader, useFrame } from '@react-three/fiber';
 import { TextureLoader } from 'three';
-import { OrbitControls } from '@react-three/drei';
+import { OrbitControls, Stars } from '@react-three/drei';
 import * as THREE from 'three';
 
 import EarthDayMap from './../../dist/assets/8k_earth_daymap.jpg';
@@ -17,6 +17,13 @@ const Sphere = () => {
   return (
   <>
   <ambientLight intensity={1}/>
+  <Stars
+  radius={300}
+  depth={60}
+  count={20000}
+  factor={7}
+  fade={true}
+  />
   <mesh>
     <sphereBufferGeometry args={[1.005, 32, 32]}/>
     <meshPhongMaterial

@@ -53,7 +53,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _react_three_fiber__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @react-three/fiber */ "./node_modules/@react-three/fiber/dist/index-212b30d8.esm.js");
 /* harmony import */ var three__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! three */ "./node_modules/three/build/three.module.js");
-/* harmony import */ var _react_three_drei__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @react-three/drei */ "./node_modules/@react-three/drei/core/OrbitControls.js");
+/* harmony import */ var _react_three_drei__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @react-three/drei */ "./node_modules/@react-three/drei/core/Stars.js");
+/* harmony import */ var _react_three_drei__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @react-three/drei */ "./node_modules/@react-three/drei/core/OrbitControls.js");
 /* harmony import */ var _dist_assets_8k_earth_daymap_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../../dist/assets/8k_earth_daymap.jpg */ "./client/dist/assets/8k_earth_daymap.jpg");
 /* harmony import */ var _dist_assets_8k_earth_normal_map_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../../dist/assets/8k_earth_normal_map.jpg */ "./client/dist/assets/8k_earth_normal_map.jpg");
 /* harmony import */ var _dist_assets_8k_earth_specular_map_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./../../dist/assets/8k_earth_specular_map.jpg */ "./client/dist/assets/8k_earth_specular_map.jpg");
@@ -96,6 +97,12 @@ var Sphere = function Sphere() {
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ambientLight", {
     intensity: 1
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_react_three_drei__WEBPACK_IMPORTED_MODULE_8__.Stars, {
+    radius: 300,
+    depth: 60,
+    count: 20000,
+    factor: 7,
+    fade: true
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("mesh", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("sphereBufferGeometry", {
     args: [1.005, 32, 32]
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("meshPhongMaterial", {
@@ -114,7 +121,7 @@ var Sphere = function Sphere() {
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("meshStandardMaterial", {
     map: colorMap,
     normalMap: normalMap
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_react_three_drei__WEBPACK_IMPORTED_MODULE_8__.OrbitControls, {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_react_three_drei__WEBPACK_IMPORTED_MODULE_9__.OrbitControls, {
     enableZoom: true,
     enablePan: true,
     zoomSpeed: 0.6,
@@ -949,6 +956,130 @@ const OrbitControls = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.forwardRef
     object: controls,
     enableDamping: enableDamping
   }, restProps));
+});
+
+
+/***/ }),
+
+/***/ "./node_modules/@react-three/drei/core/Stars.js":
+/*!******************************************************!*\
+  !*** ./node_modules/@react-three/drei/core/Stars.js ***!
+  \******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Stars": () => (/* binding */ Stars)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _react_three_fiber__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @react-three/fiber */ "./node_modules/@react-three/fiber/dist/index-212b30d8.esm.js");
+/* harmony import */ var three__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! three */ "./node_modules/three/build/three.module.js");
+
+
+
+
+class StarfieldMaterial extends three__WEBPACK_IMPORTED_MODULE_1__.ShaderMaterial {
+  constructor() {
+    super({
+      uniforms: {
+        time: {
+          value: 0.0
+        },
+        fade: {
+          value: 1.0
+        }
+      },
+      vertexShader:
+      /* glsl */
+      `
+      uniform float time;
+      attribute float size;
+      varying vec3 vColor;
+      void main() {
+        vColor = color;
+        vec4 mvPosition = modelViewMatrix * vec4(position, 0.5);
+        gl_PointSize = size * (30.0 / -mvPosition.z) * (3.0 + sin(mvPosition.x + 2.0 * time + 100.0));
+        gl_Position = projectionMatrix * mvPosition;
+      }`,
+      fragmentShader:
+      /* glsl */
+      `
+      uniform sampler2D pointTexture;
+      uniform float fade;
+      varying vec3 vColor;
+      void main() {
+        float opacity = 1.0;
+        if (fade == 1.0) {
+          float d = distance(gl_PointCoord, vec2(0.5, 0.5));
+          opacity = 1.0 / (1.0 + exp(16.0 * (d - 0.25)));
+        }
+        gl_FragColor = vec4(vColor, opacity);
+
+        #include <tonemapping_fragment>
+	      #include <encodings_fragment>
+      }`
+    });
+  }
+
+}
+
+const genStar = r => {
+  return new three__WEBPACK_IMPORTED_MODULE_1__.Vector3().setFromSpherical(new three__WEBPACK_IMPORTED_MODULE_1__.Spherical(r, Math.acos(1 - Math.random() * 2), Math.random() * 2 * Math.PI));
+};
+
+const Stars = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.forwardRef(({
+  radius = 100,
+  depth = 50,
+  count = 5000,
+  saturation = 0,
+  factor = 4,
+  fade = false,
+  speed = 1
+}, ref) => {
+  const material = react__WEBPACK_IMPORTED_MODULE_0__.useRef();
+  const [position, color, size] = react__WEBPACK_IMPORTED_MODULE_0__.useMemo(() => {
+    const positions = [];
+    const colors = [];
+    const sizes = Array.from({
+      length: count
+    }, () => (0.5 + 0.5 * Math.random()) * factor);
+    const color = new three__WEBPACK_IMPORTED_MODULE_1__.Color();
+    let r = radius + depth;
+    const increment = depth / count;
+
+    for (let i = 0; i < count; i++) {
+      r -= increment * Math.random();
+      positions.push(...genStar(r).toArray());
+      color.setHSL(i / count, saturation, 0.9);
+      colors.push(color.r, color.g, color.b);
+    }
+
+    return [new Float32Array(positions), new Float32Array(colors), new Float32Array(sizes)];
+  }, [count, depth, factor, radius, saturation]);
+  (0,_react_three_fiber__WEBPACK_IMPORTED_MODULE_2__.x)(state => material.current && (material.current.uniforms.time.value = state.clock.getElapsedTime() * speed));
+  const [starfieldMaterial] = react__WEBPACK_IMPORTED_MODULE_0__.useState(() => new StarfieldMaterial());
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("points", {
+    ref: ref
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("bufferGeometry", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("bufferAttribute", {
+    attach: "attributes-position",
+    args: [position, 3]
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("bufferAttribute", {
+    attach: "attributes-color",
+    args: [color, 3]
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("bufferAttribute", {
+    attach: "attributes-size",
+    args: [size, 1]
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("primitive", {
+    ref: material,
+    object: starfieldMaterial,
+    attach: "material",
+    blending: three__WEBPACK_IMPORTED_MODULE_1__.AdditiveBlending,
+    "uniforms-fade-value": fade,
+    transparent: true,
+    vertexColors: true
+  }));
 });
 
 
