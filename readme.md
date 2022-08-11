@@ -4,9 +4,15 @@
 
   npm init -y : creates package.json
 
+# react dependencies
+npm install react react-dom
+
+# threejs dependencies
+npm install three three @react-three/fiber
+
 # if you need to load images files to use as meshes
 
-# cli command
+# cli command to install loader for images
 
  npm install file-loader --save-dev
 

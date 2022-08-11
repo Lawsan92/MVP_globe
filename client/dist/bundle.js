@@ -72,13 +72,21 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 var Sphere = function Sphere() {
+  // overlays the 2D map over the 3D sphere
+  var mesh = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)();
+
   var _useLoader = (0,_react_three_fiber__WEBPACK_IMPORTED_MODULE_2__.z)(three__WEBPACK_IMPORTED_MODULE_3__.TextureLoader, [_dist_assets_globe1_jpg__WEBPACK_IMPORTED_MODULE_1__["default"]]),
       _useLoader2 = _slicedToArray(_useLoader, 1),
       normalMap = _useLoader2[0];
 
+  (0,_react_three_fiber__WEBPACK_IMPORTED_MODULE_2__.x)(function (state, delta) {
+    return mesh.current.rotation.y += 0.01;
+  });
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ambientLight", {
     intensity: 1
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("mesh", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("sphereBufferGeometry", {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("mesh", {
+    ref: mesh
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("sphereBufferGeometry", {
     args: [1, 50, 50],
     attach: "geometry"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("meshPhongMaterial", {
