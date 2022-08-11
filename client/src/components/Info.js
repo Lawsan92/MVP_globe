@@ -31,14 +31,14 @@ const Info = ({func, data}) => {
        <h3 onClick={func}>Neptune</h3>
 
        <h2>Stats</h2>
-       <ul>
-        <li>Diameter:{planet.diameter}</li>
-        <li>Mass:{planet.mass}</li>
-        <li>Order from the Sun:{planet.order_from_the_sun}</li>
-        <li>Volume:{planet.volume}</li>
-        <li>Gravity:{planet.gravity}</li>
-        <li>Ditance from the sun:{planet.distance_from_the_sun}</li>
-       </ul>
+       <div id='stats'>
+        <p><strong>Diameter:</strong> {planet.diameter}</p>
+        <p><strong>Mass:</strong> {planet.mass}</p>
+        <p><strong>Order from the Sun:</strong> {planet.order_from_the_sun}</p>
+        <p><strong>Volume:</strong> {planet.volume}</p>
+        <p><strong>Gravity:</strong> {planet.gravity}</p>
+        <p><strong>Ditance from the sun:</strong> {planet.distance_from_the_sun}</p>
+        </div>
     </div>
   );
 }
