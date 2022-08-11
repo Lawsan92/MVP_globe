@@ -9,7 +9,20 @@ react dependencies
 ```sh
 npm install react react-dom
 ```
+babel loader dependencies
 
+```sh
+    npm install
+    @babel/core
+    @babel/preset-env
+    @babel/preset-react
+    babel-loader
+```
+
+webpack dependencies
+```sh
+npm install webpack webpack cli
+```
 threejs dependencies
 
 ```sh
