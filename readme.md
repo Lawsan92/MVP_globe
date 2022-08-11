@@ -4,11 +4,20 @@ package.json setup
 
   npm init -y
 
+## Server-side
+
+dependencies
+```sh
+npm install nodemon express dotenv path
+```
+
+## Client-side
 react dependencies
 
 ```sh
 npm install react react-dom
 ```
+
 babel loader dependencies
 
 ```sh
@@ -57,4 +66,16 @@ module.exports = {
     ],
   },
 };
+```
+## Scripts for CLI
+
+to run server
+
+```sh
+npm run server
+```
+to monitor changes to client files (react files)
+
+```sh
+npm run client
 ```
