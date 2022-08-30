@@ -17,7 +17,7 @@ import MarsMap from './../../dist/assets/Mars/8k_mars.jpg';
 import JupiterMap from './../../dist/assets/Jupiter/8k_jupiter.jpg';
 import SaturnMap from './../../dist/assets/Saturn/8k_saturn.jpg';
 import VenusMap from './../../dist/assets/Venus/8k_venus_surface.jpg';
-
+import Rings from './../../dist/assets/Saturn/8k_saturn_ring_alpha.jpg';
 
 const Sphere = ({planetName}) => {
 
@@ -78,6 +78,9 @@ var planetMesh;
 
   const[normalMap, specularMap, cloudsMap] = useLoader(TextureLoader, [EarthNormalMap, EarthSpecularMap, EarthCloudsMap]);
 
+  const [ringMap] = useLoader(TextureLoader,[Rings]);
+
+if (planetName !== 'Saturn') {
   return (
   <>
   <ambientLight intensity={1.4}/>
@@ -88,17 +91,6 @@ var planetMesh;
   factor={7}
   fade={true}
   />
-
-  {/* <mesh ref={mesh}>
-    <sphereBufferGeometry args={[1.005, 32, 32]}/>
-    <meshPhongMaterial
-    map={cloudsMap}
-    opacity={0.4}
-    depthWrite={true}
-    transparent={true}
-    side={THREE.DoubleSide}/>
-  </mesh> */}
-
   <mesh ref={mesh}>
     <sphereBufferGeometry args={choosePlanetSize()} attach='geometry'></sphereBufferGeometry>
     <meshPhongMaterial  specularMap={specularMap}/>
@@ -114,6 +106,42 @@ var planetMesh;
 
   </>
   );
+} else {
+  return (
+    <>
+    <ambientLight intensity={1.4}/>
+    <Stars
+    radius={300}
+    depth={60}
+    count={20000}
+    factor={7}
+    fade={true}
+    />
+
+  <mesh ref={mesh}>
+    <ringBufferGeometry args={[5, 7, 32]}/>
+    <meshPhongMaterial
+    map={ringMap}
+    opacity={0.8}
+    depthWrite={true}
+    transparent={true}
+    side={THREE.DoubleSide}/>
+  </mesh>
+    <mesh ref={mesh}>
+      <sphereBufferGeometry args={choosePlanetSize()} attach='geometry'></sphereBufferGeometry>
+      <meshPhongMaterial  specularMap={specularMap}/>
+      <meshStandardMaterial map={colorMap} normalMap={normalMap}/>
+      <OrbitControls
+      enableZoom={true}
+      enablePan={true}
+      zoomSpeed={0.6}
+      panSpeed={0.5}
+      rotateSpeed={0.4}
+      />
+    </mesh>
+    </>
+    );
+}
 }
 
 export default Sphere;

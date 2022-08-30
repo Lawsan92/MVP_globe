@@ -17,9 +17,26 @@ html,#root,body, main, #app {
   width: 50%;
   color: white;
   text-align: center;
+  /* display: flex; */
+  /* flex-direction: column; */
+
+}
+.card {
+  background-color: #293765;
+  border: solid 1px whitesmoke;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  opacity: 0.5;
 }
 
 #canvas{
   width: 50%;
 }
 
+#planet-thumb {
+  height: 50px;
+  object-fit: contain;
+  border-radius: 10px;
+  opacity: 1.0;
+}

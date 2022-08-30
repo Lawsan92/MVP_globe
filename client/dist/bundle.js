@@ -78,23 +78,55 @@ var Info = function Info(_ref) {
   console.log('alertFunc:', func);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     id: "info"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, "Choose a planet"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, "Choose a planet"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    "class": "card",
     onClick: func
-  }, "Mercury"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", null, "Mercury"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
+    id: "planet-thumb",
+    src: "https://res.cloudinary.com/darp0mj9i/image/upload/v1661876827/samples/planet_thumbnails/mercury_thumb_ised0u.jpg"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    "class": "card",
     onClick: func
-  }, "Venus"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", null, "Venus"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", _defineProperty({
+    id: "planet-thumb",
+    src: "https://res.cloudinary.com/darp0mj9i/image/upload/v1661876831/samples/planet_thumbnails/venus_thumb_m87ck9.jpg"
+  }, "id", "planet-thumb"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    "class": "card",
     onClick: func
-  }, "Mars"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", null, "Mars"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", _defineProperty({
+    id: "planet-thumb",
+    src: "https://res.cloudinary.com/darp0mj9i/image/upload/v1661876837/samples/planet_thumbnails/mars_thumb_qleleh.jpg"
+  }, "id", "planet-thumb"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    "class": "card",
     onClick: func
-  }, "Earth"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", null, "Earth"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", _defineProperty({
+    id: "planet-thumb",
+    src: "https://res.cloudinary.com/darp0mj9i/image/upload/v1661876852/samples/planet_thumbnails/earth_thumb_abbcfg.jpg"
+  }, "id", "planet-thumb"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    "class": "card",
     onClick: func
-  }, "Jupiter"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", null, "Jupiter"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", _defineProperty({
+    id: "planet-thumb",
+    src: "https://res.cloudinary.com/darp0mj9i/image/upload/v1661876862/samples/planet_thumbnails/jupiter_thumb_ded7t1.jpg"
+  }, "id", "planet-thumb"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    "class": "card",
     onClick: func
-  }, "Saturn"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", null, "Saturn"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", _defineProperty({
+    id: "planet-thumb",
+    src: "https://res.cloudinary.com/darp0mj9i/image/upload/v1661876847/samples/planet_thumbnails/saturn_thumb_jpuhcy.jpg"
+  }, "id", "planet-thumb"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    "class": "card",
     onClick: func
-  }, "Uranus"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", null, "Uranus"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", _defineProperty({
+    id: "planet-thumb",
+    src: "https://res.cloudinary.com/darp0mj9i/image/upload/v1661876842/samples/planet_thumbnails/uranus_thumb_qfraon.jpg"
+  }, "id", "planet-thumb"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    "class": "card",
     onClick: func
-  }, "Neptune"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, "Stats"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", null, "Neptune"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", _defineProperty({
+    id: "planet-thumb",
+    src: "https://res.cloudinary.com/darp0mj9i/image/upload/v1661876857/samples/planet_thumbnails/neptune_thumb_vpm1fn.jpg"
+  }, "id", "planet-thumb"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, "Stats"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     id: "stats"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("strong", null, "Diameter:"), " ", planet.diameter), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("strong", null, "Mass:"), " ", planet.mass), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("strong", null, "Order from the Sun:"), " ", planet.order_from_the_sun), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("strong", null, "Volume:"), " ", planet.volume), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("strong", null, "Gravity:"), " ", planet.gravity), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("strong", null, "Ditance from the sun:"), " ", planet.distance_from_the_sun)));
 };
@@ -116,10 +148,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _react_three_fiber__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @react-three/fiber */ "./node_modules/@react-three/fiber/dist/index-212b30d8.esm.js");
-/* harmony import */ var three__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! three */ "./node_modules/three/build/three.module.js");
-/* harmony import */ var _react_three_drei__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @react-three/drei */ "./node_modules/@react-three/drei/core/Stars.js");
-/* harmony import */ var _react_three_drei__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @react-three/drei */ "./node_modules/@react-three/drei/core/OrbitControls.js");
+/* harmony import */ var _react_three_fiber__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @react-three/fiber */ "./node_modules/@react-three/fiber/dist/index-212b30d8.esm.js");
+/* harmony import */ var three__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! three */ "./node_modules/three/build/three.module.js");
+/* harmony import */ var _react_three_drei__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @react-three/drei */ "./node_modules/@react-three/drei/core/Stars.js");
+/* harmony import */ var _react_three_drei__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @react-three/drei */ "./node_modules/@react-three/drei/core/OrbitControls.js");
 /* harmony import */ var _dist_assets_8k_earth_daymap_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../../dist/assets/8k_earth_daymap.jpg */ "./client/dist/assets/8k_earth_daymap.jpg");
 /* harmony import */ var _dist_assets_8k_earth_normal_map_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../../dist/assets/8k_earth_normal_map.jpg */ "./client/dist/assets/8k_earth_normal_map.jpg");
 /* harmony import */ var _dist_assets_8k_earth_specular_map_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./../../dist/assets/8k_earth_specular_map.jpg */ "./client/dist/assets/8k_earth_specular_map.jpg");
@@ -132,6 +164,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _dist_assets_Jupiter_8k_jupiter_jpg__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./../../dist/assets/Jupiter/8k_jupiter.jpg */ "./client/dist/assets/Jupiter/8k_jupiter.jpg");
 /* harmony import */ var _dist_assets_Saturn_8k_saturn_jpg__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./../../dist/assets/Saturn/8k_saturn.jpg */ "./client/dist/assets/Saturn/8k_saturn.jpg");
 /* harmony import */ var _dist_assets_Venus_8k_venus_surface_jpg__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./../../dist/assets/Venus/8k_venus_surface.jpg */ "./client/dist/assets/Venus/8k_venus_surface.jpg");
+/* harmony import */ var _dist_assets_Saturn_8k_saturn_ring_alpha_jpg__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./../../dist/assets/Saturn/8k_saturn_ring_alpha.jpg */ "./client/dist/assets/Saturn/8k_saturn_ring_alpha.jpg");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -162,10 +195,11 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
+
 var Sphere = function Sphere(_ref) {
   var planetName = _ref.planetName;
   var mesh = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)();
-  (0,_react_three_fiber__WEBPACK_IMPORTED_MODULE_13__.x)(function (state, delta) {
+  (0,_react_three_fiber__WEBPACK_IMPORTED_MODULE_14__.x)(function (state, delta) {
     return mesh.current.rotation.y += 0.01;
   });
   var planetSize = {
@@ -217,70 +251,112 @@ var Sphere = function Sphere(_ref) {
   };
 
   if (planetName === 'Mercury') {
-    var _useLoader = (0,_react_three_fiber__WEBPACK_IMPORTED_MODULE_13__.z)(three__WEBPACK_IMPORTED_MODULE_14__.TextureLoader, [_dist_assets_Mercury_8k_mercury_jpg__WEBPACK_IMPORTED_MODULE_6__["default"]]),
+    var _useLoader = (0,_react_three_fiber__WEBPACK_IMPORTED_MODULE_14__.z)(three__WEBPACK_IMPORTED_MODULE_15__.TextureLoader, [_dist_assets_Mercury_8k_mercury_jpg__WEBPACK_IMPORTED_MODULE_6__["default"]]),
         _useLoader2 = _slicedToArray(_useLoader, 1),
         colorMap = _useLoader2[0];
   } else if (planetName === 'Neptune') {
-    var _useLoader3 = (0,_react_three_fiber__WEBPACK_IMPORTED_MODULE_13__.z)(three__WEBPACK_IMPORTED_MODULE_14__.TextureLoader, [_dist_assets_Neptune_2k_neptune_jpg__WEBPACK_IMPORTED_MODULE_7__["default"]]),
+    var _useLoader3 = (0,_react_three_fiber__WEBPACK_IMPORTED_MODULE_14__.z)(three__WEBPACK_IMPORTED_MODULE_15__.TextureLoader, [_dist_assets_Neptune_2k_neptune_jpg__WEBPACK_IMPORTED_MODULE_7__["default"]]),
         _useLoader4 = _slicedToArray(_useLoader3, 1),
         colorMap = _useLoader4[0];
   } else if (planetName === 'Uranus') {
-    var _useLoader5 = (0,_react_three_fiber__WEBPACK_IMPORTED_MODULE_13__.z)(three__WEBPACK_IMPORTED_MODULE_14__.TextureLoader, [_dist_assets_Uranus_2k_uranus_jpg__WEBPACK_IMPORTED_MODULE_8__["default"]]),
+    var _useLoader5 = (0,_react_three_fiber__WEBPACK_IMPORTED_MODULE_14__.z)(three__WEBPACK_IMPORTED_MODULE_15__.TextureLoader, [_dist_assets_Uranus_2k_uranus_jpg__WEBPACK_IMPORTED_MODULE_8__["default"]]),
         _useLoader6 = _slicedToArray(_useLoader5, 1),
         colorMap = _useLoader6[0];
   } else if (planetName === 'Saturn') {
-    var _useLoader7 = (0,_react_three_fiber__WEBPACK_IMPORTED_MODULE_13__.z)(three__WEBPACK_IMPORTED_MODULE_14__.TextureLoader, [_dist_assets_Saturn_8k_saturn_jpg__WEBPACK_IMPORTED_MODULE_11__["default"]]),
+    var _useLoader7 = (0,_react_three_fiber__WEBPACK_IMPORTED_MODULE_14__.z)(three__WEBPACK_IMPORTED_MODULE_15__.TextureLoader, [_dist_assets_Saturn_8k_saturn_jpg__WEBPACK_IMPORTED_MODULE_11__["default"]]),
         _useLoader8 = _slicedToArray(_useLoader7, 1),
         colorMap = _useLoader8[0];
   } else if (planetName === 'Jupiter') {
-    var _useLoader9 = (0,_react_three_fiber__WEBPACK_IMPORTED_MODULE_13__.z)(three__WEBPACK_IMPORTED_MODULE_14__.TextureLoader, [_dist_assets_Jupiter_8k_jupiter_jpg__WEBPACK_IMPORTED_MODULE_10__["default"]]),
+    var _useLoader9 = (0,_react_three_fiber__WEBPACK_IMPORTED_MODULE_14__.z)(three__WEBPACK_IMPORTED_MODULE_15__.TextureLoader, [_dist_assets_Jupiter_8k_jupiter_jpg__WEBPACK_IMPORTED_MODULE_10__["default"]]),
         _useLoader10 = _slicedToArray(_useLoader9, 1),
         colorMap = _useLoader10[0];
   } else if (planetName === 'Venus') {
-    var _useLoader11 = (0,_react_three_fiber__WEBPACK_IMPORTED_MODULE_13__.z)(three__WEBPACK_IMPORTED_MODULE_14__.TextureLoader, [_dist_assets_Venus_8k_venus_surface_jpg__WEBPACK_IMPORTED_MODULE_12__["default"]]),
+    var _useLoader11 = (0,_react_three_fiber__WEBPACK_IMPORTED_MODULE_14__.z)(three__WEBPACK_IMPORTED_MODULE_15__.TextureLoader, [_dist_assets_Venus_8k_venus_surface_jpg__WEBPACK_IMPORTED_MODULE_12__["default"]]),
         _useLoader12 = _slicedToArray(_useLoader11, 1),
         colorMap = _useLoader12[0];
   } else if (planetName === 'Mars') {
-    var _useLoader13 = (0,_react_three_fiber__WEBPACK_IMPORTED_MODULE_13__.z)(three__WEBPACK_IMPORTED_MODULE_14__.TextureLoader, [_dist_assets_Mars_8k_mars_jpg__WEBPACK_IMPORTED_MODULE_9__["default"]]),
+    var _useLoader13 = (0,_react_three_fiber__WEBPACK_IMPORTED_MODULE_14__.z)(three__WEBPACK_IMPORTED_MODULE_15__.TextureLoader, [_dist_assets_Mars_8k_mars_jpg__WEBPACK_IMPORTED_MODULE_9__["default"]]),
         _useLoader14 = _slicedToArray(_useLoader13, 1),
         colorMap = _useLoader14[0];
   } else {
-    var _useLoader15 = (0,_react_three_fiber__WEBPACK_IMPORTED_MODULE_13__.z)(three__WEBPACK_IMPORTED_MODULE_14__.TextureLoader, [_dist_assets_8k_earth_daymap_jpg__WEBPACK_IMPORTED_MODULE_1__["default"]]),
+    var _useLoader15 = (0,_react_three_fiber__WEBPACK_IMPORTED_MODULE_14__.z)(three__WEBPACK_IMPORTED_MODULE_15__.TextureLoader, [_dist_assets_8k_earth_daymap_jpg__WEBPACK_IMPORTED_MODULE_1__["default"]]),
         _useLoader16 = _slicedToArray(_useLoader15, 1),
         colorMap = _useLoader16[0];
   }
 
-  var _useLoader17 = (0,_react_three_fiber__WEBPACK_IMPORTED_MODULE_13__.z)(three__WEBPACK_IMPORTED_MODULE_14__.TextureLoader, [_dist_assets_8k_earth_normal_map_jpg__WEBPACK_IMPORTED_MODULE_2__["default"], _dist_assets_8k_earth_specular_map_jpg__WEBPACK_IMPORTED_MODULE_3__["default"], _dist_assets_8k_earth_clouds_jpg__WEBPACK_IMPORTED_MODULE_4__["default"]]),
+  var _useLoader17 = (0,_react_three_fiber__WEBPACK_IMPORTED_MODULE_14__.z)(three__WEBPACK_IMPORTED_MODULE_15__.TextureLoader, [_dist_assets_8k_earth_normal_map_jpg__WEBPACK_IMPORTED_MODULE_2__["default"], _dist_assets_8k_earth_specular_map_jpg__WEBPACK_IMPORTED_MODULE_3__["default"], _dist_assets_8k_earth_clouds_jpg__WEBPACK_IMPORTED_MODULE_4__["default"]]),
       _useLoader18 = _slicedToArray(_useLoader17, 3),
       normalMap = _useLoader18[0],
       specularMap = _useLoader18[1],
       cloudsMap = _useLoader18[2];
 
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ambientLight", {
-    intensity: 1.4
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_react_three_drei__WEBPACK_IMPORTED_MODULE_15__.Stars, {
-    radius: 300,
-    depth: 60,
-    count: 20000,
-    factor: 7,
-    fade: true
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("mesh", {
-    ref: mesh
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("sphereBufferGeometry", {
-    args: choosePlanetSize(),
-    attach: "geometry"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("meshPhongMaterial", {
-    specularMap: specularMap
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("meshStandardMaterial", {
-    map: colorMap,
-    normalMap: normalMap
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_react_three_drei__WEBPACK_IMPORTED_MODULE_16__.OrbitControls, {
-    enableZoom: true,
-    enablePan: true,
-    zoomSpeed: 0.6,
-    panSpeed: 0.5,
-    rotateSpeed: 0.4
-  })));
+  var _useLoader19 = (0,_react_three_fiber__WEBPACK_IMPORTED_MODULE_14__.z)(three__WEBPACK_IMPORTED_MODULE_15__.TextureLoader, [_dist_assets_Saturn_8k_saturn_ring_alpha_jpg__WEBPACK_IMPORTED_MODULE_13__["default"]]),
+      _useLoader20 = _slicedToArray(_useLoader19, 1),
+      ringMap = _useLoader20[0];
+
+  if (planetName !== 'Saturn') {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ambientLight", {
+      intensity: 1.4
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_react_three_drei__WEBPACK_IMPORTED_MODULE_16__.Stars, {
+      radius: 300,
+      depth: 60,
+      count: 20000,
+      factor: 7,
+      fade: true
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("mesh", {
+      ref: mesh
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("sphereBufferGeometry", {
+      args: choosePlanetSize(),
+      attach: "geometry"
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("meshPhongMaterial", {
+      specularMap: specularMap
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("meshStandardMaterial", {
+      map: colorMap,
+      normalMap: normalMap
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_react_three_drei__WEBPACK_IMPORTED_MODULE_17__.OrbitControls, {
+      enableZoom: true,
+      enablePan: true,
+      zoomSpeed: 0.6,
+      panSpeed: 0.5,
+      rotateSpeed: 0.4
+    })));
+  } else {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ambientLight", {
+      intensity: 1.4
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_react_three_drei__WEBPACK_IMPORTED_MODULE_16__.Stars, {
+      radius: 300,
+      depth: 60,
+      count: 20000,
+      factor: 7,
+      fade: true
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("mesh", {
+      ref: mesh
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ringBufferGeometry", {
+      args: [5, 7, 32]
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("meshPhongMaterial", {
+      map: ringMap,
+      opacity: 0.8,
+      depthWrite: true,
+      transparent: true,
+      side: three__WEBPACK_IMPORTED_MODULE_15__.DoubleSide
+    })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("mesh", {
+      ref: mesh
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("sphereBufferGeometry", {
+      args: choosePlanetSize(),
+      attach: "geometry"
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("meshPhongMaterial", {
+      specularMap: specularMap
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("meshStandardMaterial", {
+      map: colorMap,
+      normalMap: normalMap
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_react_three_drei__WEBPACK_IMPORTED_MODULE_17__.OrbitControls, {
+      enableZoom: true,
+      enablePan: true,
+      zoomSpeed: 0.6,
+      panSpeed: 0.5,
+      rotateSpeed: 0.4
+    })));
+  }
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Sphere);
@@ -19999,6 +20075,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "afe61e83ea388f0d901abf4b050a3e82.jpg");
+
+/***/ }),
+
+/***/ "./client/dist/assets/Saturn/8k_saturn_ring_alpha.jpg":
+/*!************************************************************!*\
+  !*** ./client/dist/assets/Saturn/8k_saturn_ring_alpha.jpg ***!
+  \************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "89839372f2ea539a182f510d59ee90a8.jpg");
 
 /***/ }),
 

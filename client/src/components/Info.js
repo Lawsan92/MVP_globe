@@ -21,15 +21,38 @@ const Info = ({func, data}) => {
   return (
     <div id ='info'>
       <h1>Choose a planet</h1>
-      <h3 onClick={func}>Mercury</h3>
-      <h3 onClick={func}>Venus</h3>
-       <h3 onClick={func}>Mars</h3>
-       <h3 onClick={func}>Earth</h3>
-       <h3 onClick={func}>Jupiter</h3>
-       <h3 onClick={func}>Saturn</h3>
-       <h3 onClick={func}>Uranus</h3>
-       <h3 onClick={func}>Neptune</h3>
-
+        <div class='card' onClick={func}>
+          <h3>Mercury</h3>
+          <img id='planet-thumb' src='https://res.cloudinary.com/darp0mj9i/image/upload/v1661876827/samples/planet_thumbnails/mercury_thumb_ised0u.jpg'/>
+        </div>
+        <div class='card' onClick={func}>
+          <h3>Venus</h3>
+          <img id='planet-thumb' src='https://res.cloudinary.com/darp0mj9i/image/upload/v1661876831/samples/planet_thumbnails/venus_thumb_m87ck9.jpg' id='planet-thumb'/>
+        </div>
+        <div class='card' onClick={func}>
+          <h3>Mars</h3>
+          <img id='planet-thumb' src='https://res.cloudinary.com/darp0mj9i/image/upload/v1661876837/samples/planet_thumbnails/mars_thumb_qleleh.jpg' id='planet-thumb'/>
+        </div>
+        <div class='card' onClick={func}>
+          <h3>Earth</h3>
+          <img id='planet-thumb' src='https://res.cloudinary.com/darp0mj9i/image/upload/v1661876852/samples/planet_thumbnails/earth_thumb_abbcfg.jpg' id='planet-thumb'/>
+        </div>
+        <div class='card' onClick={func}>
+          <h3>Jupiter</h3>
+          <img id='planet-thumb' src='https://res.cloudinary.com/darp0mj9i/image/upload/v1661876862/samples/planet_thumbnails/jupiter_thumb_ded7t1.jpg' id='planet-thumb'/>
+        </div>
+        <div class='card' onClick={func}>
+          <h3>Saturn</h3>
+          <img id='planet-thumb' src='https://res.cloudinary.com/darp0mj9i/image/upload/v1661876847/samples/planet_thumbnails/saturn_thumb_jpuhcy.jpg' id='planet-thumb'/>
+        </div>
+        <div class='card' onClick={func}>
+          <h3>Uranus</h3>
+          <img id='planet-thumb' src='https://res.cloudinary.com/darp0mj9i/image/upload/v1661876842/samples/planet_thumbnails/uranus_thumb_qfraon.jpg' id='planet-thumb'/>
+        </div>
+        <div class='card' onClick={func}>
+          <h3>Neptune</h3>
+          <img id='planet-thumb' src='https://res.cloudinary.com/darp0mj9i/image/upload/v1661876857/samples/planet_thumbnails/neptune_thumb_vpm1fn.jpg' id='planet-thumb'/>
+        </div>
        <h2>Stats</h2>
        <div id='stats'>
         <p><strong>Diameter:</strong> {planet.diameter}</p>
