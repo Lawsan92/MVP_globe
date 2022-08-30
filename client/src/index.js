@@ -27,14 +27,15 @@ class App extends React.Component {
   };
 
   alertFunc = (event) => {
-    console.log(event.target.innerText);
+    console.log('event:', event);
+    // console.log(event.target.innerText);
     this.setState({
-      planetName: event.target.innerText
+      planetName: event
     })
 
     axios({
       method: 'get',
-      url: `/planet/?name=${event.target.innerText}`,
+      url: `/planet/?name=${event}`,
     })
       .then((res) => {
         console.log('response:', res.data);
