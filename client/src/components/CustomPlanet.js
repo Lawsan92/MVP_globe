@@ -4,16 +4,20 @@ import { Canvas } from '@react-three/fiber';
 import { TextureLoader } from 'three';
 import { OrbitControls, Stars } from '@react-three/drei';
 import * as THREE from 'three';
-
-const CustomPlanet = ({size, color}) => {
+import MercuryMap from './../../dist/assets/Mercury/8k_mercury.jpg';
+const CustomPlanet = ({size, color, texture}) => {
   // <meshPhongMaterial  specularMap={specularMap} transparent opacity={0.7} color='#D4DBE6'/>
 
+  /*
+
+
+  */
+
   const mesh = useRef();
-  // useFrame((state, delta) => (mesh.current.rotation.y += 0.01));
+  const[colorMap] = useLoader(TextureLoader, [texture]);
+  useFrame((state, delta) => (mesh.current.rotation.y += 0.01));
   return (
-    <Canvas>
-      <Suspense fallback={null}>
-    <>
+  <>
     <ambientLight intensity={1.4}/>
     <Stars
     radius={300}
@@ -24,7 +28,8 @@ const CustomPlanet = ({size, color}) => {
     />
     <mesh ref={mesh}>
       <sphereBufferGeometry args={size} attach='geometry'></sphereBufferGeometry>
-      <meshPhongMaterial color={color}/>
+      <meshPhongMaterial/>
+      <meshStandardMaterial map={colorMap} color={color}/>
       <OrbitControls
       enableZoom={true}
       enablePan={true}
@@ -34,8 +39,6 @@ const CustomPlanet = ({size, color}) => {
       />
     </mesh>
     </>
-    </Suspense>
-    </Canvas>
     );
 }
 

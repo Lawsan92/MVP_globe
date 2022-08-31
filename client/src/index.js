@@ -5,6 +5,7 @@ import Info from './components/Info.js';
 import MakeYourOwn from './components/MakeYourOwn.js';
 import CustomPlanet from './components/CustomPlanet.js';
 import CustomInfo from './components/CustomInfo.js';
+import CustomGlobe from './components/CustomGlobe.js';
 const axios = require('axios');
 class App extends React.Component {
   constructor (props) {
@@ -17,6 +18,7 @@ class App extends React.Component {
         name: '',
         color: '',
         size: [0, 32, 32],
+        texture: '',
       },
       build: false
     }
@@ -29,6 +31,7 @@ class App extends React.Component {
     this.getName = this.getName.bind(this);
     this.getColor = this.getColor.bind(this);
     this.getSize = this.getSize.bind(this);
+    this.getTexture = this.getTexture.bind(this);
   }
 
   componentDidMount () {
@@ -118,25 +121,50 @@ class App extends React.Component {
     })
   }
 
+  getTexture = (e) => {
+    this.setState( prevState => {
+      let customPlanet = Object.assign({}, prevState.customPlanet);
+      customPlanet.texture = e;
+      return {customPlanet};
+    })
+  }
+
 
   newPlanet = () => {
     if (this.state.build) {
       return (
         <div id='app'>
-          <CustomInfo returnHome={this.returnHome} name={this.state.customPlanet.name} size={this.state.customPlanet.size}/>
-          <CustomPlanet customPlanet={this.state.customPlanet} name={this.state.customPlanet.name} size={this.state.customPlanet.size} color={this.state.customPlanet.color}/>
+          <CustomInfo
+          returnHome={this.returnHome}
+          name={this.state.customPlanet.name}
+          size={this.state.customPlanet.size}/>
+          <CustomGlobe
+          customPlanet={this.state.customPlanet}
+          name={this.state.customPlanet.name}
+          size={this.state.customPlanet.size}
+          color={this.state.customPlanet.color}
+          texture={this.state.customPlanet.texture}/>
         </div>
       )
     } else {
       return this.state.makeyourown === true ?
     ( <div id='app'>
-      <MakeYourOwn mainMenu={this.mainMenu} buildPlanet={this.buildPlanet} getName={this.getName} getColor={this.getColor} getSize={this.getSize}/>
+      <MakeYourOwn
+      mainMenu={this.mainMenu}
+      buildPlanet={this.buildPlanet}
+      getName={this.getName}
+      getColor={this.getColor}
+      getSize={this.getSize}
+      getTexture={this.getTexture}/>
       <Globe planetName={this.state.planetName} />
     </div>)
     :
    (
     <div id='app'>
-      <Info func={this.alertFunc} data={this.state.data} makeyourown={this.makeyourownClick}/>
+      <Info
+      func={this.alertFunc}
+      data={this.state.data}
+      makeyourown={this.makeyourownClick}/>
       <Globe planetName={this.state.planetName} />
     </div>);
     }

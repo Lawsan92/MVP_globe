@@ -3,7 +3,7 @@ import React from 'react';
 const CustomInfo = ({planetInfo, returnHome, name, size}) => {
   return (
     <div id = 'info'>
-    <div id='stats'>
+    <div id='custom-stats'>
     <h2>Stats</h2>
     <p><strong>Name:</strong> {name}</p>
     <p><strong>Size:</strong> x{size[0] * 2} earths</p>

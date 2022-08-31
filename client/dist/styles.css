@@ -62,6 +62,11 @@ h3:hover {
   opacity: 1.0;
 }
 
+#custom-stats{
+  display: flex;
+  flex-direction: column;
+}
+
 #make-your-own{
   background-color: #242F54; /* 293765 */
   color: white;
@@ -70,4 +75,41 @@ h3:hover {
   display: flex;
   flex-direction: column;
   justify-content: left;
+}
+
+/* #item{
+  flex-shrink: 3;
+} */
+
+/* textures */
+#textures {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+#rocky{
+width: 40px;
+height: 40px;
+}
+
+#gasous{
+width: 40px;
+height: 40px;
+}
+
+#earth-like{
+  width: 40px;
+  height: 40px;
+  flex-shrink: 4;
+}
+
+#neon{
+  width: 40px;
+  height: 40px;
+}
+
+#texture-thumb{
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
 }
