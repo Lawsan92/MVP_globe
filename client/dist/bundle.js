@@ -18,12 +18,14 @@ __webpack_require__.r(__webpack_exports__);
 
 var CustomInfo = function CustomInfo(_ref) {
   var planetInfo = _ref.planetInfo,
-      returnHome = _ref.returnHome;
+      returnHome = _ref.returnHome,
+      name = _ref.name,
+      size = _ref.size;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     id: "info"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     id: "stats"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, "Stats"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("strong", null, "Name:"), " Name"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("strong", null, "Size:"), " Size")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, "Stats"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("strong", null, "Name:"), " ", name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("strong", null, "Size:"), " x", size[0] * 2, " earths")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
     style: {
       border: '1px solid white'
     },
@@ -60,7 +62,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var CustomPlanet = function CustomPlanet() {
+var CustomPlanet = function CustomPlanet(_ref) {
+  var size = _ref.size,
+      color = _ref.color;
   // <meshPhongMaterial  specularMap={specularMap} transparent opacity={0.7} color='#D4DBE6'/>
   var mesh = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(); // useFrame((state, delta) => (mesh.current.rotation.y += 0.01));
 
@@ -77,10 +81,10 @@ var CustomPlanet = function CustomPlanet() {
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("mesh", {
     ref: mesh
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("sphereBufferGeometry", {
-    args: [.5, 32, 32],
+    args: size,
     attach: "geometry"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("meshPhongMaterial", {
-    color: "orange"
+    color: color
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_react_three_drei__WEBPACK_IMPORTED_MODULE_3__.OrbitControls, {
     enableZoom: true,
     enablePan: true,
@@ -317,35 +321,31 @@ __webpack_require__.r(__webpack_exports__);
 
 var MakeYourOwn = function MakeYourOwn(_ref) {
   var mainMenu = _ref.mainMenu,
-      buildPlanet = _ref.buildPlanet;
-
-  var getText = function getText() {
-    event.preventDefault();
-  };
-
+      buildPlanet = _ref.buildPlanet,
+      getName = _ref.getName,
+      getColor = _ref.getColor,
+      getSize = _ref.getSize;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     id: "make-your-own"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, "Make Your Own Planet!"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("form", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
     type: "text",
     onChange: function onChange() {
       console.log(event.target.value);
+      getName(event.target.value);
     }
   }), "name", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
     type: "text",
     onChange: function onChange() {
       console.log(event.target.value);
+      getColor(event.target.value);
     }
   }), "color", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
     type: "text",
     onChange: function onChange() {
       console.log(event.target.value);
+      getSize(event.target.value);
     }
-  }), "size", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
-    type: "text",
-    onChange: function onChange() {
-      console.log(event.target.value);
-    }
-  }), "Rings"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
+  }), "size 'X Earths'"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
     onClick: buildPlanet
   }, "Build!"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
     onClick: mainMenu
@@ -23526,21 +23526,59 @@ var App = /*#__PURE__*/function (_React$Component) {
       });
     });
 
+    _defineProperty(_assertThisInitialized(_this), "getName", function (e) {
+      _this.setState(function (prevState) {
+        var customPlanet = Object.assign({}, prevState.customPlanet);
+        customPlanet.name = e;
+        return {
+          customPlanet: customPlanet
+        };
+      });
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "getColor", function (e) {
+      _this.setState(function (prevState) {
+        var customPlanet = Object.assign({}, prevState.customPlanet);
+        customPlanet.color = e;
+        return {
+          customPlanet: customPlanet
+        };
+      });
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "getSize", function (e) {
+      _this.setState(function (prevState) {
+        var customPlanet = Object.assign({}, prevState.customPlanet);
+        customPlanet.size[0] = e / 2;
+        return {
+          customPlanet: customPlanet
+        };
+      });
+    });
+
     _defineProperty(_assertThisInitialized(_this), "newPlanet", function () {
       if (_this.state.build) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
           id: "app"
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_CustomInfo_js__WEBPACK_IMPORTED_MODULE_6__["default"], {
-          returnHome: _this.returnHome
+          returnHome: _this.returnHome,
+          name: _this.state.customPlanet.name,
+          size: _this.state.customPlanet.size
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_CustomPlanet_js__WEBPACK_IMPORTED_MODULE_5__["default"], {
-          customPlanet: _this.state.customPlanet
+          customPlanet: _this.state.customPlanet,
+          name: _this.state.customPlanet.name,
+          size: _this.state.customPlanet.size,
+          color: _this.state.customPlanet.color
         }));
       } else {
         return _this.state.makeyourown === true ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
           id: "app"
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_MakeYourOwn_js__WEBPACK_IMPORTED_MODULE_4__["default"], {
           mainMenu: _this.mainMenu,
-          buildPlanet: _this.buildPlanet
+          buildPlanet: _this.buildPlanet,
+          getName: _this.getName,
+          getColor: _this.getColor,
+          getSize: _this.getSize
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Globe_js__WEBPACK_IMPORTED_MODULE_2__["default"], {
           planetName: _this.state.planetName
         })) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
@@ -23562,7 +23600,7 @@ var App = /*#__PURE__*/function (_React$Component) {
       customPlanet: {
         name: '',
         color: '',
-        size: []
+        size: [0, 32, 32]
       },
       build: false
     };
@@ -23572,6 +23610,9 @@ var App = /*#__PURE__*/function (_React$Component) {
     _this.buildPlanet = _this.buildPlanet.bind(_assertThisInitialized(_this));
     _this.newPlanet = _this.newPlanet.bind(_assertThisInitialized(_this));
     _this.returnHome = _this.returnHome.bind(_assertThisInitialized(_this));
+    _this.getName = _this.getName.bind(_assertThisInitialized(_this));
+    _this.getColor = _this.getColor.bind(_assertThisInitialized(_this));
+    _this.getSize = _this.getSize.bind(_assertThisInitialized(_this));
     return _this;
   }
 

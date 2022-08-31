@@ -5,7 +5,7 @@ import { TextureLoader } from 'three';
 import { OrbitControls, Stars } from '@react-three/drei';
 import * as THREE from 'three';
 
-const CustomPlanet = () => {
+const CustomPlanet = ({size, color}) => {
   // <meshPhongMaterial  specularMap={specularMap} transparent opacity={0.7} color='#D4DBE6'/>
 
   const mesh = useRef();
@@ -23,8 +23,8 @@ const CustomPlanet = () => {
     fade={true}
     />
     <mesh ref={mesh}>
-      <sphereBufferGeometry args={ [.5, 32, 32]} attach='geometry'></sphereBufferGeometry>
-      <meshPhongMaterial color='orange'/>
+      <sphereBufferGeometry args={size} attach='geometry'></sphereBufferGeometry>
+      <meshPhongMaterial color={color}/>
       <OrbitControls
       enableZoom={true}
       enablePan={true}

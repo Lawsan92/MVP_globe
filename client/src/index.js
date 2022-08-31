@@ -16,7 +16,7 @@ class App extends React.Component {
       customPlanet: {
         name: '',
         color: '',
-        size: [],
+        size: [0, 32, 32],
       },
       build: false
     }
@@ -26,6 +26,9 @@ class App extends React.Component {
     this.buildPlanet= this.buildPlanet.bind(this);
     this.newPlanet = this.newPlanet.bind(this);
     this.returnHome = this.returnHome.bind(this);
+    this.getName = this.getName.bind(this);
+    this.getColor = this.getColor.bind(this);
+    this.getSize = this.getSize.bind(this);
   }
 
   componentDidMount () {
@@ -64,6 +67,7 @@ class App extends React.Component {
 
   };
 
+  // Click Events
   makeyourownClick = () => {
     this.setState({
       makeyourown: true
@@ -88,18 +92,45 @@ class App extends React.Component {
     })
   }
 
+  // Planet Criteria
+
+  getName = (e) => {
+    this.setState( prevState => {
+      let customPlanet = Object.assign({}, prevState.customPlanet);
+      customPlanet.name = e;
+      return {customPlanet};
+    })
+  }
+
+  getColor = (e) => {
+    this.setState( prevState => {
+      let customPlanet = Object.assign({}, prevState.customPlanet);
+      customPlanet.color = e;
+      return {customPlanet};
+    })
+  }
+
+  getSize = (e) => {
+    this.setState( prevState => {
+      let customPlanet = Object.assign({}, prevState.customPlanet);
+      customPlanet.size[0] = e/2;
+      return {customPlanet};
+    })
+  }
+
+
   newPlanet = () => {
     if (this.state.build) {
       return (
         <div id='app'>
-          <CustomInfo returnHome={this.returnHome}/>
-          <CustomPlanet customPlanet={this.state.customPlanet}/>
+          <CustomInfo returnHome={this.returnHome} name={this.state.customPlanet.name} size={this.state.customPlanet.size}/>
+          <CustomPlanet customPlanet={this.state.customPlanet} name={this.state.customPlanet.name} size={this.state.customPlanet.size} color={this.state.customPlanet.color}/>
         </div>
       )
     } else {
       return this.state.makeyourown === true ?
     ( <div id='app'>
-      <MakeYourOwn mainMenu={this.mainMenu} buildPlanet={this.buildPlanet}/>
+      <MakeYourOwn mainMenu={this.mainMenu} buildPlanet={this.buildPlanet} getName={this.getName} getColor={this.getColor} getSize={this.getSize}/>
       <Globe planetName={this.state.planetName} />
     </div>)
     :
