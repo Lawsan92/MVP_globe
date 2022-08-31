@@ -19,7 +19,10 @@ class App extends React.Component {
         color: '',
         size: [0, 32, 32],
         texture: '',
+        rings: '',
+        ringColor: '',
       },
+      hasRings: false,
       build: false
     }
     this.alertFunc = this.alertFunc.bind(this);
@@ -32,6 +35,8 @@ class App extends React.Component {
     this.getColor = this.getColor.bind(this);
     this.getSize = this.getSize.bind(this);
     this.getTexture = this.getTexture.bind(this);
+    this.hasRings = this.hasRings.bind(this);
+    this.ringColor = this.ringColor.bind(this);
   }
 
   componentDidMount () {
@@ -129,6 +134,24 @@ class App extends React.Component {
     })
   }
 
+  hasRings = (e) => {
+    this.setState({
+      hasRings: true
+    })
+    this.setState( prevState => {
+      let customPlanet = Object.assign({}, prevState.customPlanet);
+      customPlanet.rings = e;
+      return {customPlanet};
+    })
+  }
+
+  ringColor = (e) => {
+    this.setState( prevState => {
+      let customPlanet = Object.assign({}, prevState.customPlanet);
+      customPlanet.ringColor = e;
+      return {customPlanet};
+    })
+  }
 
   newPlanet = () => {
     if (this.state.build) {
@@ -143,7 +166,10 @@ class App extends React.Component {
           name={this.state.customPlanet.name}
           size={this.state.customPlanet.size}
           color={this.state.customPlanet.color}
-          texture={this.state.customPlanet.texture}/>
+          texture={this.state.customPlanet.texture}
+          rings={this.state.customPlanet.rings}
+          ringColor={this.state.customPlanet.ringColor}
+          />
         </div>
       )
     } else {
@@ -155,7 +181,10 @@ class App extends React.Component {
       getName={this.getName}
       getColor={this.getColor}
       getSize={this.getSize}
-      getTexture={this.getTexture}/>
+      getTexture={this.getTexture}
+      hasRings={this.hasRings}
+      ringColor={this.ringColor}
+      />
       <Globe planetName={this.state.planetName} />
     </div>)
     :

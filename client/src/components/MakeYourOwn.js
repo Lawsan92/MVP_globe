@@ -1,6 +1,6 @@
 import React from 'react'
 
-const MakeYourOwn = ({mainMenu, buildPlanet, getName, getColor, getSize, getTexture}) => {
+const MakeYourOwn = ({mainMenu, buildPlanet, getName, getColor, getSize, getTexture, hasRings, ringColor}) => {
 
   return (
     <div id='make-your-own'>
@@ -40,6 +40,18 @@ const MakeYourOwn = ({mainMenu, buildPlanet, getName, getColor, getSize, getText
         </div>
         </div>
       </div>
+      <div id='rings'>
+        <h4>Rings</h4>
+        {/* <input type='radio'/> */}
+        <div id='metallic'>
+          <p>metallic</p>
+          <img id='texture-thumb' src='https://res.cloudinary.com/darp0mj9i/image/upload/v1661958838/samples/planet_thumbnails/textures/89839372f2ea539a182f510d59ee90a8_amfxvw.png' onClick={() => {console.log('event:', event.target.currentSrc); hasRings(event.target.currentSrc)}}></img>
+        </div>
+      </div>
+      <div id='ring-color'>
+          <h4>Ring color</h4>
+      <input id ='item' type='text' onChange={ () => {console.log(event.target.value); ringColor(event.target.value)}}/>
+        </div>
       <div id='buttons'>
         <button onClick={buildPlanet}>Build!</button>
         <button onClick={mainMenu}>Home</button>

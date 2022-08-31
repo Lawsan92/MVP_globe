@@ -28,7 +28,9 @@ var CustomGlobe = function CustomGlobe(_ref) {
   var name = _ref.name,
       size = _ref.size,
       color = _ref.color,
-      texture = _ref.texture;
+      texture = _ref.texture,
+      rings = _ref.rings,
+      ringColor = _ref.ringColor;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_react_three_fiber__WEBPACK_IMPORTED_MODULE_3__.Canvas, {
     id: "canvas"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react__WEBPACK_IMPORTED_MODULE_0__.Suspense, {
@@ -37,7 +39,9 @@ var CustomGlobe = function CustomGlobe(_ref) {
     name: name,
     size: size,
     color: color,
-    texture: texture
+    texture: texture,
+    rings: rings,
+    ringColor: ringColor
   })));
 };
 
@@ -124,11 +128,10 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 var CustomPlanet = function CustomPlanet(_ref) {
   var size = _ref.size,
       color = _ref.color,
-      texture = _ref.texture;
+      texture = _ref.texture,
+      rings = _ref.rings,
+      ringColor = _ref.ringColor;
   // <meshPhongMaterial  specularMap={specularMap} transparent opacity={0.7} color='#D4DBE6'/>
-
-  /*
-    */
   var mesh = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)();
 
   var _useLoader = (0,_react_three_fiber__WEBPACK_IMPORTED_MODULE_2__.z)(three__WEBPACK_IMPORTED_MODULE_3__.TextureLoader, [texture]),
@@ -138,6 +141,49 @@ var CustomPlanet = function CustomPlanet(_ref) {
   (0,_react_three_fiber__WEBPACK_IMPORTED_MODULE_2__.x)(function (state, delta) {
     return mesh.current.rotation.y += 0.01;
   });
+
+  if (rings !== '') {
+    var _useLoader3 = (0,_react_three_fiber__WEBPACK_IMPORTED_MODULE_2__.z)(three__WEBPACK_IMPORTED_MODULE_3__.TextureLoader, [rings]),
+        _useLoader4 = _slicedToArray(_useLoader3, 1),
+        ringMap = _useLoader4[0];
+
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("mesh", {
+      ref: mesh
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ringBufferGeometry", {
+      args: [5, 7, 32],
+      ref: mesh
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("meshPhongMaterial", {
+      color: ringColor,
+      map: ringMap,
+      opacity: 1,
+      depthWrite: true,
+      transparent: true,
+      side: three__WEBPACK_IMPORTED_MODULE_3__.DoubleSide
+    })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ambientLight", {
+      intensity: 1.4
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_react_three_drei__WEBPACK_IMPORTED_MODULE_4__.Stars, {
+      radius: 300,
+      depth: 60,
+      count: 20000,
+      factor: 7,
+      fade: true
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("mesh", {
+      ref: mesh
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("sphereBufferGeometry", {
+      args: size,
+      attach: "geometry"
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("meshPhongMaterial", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("meshStandardMaterial", {
+      map: colorMap,
+      color: color
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_react_three_drei__WEBPACK_IMPORTED_MODULE_5__.OrbitControls, {
+      enableZoom: true,
+      enablePan: true,
+      zoomSpeed: 0.6,
+      panSpeed: 0.5,
+      rotateSpeed: 0.4
+    })));
+  }
+
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ambientLight", {
     intensity: 1.4
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_react_three_drei__WEBPACK_IMPORTED_MODULE_4__.Stars, {
@@ -394,7 +440,9 @@ var MakeYourOwn = function MakeYourOwn(_ref) {
       getName = _ref.getName,
       getColor = _ref.getColor,
       getSize = _ref.getSize,
-      getTexture = _ref.getTexture;
+      getTexture = _ref.getTexture,
+      hasRings = _ref.hasRings,
+      ringColor = _ref.ringColor;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     id: "make-your-own"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, "Make Your Own Planet!"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("form", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h4", null, "name"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
@@ -457,6 +505,26 @@ var MakeYourOwn = function MakeYourOwn(_ref) {
       getTexture(event.target.currentSrc);
     }
   })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    id: "rings"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h4", null, "Rings"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    id: "metallic"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "metallic"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
+    id: "texture-thumb",
+    src: "https://res.cloudinary.com/darp0mj9i/image/upload/v1661958838/samples/planet_thumbnails/textures/89839372f2ea539a182f510d59ee90a8_amfxvw.png",
+    onClick: function onClick() {
+      console.log('event:', event.target.currentSrc);
+      hasRings(event.target.currentSrc);
+    }
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    id: "ring-color"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h4", null, "Ring color"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
+    id: "item",
+    type: "text",
+    onChange: function onChange() {
+      console.log(event.target.value);
+      ringColor(event.target.value);
+    }
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     id: "buttons"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
     onClick: buildPlanet
@@ -23681,6 +23749,30 @@ var App = /*#__PURE__*/function (_React$Component) {
       });
     });
 
+    _defineProperty(_assertThisInitialized(_this), "hasRings", function (e) {
+      _this.setState({
+        hasRings: true
+      });
+
+      _this.setState(function (prevState) {
+        var customPlanet = Object.assign({}, prevState.customPlanet);
+        customPlanet.rings = e;
+        return {
+          customPlanet: customPlanet
+        };
+      });
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "ringColor", function (e) {
+      _this.setState(function (prevState) {
+        var customPlanet = Object.assign({}, prevState.customPlanet);
+        customPlanet.ringColor = e;
+        return {
+          customPlanet: customPlanet
+        };
+      });
+    });
+
     _defineProperty(_assertThisInitialized(_this), "newPlanet", function () {
       if (_this.state.build) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
@@ -23694,7 +23786,9 @@ var App = /*#__PURE__*/function (_React$Component) {
           name: _this.state.customPlanet.name,
           size: _this.state.customPlanet.size,
           color: _this.state.customPlanet.color,
-          texture: _this.state.customPlanet.texture
+          texture: _this.state.customPlanet.texture,
+          rings: _this.state.customPlanet.rings,
+          ringColor: _this.state.customPlanet.ringColor
         }));
       } else {
         return _this.state.makeyourown === true ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
@@ -23705,7 +23799,9 @@ var App = /*#__PURE__*/function (_React$Component) {
           getName: _this.getName,
           getColor: _this.getColor,
           getSize: _this.getSize,
-          getTexture: _this.getTexture
+          getTexture: _this.getTexture,
+          hasRings: _this.hasRings,
+          ringColor: _this.ringColor
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Globe_js__WEBPACK_IMPORTED_MODULE_2__["default"], {
           planetName: _this.state.planetName
         })) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
@@ -23728,8 +23824,11 @@ var App = /*#__PURE__*/function (_React$Component) {
         name: '',
         color: '',
         size: [0, 32, 32],
-        texture: ''
+        texture: '',
+        rings: '',
+        ringColor: ''
       },
+      hasRings: false,
       build: false
     };
     _this.alertFunc = _this.alertFunc.bind(_assertThisInitialized(_this));
@@ -23742,6 +23841,8 @@ var App = /*#__PURE__*/function (_React$Component) {
     _this.getColor = _this.getColor.bind(_assertThisInitialized(_this));
     _this.getSize = _this.getSize.bind(_assertThisInitialized(_this));
     _this.getTexture = _this.getTexture.bind(_assertThisInitialized(_this));
+    _this.hasRings = _this.hasRings.bind(_assertThisInitialized(_this));
+    _this.ringColor = _this.ringColor.bind(_assertThisInitialized(_this));
     return _this;
   }
 
