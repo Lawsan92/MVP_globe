@@ -23,7 +23,7 @@ html,#root,body, main, #app {
   text-align: center;
 }
 .card {
-  background-color: #293765;
+  background-color: #242F54; /* 293765 */
   border: solid 1px whitesmoke;
   border-radius: 10px;
   display: flex;
@@ -31,6 +31,7 @@ html,#root,body, main, #app {
   justify-content: space-evenly;
   align-self: flex-start;
   opacity: 0.5;
+  margin-bottom: 10px;
 }
 
 h3:hover {
@@ -43,18 +44,30 @@ h3:hover {
 
 #canvas{
   width: 50%;
+  height: 100%
 }
 
 #stats{
-  background-color: #293765;
+  background-color: #242F54; /* 293765 */
   border: solid 1px whitesmoke;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
+  justify-content: left;
 }
 
 #planet-thumb {
   height: 50px;
   border-radius: 10px;
   opacity: 1.0;
+}
+
+#make-your-own{
+  background-color: #242F54; /* 293765 */
+  color: white;
+  border: solid 1px whitesmoke;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
 }

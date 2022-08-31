@@ -103,7 +103,6 @@ if (planetName !== 'Saturn') {
     rotateSpeed={0.4}
     />
   </mesh>
-
   </>
   );
 } else {
@@ -122,7 +121,7 @@ if (planetName !== 'Saturn') {
     <ringBufferGeometry args={[5, 7, 32]}/>
     <meshPhongMaterial
     map={ringMap}
-    opacity={0.8}
+    opacity={1}
     depthWrite={true}
     transparent={true}
     side={THREE.DoubleSide}/>
@@ -140,7 +139,7 @@ if (planetName !== 'Saturn') {
       />
     </mesh>
     </>
-    );
+  );
 }
 }
 

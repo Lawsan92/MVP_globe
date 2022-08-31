@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 
-const Info = ({func, data}) => {
+const Info = ({func, data, makeyourown}) => {
   var planet;
   if (data[0]) {
     planet = data[0]
@@ -33,7 +33,7 @@ const Info = ({func, data}) => {
         <p><strong>Gravity:</strong> {planet.gravity}</p>
         <p><strong>Ditance from the sun:</strong> {planet.distance_from_the_sun}</p>
         </div>
-        <button onClick={() => {isClicked(false)}}>Return</button>
+        <button style={{border: '1px solid white'}}onClick={() => {isClicked(false)}}>Home</button>
       </div>
     );
   } else {
@@ -71,6 +71,10 @@ const Info = ({func, data}) => {
           <div class='card'>
             <h3 onClick={() => {func(event.target.innerText); isClicked(true);}}>Neptune</h3>
             <img id='planet-thumb' src='https://res.cloudinary.com/darp0mj9i/image/upload/v1661876857/samples/planet_thumbnails/neptune_thumb_vpm1fn.jpg' id='planet-thumb'/>
+          </div>
+          <div class='card'>
+            <h3 onClick={() => {makeyourown()}}>Make your own!</h3>
+            <img id='planet-thumb' src='https://res.cloudinary.com/darp0mj9i/image/upload/v1661891307/samples/planet_thumbnails/make_your_own_thumb_wh6w9h.jpg' id='planet-thumb'/>
           </div>
       </div>
     );

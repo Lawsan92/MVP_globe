@@ -1,6 +1,99 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./client/src/components/CustomInfo.js":
+/*!*********************************************!*\
+  !*** ./client/src/components/CustomInfo.js ***!
+  \*********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var CustomInfo = function CustomInfo(_ref) {
+  var planetInfo = _ref.planetInfo,
+      returnHome = _ref.returnHome;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    id: "info"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    id: "stats"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, "Stats"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("strong", null, "Name:"), " Name"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("strong", null, "Size:"), " Size")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
+    style: {
+      border: '1px solid white'
+    },
+    onClick: function onClick() {
+      returnHome();
+    }
+  }, "Home"));
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (CustomInfo);
+
+/***/ }),
+
+/***/ "./client/src/components/CustomPlanet.js":
+/*!***********************************************!*\
+  !*** ./client/src/components/CustomPlanet.js ***!
+  \***********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _react_three_fiber__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @react-three/fiber */ "./node_modules/@react-three/fiber/dist/react-three-fiber.esm.js");
+/* harmony import */ var _react_three_drei__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @react-three/drei */ "./node_modules/@react-three/drei/core/Stars.js");
+/* harmony import */ var _react_three_drei__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @react-three/drei */ "./node_modules/@react-three/drei/core/OrbitControls.js");
+
+
+
+
+
+
+
+var CustomPlanet = function CustomPlanet() {
+  // <meshPhongMaterial  specularMap={specularMap} transparent opacity={0.7} color='#D4DBE6'/>
+  var mesh = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(); // useFrame((state, delta) => (mesh.current.rotation.y += 0.01));
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_react_three_fiber__WEBPACK_IMPORTED_MODULE_1__.Canvas, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react__WEBPACK_IMPORTED_MODULE_0__.Suspense, {
+    fallback: null
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ambientLight", {
+    intensity: 1.4
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_react_three_drei__WEBPACK_IMPORTED_MODULE_2__.Stars, {
+    radius: 300,
+    depth: 60,
+    count: 20000,
+    factor: 7,
+    fade: true
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("mesh", {
+    ref: mesh
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("sphereBufferGeometry", {
+    args: [.5, 32, 32],
+    attach: "geometry"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("meshPhongMaterial", {
+    color: "orange"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_react_three_drei__WEBPACK_IMPORTED_MODULE_3__.OrbitControls, {
+    enableZoom: true,
+    enablePan: true,
+    zoomSpeed: 0.6,
+    panSpeed: 0.5,
+    rotateSpeed: 0.4
+  })))));
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (CustomPlanet);
+
+/***/ }),
+
 /***/ "./client/src/components/Globe.js":
 /*!****************************************!*\
   !*** ./client/src/components/Globe.js ***!
@@ -69,7 +162,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 var Info = function Info(_ref) {
   var func = _ref.func,
-      data = _ref.data;
+      data = _ref.data,
+      makeyourown = _ref.makeyourown;
   var planet;
 
   if (data[0]) {
@@ -99,10 +193,13 @@ var Info = function Info(_ref) {
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
       id: "stats"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, "Stats"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("strong", null, "Diameter:"), " ", planet.diameter), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("strong", null, "Mass:"), " ", planet.mass), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("strong", null, "Order from the Sun:"), " ", planet.order_from_the_sun), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("strong", null, "Volume:"), " ", planet.volume), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("strong", null, "Gravity:"), " ", planet.gravity), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("strong", null, "Ditance from the sun:"), " ", planet.distance_from_the_sun)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
+      style: {
+        border: '1px solid white'
+      },
       onClick: function onClick() {
         isClicked(false);
       }
-    }, "Return"));
+    }, "Home"));
   } else {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
       id: "info"
@@ -186,11 +283,76 @@ var Info = function Info(_ref) {
     }, "Neptune"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", _defineProperty({
       id: "planet-thumb",
       src: "https://res.cloudinary.com/darp0mj9i/image/upload/v1661876857/samples/planet_thumbnails/neptune_thumb_vpm1fn.jpg"
+    }, "id", "planet-thumb"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+      "class": "card"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", {
+      onClick: function onClick() {
+        makeyourown();
+      }
+    }, "Make your own!"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", _defineProperty({
+      id: "planet-thumb",
+      src: "https://res.cloudinary.com/darp0mj9i/image/upload/v1661891307/samples/planet_thumbnails/make_your_own_thumb_wh6w9h.jpg"
     }, "id", "planet-thumb"))));
   }
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Info);
+
+/***/ }),
+
+/***/ "./client/src/components/MakeYourOwn.js":
+/*!**********************************************!*\
+  !*** ./client/src/components/MakeYourOwn.js ***!
+  \**********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var MakeYourOwn = function MakeYourOwn(_ref) {
+  var mainMenu = _ref.mainMenu,
+      buildPlanet = _ref.buildPlanet;
+
+  var getText = function getText() {
+    event.preventDefault();
+  };
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    id: "make-your-own"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, "Make Your Own Planet!"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("form", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
+    type: "text",
+    onChange: function onChange() {
+      console.log(event.target.value);
+    }
+  }), "name", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
+    type: "text",
+    onChange: function onChange() {
+      console.log(event.target.value);
+    }
+  }), "color", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
+    type: "text",
+    onChange: function onChange() {
+      console.log(event.target.value);
+    }
+  }), "size", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
+    type: "text",
+    onChange: function onChange() {
+      console.log(event.target.value);
+    }
+  }), "Rings"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
+    onClick: buildPlanet
+  }, "Build!"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
+    onClick: mainMenu
+  }, "Home"));
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (MakeYourOwn);
 
 /***/ }),
 
@@ -394,7 +556,7 @@ var Sphere = function Sphere(_ref) {
       args: [5, 7, 32]
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("meshPhongMaterial", {
       map: ringMap,
-      opacity: 0.8,
+      opacity: 1,
       depthWrite: true,
       transparent: true,
       side: three__WEBPACK_IMPORTED_MODULE_15__.DoubleSide
@@ -23270,6 +23432,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
 /* harmony import */ var _components_Globe_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/Globe.js */ "./client/src/components/Globe.js");
 /* harmony import */ var _components_Info_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/Info.js */ "./client/src/components/Info.js");
+/* harmony import */ var _components_MakeYourOwn_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/MakeYourOwn.js */ "./client/src/components/MakeYourOwn.js");
+/* harmony import */ var _components_CustomPlanet_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/CustomPlanet.js */ "./client/src/components/CustomPlanet.js");
+/* harmony import */ var _components_CustomInfo_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/CustomInfo.js */ "./client/src/components/CustomInfo.js");
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -23293,6 +23458,9 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
 
 
 
@@ -23334,11 +23502,76 @@ var App = /*#__PURE__*/function (_React$Component) {
       });
     });
 
+    _defineProperty(_assertThisInitialized(_this), "makeyourownClick", function () {
+      _this.setState({
+        makeyourown: true
+      });
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "mainMenu", function () {
+      _this.setState({
+        makeyourown: false
+      });
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "buildPlanet", function () {
+      _this.setState({
+        build: true
+      });
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "returnHome", function () {
+      _this.setState({
+        build: false
+      });
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "newPlanet", function () {
+      if (_this.state.build) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+          id: "app"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_CustomInfo_js__WEBPACK_IMPORTED_MODULE_6__["default"], {
+          returnHome: _this.returnHome
+        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_CustomPlanet_js__WEBPACK_IMPORTED_MODULE_5__["default"], {
+          customPlanet: _this.state.customPlanet
+        }));
+      } else {
+        return _this.state.makeyourown === true ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+          id: "app"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_MakeYourOwn_js__WEBPACK_IMPORTED_MODULE_4__["default"], {
+          mainMenu: _this.mainMenu,
+          buildPlanet: _this.buildPlanet
+        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Globe_js__WEBPACK_IMPORTED_MODULE_2__["default"], {
+          planetName: _this.state.planetName
+        })) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+          id: "app"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Info_js__WEBPACK_IMPORTED_MODULE_3__["default"], {
+          func: _this.alertFunc,
+          data: _this.state.data,
+          makeyourown: _this.makeyourownClick
+        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Globe_js__WEBPACK_IMPORTED_MODULE_2__["default"], {
+          planetName: _this.state.planetName
+        }));
+      }
+    });
+
     _this.state = {
       planetName: '',
-      data: []
+      data: [],
+      makeyourown: false,
+      customPlanet: {
+        name: '',
+        color: '',
+        size: []
+      },
+      build: false
     };
     _this.alertFunc = _this.alertFunc.bind(_assertThisInitialized(_this));
+    _this.makeyourownClick = _this.makeyourownClick.bind(_assertThisInitialized(_this));
+    _this.mainMenu = _this.mainMenu.bind(_assertThisInitialized(_this));
+    _this.buildPlanet = _this.buildPlanet.bind(_assertThisInitialized(_this));
+    _this.newPlanet = _this.newPlanet.bind(_assertThisInitialized(_this));
+    _this.returnHome = _this.returnHome.bind(_assertThisInitialized(_this));
     return _this;
   }
 
@@ -23359,19 +23592,14 @@ var App = /*#__PURE__*/function (_React$Component) {
     value: function render(props) {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
         id: "app"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Info_js__WEBPACK_IMPORTED_MODULE_3__["default"], {
-        func: this.alertFunc,
-        data: this.state.data
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Globe_js__WEBPACK_IMPORTED_MODULE_2__["default"], {
-        planetName: this.state.planetName
-      }));
+      }, this.newPlanet());
     }
   }]);
 
   return App;
 }((react__WEBPACK_IMPORTED_MODULE_0___default().Component));
 
-react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(App, null), document.getElementById('root'));
+react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(App, null), document.getElementById('root')); // <MakeYourOwn/>
 })();
 
 /******/ })()

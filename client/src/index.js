@@ -2,15 +2,30 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Globe from './components/Globe.js';
 import Info from './components/Info.js';
+import MakeYourOwn from './components/MakeYourOwn.js';
+import CustomPlanet from './components/CustomPlanet.js';
+import CustomInfo from './components/CustomInfo.js';
 const axios = require('axios');
 class App extends React.Component {
   constructor (props) {
     super (props);
     this.state = {
       planetName: '',
-      data: []
+      data: [],
+      makeyourown: false,
+      customPlanet: {
+        name: '',
+        color: '',
+        size: [],
+      },
+      build: false
     }
     this.alertFunc = this.alertFunc.bind(this);
+    this.makeyourownClick = this.makeyourownClick.bind(this);
+    this.mainMenu = this.mainMenu.bind(this);
+    this.buildPlanet= this.buildPlanet.bind(this);
+    this.newPlanet = this.newPlanet.bind(this);
+    this.returnHome = this.returnHome.bind(this);
   }
 
   componentDidMount () {
@@ -49,14 +64,63 @@ class App extends React.Component {
 
   };
 
-  render (props) {
-  return (
-    <div id='app'>
-      <Info func={this.alertFunc} data={this.state.data}/>
+  makeyourownClick = () => {
+    this.setState({
+      makeyourown: true
+    })
+  }
+
+  mainMenu = () => {
+    this.setState({
+      makeyourown: false
+    })
+  }
+
+  buildPlanet = () => {
+    this.setState({
+      build: true
+    })
+  }
+
+  returnHome = () => {
+    this.setState({
+      build: false
+    })
+  }
+
+  newPlanet = () => {
+    if (this.state.build) {
+      return (
+        <div id='app'>
+          <CustomInfo returnHome={this.returnHome}/>
+          <CustomPlanet customPlanet={this.state.customPlanet}/>
+        </div>
+      )
+    } else {
+      return this.state.makeyourown === true ?
+    ( <div id='app'>
+      <MakeYourOwn mainMenu={this.mainMenu} buildPlanet={this.buildPlanet}/>
       <Globe planetName={this.state.planetName} />
-    </div>
-  );
+    </div>)
+    :
+   (
+    <div id='app'>
+      <Info func={this.alertFunc} data={this.state.data} makeyourown={this.makeyourownClick}/>
+      <Globe planetName={this.state.planetName} />
+    </div>);
+    }
+  }
+
+  render (props) {
+    return (
+      <div id='app'>
+        {this.newPlanet()}
+      </div>
+    )
 }
 }
 
 ReactDOM.render(<App/>, document.getElementById('root'));
+
+
+// <MakeYourOwn/>
