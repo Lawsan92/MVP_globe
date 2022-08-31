@@ -138,29 +138,28 @@ var CustomPlanet = function CustomPlanet(_ref) {
       _useLoader2 = _slicedToArray(_useLoader, 1),
       colorMap = _useLoader2[0];
 
+  (0,_react_three_fiber__WEBPACK_IMPORTED_MODULE_2__.x)(function (state, delta) {
+    return mesh.current.rotation.y += 0.01;
+  });
+  var ringMesh = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(); // useFrame((state, delta) => (ringMesh.current.rotation.x += 0.01));
+  // useFrame((state, delta) => (ringMesh.current.rotation.y += 0.01));
+
   if (rings !== '') {
-    var _mesh = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)();
+    var xRot = 1.34;
+    var yRot = 1;
+    var zRot = 1;
 
-    var _useLoader3 = (0,_react_three_fiber__WEBPACK_IMPORTED_MODULE_2__.z)(three__WEBPACK_IMPORTED_MODULE_3__.TextureLoader, [texture]),
+    var _useLoader3 = (0,_react_three_fiber__WEBPACK_IMPORTED_MODULE_2__.z)(three__WEBPACK_IMPORTED_MODULE_3__.TextureLoader, [rings]),
         _useLoader4 = _slicedToArray(_useLoader3, 1),
-        _colorMap = _useLoader4[0];
-
-    var ringMesh = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)();
-    (0,_react_three_fiber__WEBPACK_IMPORTED_MODULE_2__.x)(function (state, delta) {
-      return ringMesh.current.rotation.x += 0.01;
-    }); // vertical
-    // useFrame((state, delta) => (mesh.current.rotation.y += 0.01)); // horizontal
-
-    var _useLoader5 = (0,_react_three_fiber__WEBPACK_IMPORTED_MODULE_2__.z)(three__WEBPACK_IMPORTED_MODULE_3__.TextureLoader, [rings]),
-        _useLoader6 = _slicedToArray(_useLoader5, 1),
-        ringMap = _useLoader6[0];
+        ringMap = _useLoader4[0];
 
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("mesh", {
-      ref: ringMesh,
-      position: [0, 0, 0]
+      //  ref={ringMesh}
+      position: [0, 0, 0],
+      rotation: [xRot * Math.PI, yRot * Math.PI, zRot * Math.PI]
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ringBufferGeometry", {
       args: [5, 7, 32],
-      ref: _mesh
+      ref: mesh
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("meshPhongMaterial", {
       color: ringColor,
       map: ringMap,
@@ -177,12 +176,12 @@ var CustomPlanet = function CustomPlanet(_ref) {
       factor: 7,
       fade: true
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("mesh", {
-      ref: _mesh
+      ref: mesh
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("sphereBufferGeometry", {
       args: size,
       attach: "geometry"
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("meshPhongMaterial", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("meshStandardMaterial", {
-      map: _colorMap,
+      map: colorMap,
       color: color
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_react_three_drei__WEBPACK_IMPORTED_MODULE_5__.OrbitControls, {
       enableZoom: true,
@@ -730,7 +729,7 @@ var Sphere = function Sphere(_ref) {
       specularMap = _useLoader18[1],
       cloudsMap = _useLoader18[2];
 
-  var _useLoader19 = (0,_react_three_fiber__WEBPACK_IMPORTED_MODULE_14__.z)(three__WEBPACK_IMPORTED_MODULE_15__.TextureLoader, [_dist_assets_Saturn_8k_saturn_ring_alpha_jpg__WEBPACK_IMPORTED_MODULE_13__["default"]]),
+  var _useLoader19 = (0,_react_three_fiber__WEBPACK_IMPORTED_MODULE_14__.z)(three__WEBPACK_IMPORTED_MODULE_15__.TextureLoader, ['https://res.cloudinary.com/darp0mj9i/image/upload/v1661964645/samples/planet_thumbnails/textures/saturn_rings_cjduey.jpg']),
       _useLoader20 = _slicedToArray(_useLoader19, 1),
       ringMap = _useLoader20[0];
 
@@ -761,6 +760,9 @@ var Sphere = function Sphere(_ref) {
       rotateSpeed: 0.4
     })));
   } else {
+    var xRot = 1.34;
+    var yRot = 1;
+    var zRot = 1;
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ambientLight", {
       intensity: 1.4
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_react_three_drei__WEBPACK_IMPORTED_MODULE_16__.Stars, {
@@ -770,10 +772,14 @@ var Sphere = function Sphere(_ref) {
       factor: 7,
       fade: true
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("mesh", {
-      ref: mesh
+      ref: mesh // position={[xPos, yPos, zPos]}
+      // scale={[xScale, yScale, zScale]}
+      ,
+      rotation: [xRot * Math.PI, yRot * Math.PI, zRot * Math.PI]
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ringBufferGeometry", {
-      args: [5, 7, 32]
+      args: [5.5, 7.5, 32]
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("meshPhongMaterial", {
+      rotate: [50],
       map: ringMap,
       opacity: 1,
       depthWrite: true,

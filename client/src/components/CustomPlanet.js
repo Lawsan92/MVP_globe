@@ -10,16 +10,20 @@ const CustomPlanet = ({size, color, texture, rings, ringColor}) => {
 
   const mesh = useRef();
   const[colorMap] = useLoader(TextureLoader, [texture]);
-
+  useFrame((state, delta) => (mesh.current.rotation.y += 0.01));
+  const ringMesh = useRef();
+  // useFrame((state, delta) => (ringMesh.current.rotation.x += 0.01));
+  // useFrame((state, delta) => (ringMesh.current.rotation.y += 0.01));
   if (rings !== '') {
-    const mesh = useRef();
-    const[colorMap] = useLoader(TextureLoader, [texture]);
-    const ringMesh = useRef();
-    useFrame((state, delta) => (ringMesh.current.rotation.x += 0.01)); // vertical
-    // useFrame((state, delta) => (mesh.current.rotation.y += 0.01)); // horizontal
+    var xRot = 1.34;
+    var yRot = 1;
+    var zRot = 1;
     const [ringMap] = useLoader(TextureLoader,[rings]);
     return(<>
-     <mesh ref={ringMesh} position={[0, 0, 0]}>
+     <mesh
+    //  ref={ringMesh}
+     position={[0, 0, 0]}
+     rotation={[xRot * Math.PI, yRot * Math.PI, zRot * Math.PI]}>
     <ringBufferGeometry args={[5, 7, 32]} ref={mesh}/>
     <meshPhongMaterial
     color={ringColor}

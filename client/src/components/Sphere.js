@@ -78,7 +78,7 @@ var planetMesh;
 
   const[normalMap, specularMap, cloudsMap] = useLoader(TextureLoader, [EarthNormalMap, EarthSpecularMap, EarthCloudsMap]);
 
-  const [ringMap] = useLoader(TextureLoader,[Rings]);
+  const [ringMap] = useLoader(TextureLoader,['https://res.cloudinary.com/darp0mj9i/image/upload/v1661964645/samples/planet_thumbnails/textures/saturn_rings_cjduey.jpg']);
 
 if (planetName !== 'Saturn') {
   return (
@@ -106,6 +106,9 @@ if (planetName !== 'Saturn') {
   </>
   );
 } else {
+ var xRot = 1.34;
+ var yRot = 1;
+ var zRot = 1;
   return (
     <>
     <ambientLight intensity={1.4}/>
@@ -117,9 +120,15 @@ if (planetName !== 'Saturn') {
     fade={true}
     />
 
-  <mesh ref={mesh}>
-    <ringBufferGeometry args={[5, 7, 32]}/>
+  <mesh
+  ref={mesh}
+  // position={[xPos, yPos, zPos]}
+  // scale={[xScale, yScale, zScale]}
+  rotation={[xRot * Math.PI, yRot * Math.PI, zRot * Math.PI]}
+  >
+    <ringBufferGeometry args={[5.5, 7.5, 32]}/>
     <meshPhongMaterial
+    rotate={[50]}
     map={ringMap}
     opacity={1}
     depthWrite={true}
