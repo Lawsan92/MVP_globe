@@ -20,6 +20,8 @@
 
 <img src ='https://res.cloudinary.com/darp0mj9i/image/upload/v1661969799/samples/planet_thumbnails/textures/Screen_Shot_2022-08-31_at_13.13.00_vye4ql.jpg'/>
 
+<img src='https://res.cloudinary.com/darp0mj9i/image/upload/v1661970399/samples/planet_thumbnails/textures/Screen_Shot_2022-08-31_at_13.25.36_f3p24f.jpg'/>
+
 package.json setup
 
   npm init -y
