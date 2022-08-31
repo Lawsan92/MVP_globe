@@ -35,7 +35,7 @@ const MakeYourOwn = ({mainMenu, buildPlanet, getName, getColor, getSize, getText
           <img id='texture-thumb' src='https://res.cloudinary.com/darp0mj9i/image/upload/v1661916099/samples/planet_thumbnails/textures/2k_neptune_q24lo3.jpg' onClick={() => {console.log('event:', event.target.currentSrc); getTexture(event.target.currentSrc)}}></img>
         </div>
         <div id='earth-like'>
-          <p>earth-like</p>
+          <p>earth</p>
           <img id='texture-thumb' src='https://res.cloudinary.com/darp0mj9i/image/upload/v1661916035/samples/planet_thumbnails/textures/8k_earth_daymap_fia1el.jpg' onClick={() => {console.log('event:', event.target.currentSrc); getTexture(event.target.currentSrc)}}></img>
         </div>
         </div>
@@ -43,9 +43,23 @@ const MakeYourOwn = ({mainMenu, buildPlanet, getName, getColor, getSize, getText
       <div id='rings'>
         <h4>Rings</h4>
         {/* <input type='radio'/> */}
+        <div id='ring-textures'>
         <div id='metallic'>
           <p>metallic</p>
           <img id='texture-thumb' src='https://res.cloudinary.com/darp0mj9i/image/upload/v1661958838/samples/planet_thumbnails/textures/89839372f2ea539a182f510d59ee90a8_amfxvw.png' onClick={() => {console.log('event:', event.target.currentSrc); hasRings(event.target.currentSrc)}}></img>
+        </div>
+        <div id='saturn'>
+          <p>saturn</p>
+          <img id='texture-thumb' src='https://res.cloudinary.com/darp0mj9i/image/upload/v1661964645/samples/planet_thumbnails/textures/saturn_rings_cjduey.jpg' onClick={() => {console.log('event:', event.target.currentSrc); hasRings(event.target.currentSrc)}}></img>
+        </div>
+        <div id='fire'>
+          <p>fire</p>
+          <img id='texture-thumb' src='https://res.cloudinary.com/darp0mj9i/image/upload/v1661964978/samples/planet_thumbnails/textures/2k_sun_chdear.jpg' onClick={() => {console.log('event:', event.target.currentSrc); hasRings(event.target.currentSrc)}}></img>
+        </div>
+        <div id='ice'>
+          <p>ice</p>
+          <img id='texture-thumb' src='https://res.cloudinary.com/darp0mj9i/image/upload/v1661965644/samples/planet_thumbnails/textures/aaron-burden-if9vJoHDQes-unsplash_ni8ekf.jpg' onClick={() => {console.log('event:', event.target.currentSrc); hasRings(event.target.currentSrc)}}></img>
+        </div>
         </div>
       </div>
       <div id='ring-color'>

@@ -112,4 +112,11 @@ height: 40px;
   height: 40px;
   width: 40px;
   border-radius: 20px;
+  margin-left: 20px;
+  margin-bottom: 5px;
+}
+
+#ring-textures{
+  display: flex;
+  flex-direction: row;
 }

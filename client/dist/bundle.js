@@ -138,20 +138,29 @@ var CustomPlanet = function CustomPlanet(_ref) {
       _useLoader2 = _slicedToArray(_useLoader, 1),
       colorMap = _useLoader2[0];
 
-  (0,_react_three_fiber__WEBPACK_IMPORTED_MODULE_2__.x)(function (state, delta) {
-    return mesh.current.rotation.y += 0.01;
-  });
-
   if (rings !== '') {
-    var _useLoader3 = (0,_react_three_fiber__WEBPACK_IMPORTED_MODULE_2__.z)(three__WEBPACK_IMPORTED_MODULE_3__.TextureLoader, [rings]),
+    var _mesh = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)();
+
+    var _useLoader3 = (0,_react_three_fiber__WEBPACK_IMPORTED_MODULE_2__.z)(three__WEBPACK_IMPORTED_MODULE_3__.TextureLoader, [texture]),
         _useLoader4 = _slicedToArray(_useLoader3, 1),
-        ringMap = _useLoader4[0];
+        _colorMap = _useLoader4[0];
+
+    var ringMesh = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)();
+    (0,_react_three_fiber__WEBPACK_IMPORTED_MODULE_2__.x)(function (state, delta) {
+      return ringMesh.current.rotation.x += 0.01;
+    }); // vertical
+    // useFrame((state, delta) => (mesh.current.rotation.y += 0.01)); // horizontal
+
+    var _useLoader5 = (0,_react_three_fiber__WEBPACK_IMPORTED_MODULE_2__.z)(three__WEBPACK_IMPORTED_MODULE_3__.TextureLoader, [rings]),
+        _useLoader6 = _slicedToArray(_useLoader5, 1),
+        ringMap = _useLoader6[0];
 
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("mesh", {
-      ref: mesh
+      ref: ringMesh,
+      position: [0, 0, 0]
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ringBufferGeometry", {
       args: [5, 7, 32],
-      ref: mesh
+      ref: _mesh
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("meshPhongMaterial", {
       color: ringColor,
       map: ringMap,
@@ -168,12 +177,12 @@ var CustomPlanet = function CustomPlanet(_ref) {
       factor: 7,
       fade: true
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("mesh", {
-      ref: mesh
+      ref: _mesh
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("sphereBufferGeometry", {
       args: size,
       attach: "geometry"
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("meshPhongMaterial", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("meshStandardMaterial", {
-      map: colorMap,
+      map: _colorMap,
       color: color
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_react_three_drei__WEBPACK_IMPORTED_MODULE_5__.OrbitControls, {
       enableZoom: true,
@@ -497,7 +506,7 @@ var MakeYourOwn = function MakeYourOwn(_ref) {
     }
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     id: "earth-like"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "earth-like"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "earth"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
     id: "texture-thumb",
     src: "https://res.cloudinary.com/darp0mj9i/image/upload/v1661916035/samples/planet_thumbnails/textures/8k_earth_daymap_fia1el.jpg",
     onClick: function onClick() {
@@ -507,6 +516,8 @@ var MakeYourOwn = function MakeYourOwn(_ref) {
   })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     id: "rings"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h4", null, "Rings"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    id: "ring-textures"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     id: "metallic"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "metallic"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
     id: "texture-thumb",
@@ -515,7 +526,34 @@ var MakeYourOwn = function MakeYourOwn(_ref) {
       console.log('event:', event.target.currentSrc);
       hasRings(event.target.currentSrc);
     }
-  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    id: "saturn"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "saturn"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
+    id: "texture-thumb",
+    src: "https://res.cloudinary.com/darp0mj9i/image/upload/v1661964645/samples/planet_thumbnails/textures/saturn_rings_cjduey.jpg",
+    onClick: function onClick() {
+      console.log('event:', event.target.currentSrc);
+      hasRings(event.target.currentSrc);
+    }
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    id: "fire"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "fire"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
+    id: "texture-thumb",
+    src: "https://res.cloudinary.com/darp0mj9i/image/upload/v1661964978/samples/planet_thumbnails/textures/2k_sun_chdear.jpg",
+    onClick: function onClick() {
+      console.log('event:', event.target.currentSrc);
+      hasRings(event.target.currentSrc);
+    }
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    id: "ice"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "ice"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
+    id: "texture-thumb",
+    src: "https://res.cloudinary.com/darp0mj9i/image/upload/v1661965644/samples/planet_thumbnails/textures/aaron-burden-if9vJoHDQes-unsplash_ni8ekf.jpg",
+    onClick: function onClick() {
+      console.log('event:', event.target.currentSrc);
+      hasRings(event.target.currentSrc);
+    }
+  })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     id: "ring-color"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h4", null, "Ring color"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
     id: "item",
