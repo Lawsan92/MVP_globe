@@ -29,7 +29,7 @@ html,#root,body, main, #app {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  align-self: flex-start;
+  align-items: center;
   opacity: 0.5;
   margin-bottom: 10px;
 }
@@ -116,7 +116,25 @@ height: 40px;
   margin-bottom: 5px;
 }
 
+#texture-thumb-clicked{
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  margin-left: 20px;
+  margin-bottom: 5px;
+  border: solid 2px #ADD8E6;
+}
+
 #ring-textures{
   display: flex;
   flex-direction: row;
 }
+
+.left-arrow {
+  cursor: pointer;
+}
+
+.right-arrow {
+  cursor: pointer;
+}
+

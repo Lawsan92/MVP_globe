@@ -1,4 +1,8 @@
 import React, {useState} from 'react';
+import planetCardsData from './../data/planetCardsData.js';
+import {FaArrowAltCircleUp, FaArrowAltCircleDown} from 'react-icons/fa';
+
+console.log('planetCardsData:', planetCardsData);
 
 const Info = ({func, data, makeyourown}) => {
   var planet;
@@ -18,6 +22,19 @@ const Info = ({func, data, makeyourown}) => {
   }
   // console.log('planet:', planet);
   // console.log('alertFunc:', func);
+
+
+  // card carousel
+
+  const [currentCard, setCurrentCard] = useState(0);
+  console.log('currentCard:', currentCard);
+  const nextCard = () => {
+    setCurrentCard(currentCard === planetCardsData.length - 1 ? 0 : currentCard + 1);
+  };
+
+  const prevCard = () => {
+    setCurrentCard(currentCard === 0 ? planetCardsData.length - 1 : currentCard - 1);
+  }
 
   const [card, isClicked] = useState(false);
 
@@ -40,42 +57,24 @@ const Info = ({func, data, makeyourown}) => {
     return (
       <div id ='info'>
         <h1>Choose a planet</h1>
+          <section className='carousel'>
+            <FaArrowAltCircleUp className='left-arrow' onClick={prevCard}/>
+            {planetCardsData.map((planet, index) => {
+              return (
+                <div className={index === currentCard ? 'card active' : 'card'} key={index}>
+                 {index === currentCard && (<h3 onClick={() => {func(event.target.innerText); isClicked(true);}}>{planet.name}</h3>)}
+                {index === currentCard && (   <img id='planet-thumb' src={planet.img}/>)}
+                {/* <h3 onClick={() => {func(event.target.innerText); isClicked(true);}}>{planet.name}</h3> */}
+
+              </div>
+              )
+            })}
+            <FaArrowAltCircleDown className='right-arrow' onClick={nextCard}/>
+          </section>
           <div class='card'>
-            <h3 onClick={() => {func(event.target.innerText); isClicked(true);}}>Mercury</h3>
-            <img id='planet-thumb' src='https://res.cloudinary.com/darp0mj9i/image/upload/v1661876827/samples/planet_thumbnails/mercury_thumb_ised0u.jpg'/>
-          </div>
-          <div class='card'>
-            <h3 onClick={() => {func(event.target.innerText); isClicked(true);}}>Venus</h3>
-            <img id='planet-thumb' src='https://res.cloudinary.com/darp0mj9i/image/upload/v1661876831/samples/planet_thumbnails/venus_thumb_m87ck9.jpg' id='planet-thumb'/>
-          </div>
-          <div class='card'>
-            <h3 onClick={() => {func(event.target.innerText); isClicked(true);}}>Mars</h3>
-            <img id='planet-thumb' src='https://res.cloudinary.com/darp0mj9i/image/upload/v1661876837/samples/planet_thumbnails/mars_thumb_qleleh.jpg' id='planet-thumb'/>
-          </div>
-          <div class='card'>
-            <h3 onClick={() => {func(event.target.innerText); isClicked(true);}}>Earth</h3>
-            <img id='planet-thumb' src='https://res.cloudinary.com/darp0mj9i/image/upload/v1661876852/samples/planet_thumbnails/earth_thumb_abbcfg.jpg' id='planet-thumb'/>
-          </div>
-          <div class='card'>
-            <h3 onClick={() => {func(event.target.innerText); isClicked(true);}}>Jupiter</h3>
-            <img id='planet-thumb' src='https://res.cloudinary.com/darp0mj9i/image/upload/v1661876862/samples/planet_thumbnails/jupiter_thumb_ded7t1.jpg' id='planet-thumb'/>
-          </div>
-          <div class='card'>
-            <h3 onClick={() => {func(event.target.innerText); isClicked(true);}}>Saturn</h3>
-            <img id='planet-thumb' src='https://res.cloudinary.com/darp0mj9i/image/upload/v1661876847/samples/planet_thumbnails/saturn_thumb_jpuhcy.jpg' id='planet-thumb'/>
-          </div>
-          <div class='card'>
-            <h3 onClick={() => {func(event.target.innerText); isClicked(true);}}>Uranus</h3>
-            <img id='planet-thumb' src='https://res.cloudinary.com/darp0mj9i/image/upload/v1661876842/samples/planet_thumbnails/uranus_thumb_qfraon.jpg' id='planet-thumb'/>
-          </div>
-          <div class='card'>
-            <h3 onClick={() => {func(event.target.innerText); isClicked(true);}}>Neptune</h3>
-            <img id='planet-thumb' src='https://res.cloudinary.com/darp0mj9i/image/upload/v1661876857/samples/planet_thumbnails/neptune_thumb_vpm1fn.jpg' id='planet-thumb'/>
-          </div>
-          <div class='card'>
-            <h3 onClick={() => {makeyourown()}}>Make your own!</h3>
-            <img id='planet-thumb' src='https://res.cloudinary.com/darp0mj9i/image/upload/v1661891307/samples/planet_thumbnails/make_your_own_thumb_wh6w9h.jpg' id='planet-thumb'/>
-          </div>
+              <h3 onClick={() => {makeyourown()}}>Make your own!</h3>
+              <img id='planet-thumb' src='https://res.cloudinary.com/darp0mj9i/image/upload/v1661891307/samples/planet_thumbnails/make_your_own_thumb_wh6w9h.jpg' id='planet-thumb'/>
+            </div>
       </div>
     );
   }

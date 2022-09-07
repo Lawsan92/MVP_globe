@@ -1,6 +1,14 @@
-import React from 'react'
+import React, {useState} from 'react'
+import {planetTextures, ringTextures} from './../data/texturesData.js';
+console.log(planetTextures, ringTextures);
 
 const MakeYourOwn = ({mainMenu, buildPlanet, getName, getColor, getSize, getTexture, hasRings, ringColor}) => {
+
+  const [style, setStyle] = useState(false);
+
+  const changeStyle = () => {
+    setStyle(true);
+  }
 
   return (
     <div id='make-your-own'>
@@ -22,44 +30,41 @@ const MakeYourOwn = ({mainMenu, buildPlanet, getName, getColor, getSize, getText
       <div>
         <h4>Textures</h4>
         <div id='textures'>
-        <div id='rocky'>
-          <p>rocky</p>
-          <img id='texture-thumb' src='https://res.cloudinary.com/darp0mj9i/image/upload/v1661916089/samples/planet_thumbnails/textures/8k_mars_nq2rri.jpg' onClick={() => {console.log('event:', event.target.currentSrc); getTexture(event.target.currentSrc)}}></img>
-          </div>
-        <div id='gaseous'>
-          <p>gaseous</p>
-          <img id='texture-thumb' src='https://res.cloudinary.com/darp0mj9i/image/upload/v1661916056/samples/planet_thumbnails/textures/8k_saturn_l1lhd6.jpg' onClick={() => {console.log('event:', event.target.currentSrc); getTexture(event.target.currentSrc)}}></img>
-        </div>
-        <div id='neon'>
-          <p>neon</p>
-          <img id='texture-thumb' src='https://res.cloudinary.com/darp0mj9i/image/upload/v1661916099/samples/planet_thumbnails/textures/2k_neptune_q24lo3.jpg' onClick={() => {console.log('event:', event.target.currentSrc); getTexture(event.target.currentSrc)}}></img>
-        </div>
-        <div id='earth-like'>
-          <p>earth</p>
-          <img id='texture-thumb' src='https://res.cloudinary.com/darp0mj9i/image/upload/v1661916035/samples/planet_thumbnails/textures/8k_earth_daymap_fia1el.jpg' onClick={() => {console.log('event:', event.target.currentSrc); getTexture(event.target.currentSrc)}}></img>
-        </div>
+        {planetTextures.map((texture) => {
+          return(
+            <div id={texture.type}>
+              <p>{texture.type}</p>
+              <img
+              id = {style ? 'texture-thumb-clicked' : 'texture-thumb'}
+              src={texture.img}
+              onClick={() => {
+              console.log('event:', event.target.currentSrc);
+              getTexture(event.target.currentSrc);
+              changeStyle();
+              }}></img>
+            </div>
+            )
+        })}
         </div>
       </div>
       <div id='rings'>
         <h4>Rings</h4>
         {/* <input type='radio'/> */}
         <div id='ring-textures'>
-        <div id='metallic'>
-          <p>metallic</p>
-          <img id='texture-thumb' src='https://res.cloudinary.com/darp0mj9i/image/upload/v1661958838/samples/planet_thumbnails/textures/89839372f2ea539a182f510d59ee90a8_amfxvw.png' onClick={() => {console.log('event:', event.target.currentSrc); hasRings(event.target.currentSrc)}}></img>
-        </div>
-        <div id='saturn'>
-          <p>saturn</p>
-          <img id='texture-thumb' src='https://res.cloudinary.com/darp0mj9i/image/upload/v1661964645/samples/planet_thumbnails/textures/saturn_rings_cjduey.jpg' onClick={() => {console.log('event:', event.target.currentSrc); hasRings(event.target.currentSrc)}}></img>
-        </div>
-        <div id='fire'>
-          <p>fire</p>
-          <img id='texture-thumb' src='https://res.cloudinary.com/darp0mj9i/image/upload/v1661964978/samples/planet_thumbnails/textures/2k_sun_chdear.jpg' onClick={() => {console.log('event:', event.target.currentSrc); hasRings(event.target.currentSrc)}}></img>
-        </div>
-        <div id='ice'>
-          <p>ice</p>
-          <img id='texture-thumb' src='https://res.cloudinary.com/darp0mj9i/image/upload/v1661965644/samples/planet_thumbnails/textures/aaron-burden-if9vJoHDQes-unsplash_ni8ekf.jpg' onClick={() => {console.log('event:', event.target.currentSrc); hasRings(event.target.currentSrc)}}></img>
-        </div>
+        {ringTextures.map((texture) => {
+          return(
+            <div id={texture.type}>
+            <p>{texture.type}</p>
+            <img
+            id = {style ? 'texture-thumb-clicked' : 'texture-thumb'}
+            src={texture.img}
+            onClick={() => {
+              console.log('event:', event.target.currentSrc); hasRings(event.target.currentSrc);
+              changeStyle();
+              }}></img>
+          </div>
+            )
+        })}
         </div>
       </div>
       <div id='ring-color'>
