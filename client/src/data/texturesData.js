@@ -12,7 +12,7 @@ const planetTextures = [
     img: 'https://res.cloudinary.com/darp0mj9i/image/upload/v1661916099/samples/planet_thumbnails/textures/2k_neptune_q24lo3.jpg'
   },
   {
-    type: 'earth-like',
+    type: 'earth',
     img: 'https://res.cloudinary.com/darp0mj9i/image/upload/v1661916035/samples/planet_thumbnails/textures/8k_earth_daymap_fia1el.jpg'
   }
 ]

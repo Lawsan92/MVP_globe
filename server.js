@@ -1,7 +1,7 @@
 // ----- external modules -----
 require('dotenv').config();
 const express = require('express');
-const path =require('path');
+const path = require('path');
 const {getData} = require('./db/postgres.js');
 
 const app = express();

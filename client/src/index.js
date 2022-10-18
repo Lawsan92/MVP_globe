@@ -6,6 +6,7 @@ import MakeYourOwn from './components/MakeYourOwn.js';
 import CustomPlanet from './components/CustomPlanet.js';
 import CustomInfo from './components/CustomInfo.js';
 import CustomGlobe from './components/CustomGlobe.js';
+import NavBar from './components/NavBar.js';
 const axios = require('axios');
 class App extends React.Component {
   constructor (props) {
@@ -157,44 +158,53 @@ class App extends React.Component {
     if (this.state.build) {
       return (
         <div id='app'>
-          <CustomInfo
-          returnHome={this.returnHome}
-          name={this.state.customPlanet.name}
-          size={this.state.customPlanet.size}/>
-          <CustomGlobe
-          customPlanet={this.state.customPlanet}
-          name={this.state.customPlanet.name}
-          size={this.state.customPlanet.size}
-          color={this.state.customPlanet.color}
-          texture={this.state.customPlanet.texture}
-          rings={this.state.customPlanet.rings}
-          ringColor={this.state.customPlanet.ringColor}
+          <NavBar/>
+          <div id='app-body'>
+            <CustomInfo
+            returnHome={this.returnHome}
+            name={this.state.customPlanet.name}
+            size={this.state.customPlanet.size}/>
+            <CustomGlobe
+            customPlanet={this.state.customPlanet}
+            name={this.state.customPlanet.name}
+            size={this.state.customPlanet.size}
+            color={this.state.customPlanet.color}
+            texture={this.state.customPlanet.texture}
+            rings={this.state.customPlanet.rings}
+            ringColor={this.state.customPlanet.ringColor}
           />
+          </div>
         </div>
       )
     } else {
       return this.state.makeyourown === true ?
     ( <div id='app'>
-      <MakeYourOwn
-      mainMenu={this.mainMenu}
-      buildPlanet={this.buildPlanet}
-      getName={this.getName}
-      getColor={this.getColor}
-      getSize={this.getSize}
-      getTexture={this.getTexture}
-      hasRings={this.hasRings}
-      ringColor={this.ringColor}
-      />
-      <Globe planetName={this.state.planetName} />
+      <NavBar/>
+      <div id='app-body'>
+        <MakeYourOwn
+        mainMenu={this.mainMenu}
+        buildPlanet={this.buildPlanet}
+        getName={this.getName}
+        getColor={this.getColor}
+        getSize={this.getSize}
+        getTexture={this.getTexture}
+        hasRings={this.hasRings}
+        ringColor={this.ringColor}
+        />
+        <Globe planetName={this.state.planetName} />
+      </div>
     </div>)
     :
    (
     <div id='app'>
-      <Info
-      func={this.alertFunc}
-      data={this.state.data}
-      makeyourown={this.makeyourownClick}/>
-      <Globe planetName={this.state.planetName} />
+      <NavBar/>
+      <div id='app-body'>
+        <Info
+        func={this.alertFunc}
+        data={this.state.data}
+        makeyourown={this.makeyourownClick}/>
+        <Globe planetName={this.state.planetName} />
+      </div>
     </div>);
     }
   }
