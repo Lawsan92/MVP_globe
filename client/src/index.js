@@ -35,6 +35,13 @@ class App extends React.Component {
     this.getTexture = this.getTexture.bind(this);
     this.hasRings = this.hasRings.bind(this);
     this.ringColor = this.ringColor.bind(this);
+
+  }
+
+  bindingFunc(arr) {
+    for (let func of arr) {
+      func = func.bind(this);
+    }
   }
 
   componentDidMount () {

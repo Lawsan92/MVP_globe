@@ -154,3 +154,22 @@ height: 40px;
   color: whitesmoke;
   opacity: 0.5;
 }
+
+#user {
+  display: flex;
+  flex-direction: column;
+}
+
+/* #search-bar {
+  display: flex;
+  flex-direction: row;
+} */
+#search-button {
+  display: flex;
+  justify-content: center;
+}
+
+#mag {
+  height: 10px;
+}
+
