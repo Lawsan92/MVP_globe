@@ -258,6 +258,44 @@ var Globe = function Globe(_ref) {
 
 /***/ }),
 
+/***/ "./client/src/components/Imports.js":
+/*!******************************************!*\
+  !*** ./client/src/components/Imports.js ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "CustomGlobe": () => (/* reexport safe */ _CustomGlobe_js__WEBPACK_IMPORTED_MODULE_6__["default"]),
+/* harmony export */   "CustomInfo": () => (/* reexport safe */ _CustomInfo_js__WEBPACK_IMPORTED_MODULE_5__["default"]),
+/* harmony export */   "CustomPlanet": () => (/* reexport safe */ _CustomPlanet_js__WEBPACK_IMPORTED_MODULE_4__["default"]),
+/* harmony export */   "Globe": () => (/* reexport safe */ _Globe_js__WEBPACK_IMPORTED_MODULE_1__["default"]),
+/* harmony export */   "Info": () => (/* reexport safe */ _Info_js__WEBPACK_IMPORTED_MODULE_2__["default"]),
+/* harmony export */   "MakeYourOwn": () => (/* reexport safe */ _MakeYourOwn_js__WEBPACK_IMPORTED_MODULE_3__["default"]),
+/* harmony export */   "NavBar": () => (/* reexport safe */ _NavBar_js__WEBPACK_IMPORTED_MODULE_7__["default"])
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Globe_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Globe.js */ "./client/src/components/Globe.js");
+/* harmony import */ var _Info_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Info.js */ "./client/src/components/Info.js");
+/* harmony import */ var _MakeYourOwn_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./MakeYourOwn.js */ "./client/src/components/MakeYourOwn.js");
+/* harmony import */ var _CustomPlanet_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./CustomPlanet.js */ "./client/src/components/CustomPlanet.js");
+/* harmony import */ var _CustomInfo_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./CustomInfo.js */ "./client/src/components/CustomInfo.js");
+/* harmony import */ var _CustomGlobe_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./CustomGlobe.js */ "./client/src/components/CustomGlobe.js");
+/* harmony import */ var _NavBar_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./NavBar.js */ "./client/src/components/NavBar.js");
+
+
+
+
+
+
+
+
+
+
+/***/ }),
+
 /***/ "./client/src/components/Info.js":
 /*!***************************************!*\
   !*** ./client/src/components/Info.js ***!
@@ -524,7 +562,16 @@ __webpack_require__.r(__webpack_exports__);
 var NavBar = function NavBar() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     id: "nav-bar"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, "This is the Navbar"));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, "Navbar under construction..."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    id: "logo"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    id: "searh-bar"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
+    type: "text",
+    placeholder: "search..."
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    id: "user"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", null, "login"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", null, "signup")));
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (NavBar);
@@ -23686,13 +23733,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-/* harmony import */ var _components_Globe_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/Globe.js */ "./client/src/components/Globe.js");
-/* harmony import */ var _components_Info_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/Info.js */ "./client/src/components/Info.js");
-/* harmony import */ var _components_MakeYourOwn_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/MakeYourOwn.js */ "./client/src/components/MakeYourOwn.js");
-/* harmony import */ var _components_CustomPlanet_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/CustomPlanet.js */ "./client/src/components/CustomPlanet.js");
-/* harmony import */ var _components_CustomInfo_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/CustomInfo.js */ "./client/src/components/CustomInfo.js");
-/* harmony import */ var _components_CustomGlobe_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/CustomGlobe.js */ "./client/src/components/CustomGlobe.js");
-/* harmony import */ var _components_NavBar_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/NavBar.js */ "./client/src/components/NavBar.js");
+/* harmony import */ var _components_Imports_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/Imports.js */ "./client/src/components/Imports.js");
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -23717,13 +23758,9 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
+// Global Modules
 
-
-
-
-
-
-
+ // Containers
 
 
 
@@ -23854,13 +23891,13 @@ var App = /*#__PURE__*/function (_React$Component) {
       if (_this.state.build) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
           id: "app"
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_NavBar_js__WEBPACK_IMPORTED_MODULE_8__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Imports_js__WEBPACK_IMPORTED_MODULE_2__.NavBar, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
           id: "app-body"
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_CustomInfo_js__WEBPACK_IMPORTED_MODULE_6__["default"], {
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Imports_js__WEBPACK_IMPORTED_MODULE_2__.CustomInfo, {
           returnHome: _this.returnHome,
           name: _this.state.customPlanet.name,
           size: _this.state.customPlanet.size
-        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_CustomGlobe_js__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Imports_js__WEBPACK_IMPORTED_MODULE_2__.CustomGlobe, {
           customPlanet: _this.state.customPlanet,
           name: _this.state.customPlanet.name,
           size: _this.state.customPlanet.size,
@@ -23872,9 +23909,9 @@ var App = /*#__PURE__*/function (_React$Component) {
       } else {
         return _this.state.makeyourown === true ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
           id: "app"
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_NavBar_js__WEBPACK_IMPORTED_MODULE_8__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Imports_js__WEBPACK_IMPORTED_MODULE_2__.NavBar, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
           id: "app-body"
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_MakeYourOwn_js__WEBPACK_IMPORTED_MODULE_4__["default"], {
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Imports_js__WEBPACK_IMPORTED_MODULE_2__.MakeYourOwn, {
           mainMenu: _this.mainMenu,
           buildPlanet: _this.buildPlanet,
           getName: _this.getName,
@@ -23883,17 +23920,17 @@ var App = /*#__PURE__*/function (_React$Component) {
           getTexture: _this.getTexture,
           hasRings: _this.hasRings,
           ringColor: _this.ringColor
-        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Globe_js__WEBPACK_IMPORTED_MODULE_2__["default"], {
+        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Imports_js__WEBPACK_IMPORTED_MODULE_2__.Globe, {
           planetName: _this.state.planetName
         }))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
           id: "app"
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_NavBar_js__WEBPACK_IMPORTED_MODULE_8__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Imports_js__WEBPACK_IMPORTED_MODULE_2__.NavBar, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
           id: "app-body"
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Info_js__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Imports_js__WEBPACK_IMPORTED_MODULE_2__.Info, {
           func: _this.alertFunc,
           data: _this.state.data,
           makeyourown: _this.makeyourownClick
-        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Globe_js__WEBPACK_IMPORTED_MODULE_2__["default"], {
+        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Imports_js__WEBPACK_IMPORTED_MODULE_2__.Globe, {
           planetName: _this.state.planetName
         })));
       }
@@ -23953,7 +23990,7 @@ var App = /*#__PURE__*/function (_React$Component) {
   return App;
 }((react__WEBPACK_IMPORTED_MODULE_0___default().Component));
 
-react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(App, null), document.getElementById('root')); // <MakeYourOwn/>
+react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(App, null), document.getElementById('root'));
 })();
 
 /******/ })()

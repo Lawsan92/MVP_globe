@@ -1,12 +1,9 @@
+// Global Modules
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Globe from './components/Globe.js';
-import Info from './components/Info.js';
-import MakeYourOwn from './components/MakeYourOwn.js';
-import CustomPlanet from './components/CustomPlanet.js';
-import CustomInfo from './components/CustomInfo.js';
-import CustomGlobe from './components/CustomGlobe.js';
-import NavBar from './components/NavBar.js';
+
+// Containers
+import { Globe, Info, MakeYourOwn, CustomPlanet, CustomInfo, CustomGlobe, NavBar } from './components/Imports.js';
 const axios = require('axios');
 class App extends React.Component {
   constructor (props) {
@@ -221,4 +218,3 @@ class App extends React.Component {
 ReactDOM.render(<App/>, document.getElementById('root'));
 
 
-// <MakeYourOwn/>
