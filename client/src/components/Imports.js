@@ -1,10 +1,10 @@
 import React from 'react';
-import Globe from './Globe.js';
-import Info from './Info.js';
-import MakeYourOwn from './MakeYourOwn.js';
-import CustomPlanet from './CustomPlanet.js';
-import CustomInfo from './CustomInfo.js';
-import CustomGlobe from './CustomGlobe.js';
+import Globe from './solarSystem/Globe.js';
+import Info from './solarSystem/Info.js';
+import MakeYourOwn from './customPlanet/MakeYourOwn.js';
+import CustomPlanet from './customPlanet/CustomPlanet.js';
+import CustomInfo from './customPlanet/CustomInfo.js';
+import CustomGlobe from './customPlanet/CustomGlobe.js';
 import NavBar from './NavBar.js';
 
 export {

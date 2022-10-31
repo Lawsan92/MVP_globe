@@ -1,10 +1,372 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./client/src/components/CustomGlobe.js":
-/*!**********************************************!*\
-  !*** ./client/src/components/CustomGlobe.js ***!
-  \**********************************************/
+/***/ "./client/dist/mediaExports.js":
+/*!*************************************!*\
+  !*** ./client/dist/mediaExports.js ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "EarthCloudsMap": () => (/* reexport safe */ _assets_8k_earth_clouds_jpg__WEBPACK_IMPORTED_MODULE_4__["default"]),
+/* harmony export */   "EarthMap": () => (/* reexport safe */ _assets_8k_earth_daymap_jpg__WEBPACK_IMPORTED_MODULE_1__["default"]),
+/* harmony export */   "EarthNightMap": () => (/* reexport safe */ _assets_8k_earth_nightmap_jpg__WEBPACK_IMPORTED_MODULE_5__["default"]),
+/* harmony export */   "EarthNormalMap": () => (/* reexport safe */ _assets_8k_earth_normal_map_jpg__WEBPACK_IMPORTED_MODULE_2__["default"]),
+/* harmony export */   "EarthSpecularMap": () => (/* reexport safe */ _assets_8k_earth_specular_map_jpg__WEBPACK_IMPORTED_MODULE_3__["default"]),
+/* harmony export */   "JupiterMap": () => (/* reexport safe */ _assets_Jupiter_8k_jupiter_jpg__WEBPACK_IMPORTED_MODULE_10__["default"]),
+/* harmony export */   "MarsMap": () => (/* reexport safe */ _assets_Mars_8k_mars_jpg__WEBPACK_IMPORTED_MODULE_9__["default"]),
+/* harmony export */   "MercuryMap": () => (/* reexport safe */ _assets_Mercury_8k_mercury_jpg__WEBPACK_IMPORTED_MODULE_6__["default"]),
+/* harmony export */   "NeptuneMap": () => (/* reexport safe */ _assets_Neptune_2k_neptune_jpg__WEBPACK_IMPORTED_MODULE_7__["default"]),
+/* harmony export */   "Rings": () => (/* reexport safe */ _assets_Saturn_8k_saturn_ring_alpha_jpg__WEBPACK_IMPORTED_MODULE_13__["default"]),
+/* harmony export */   "SaturnMap": () => (/* reexport safe */ _assets_Saturn_8k_saturn_jpg__WEBPACK_IMPORTED_MODULE_11__["default"]),
+/* harmony export */   "UranusMap": () => (/* reexport safe */ _assets_Uranus_2k_uranus_jpg__WEBPACK_IMPORTED_MODULE_8__["default"]),
+/* harmony export */   "VenusMap": () => (/* reexport safe */ _assets_Venus_8k_venus_surface_jpg__WEBPACK_IMPORTED_MODULE_12__["default"])
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _assets_8k_earth_daymap_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assets/8k_earth_daymap.jpg */ "./client/dist/assets/8k_earth_daymap.jpg");
+/* harmony import */ var _assets_8k_earth_normal_map_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./assets/8k_earth_normal_map.jpg */ "./client/dist/assets/8k_earth_normal_map.jpg");
+/* harmony import */ var _assets_8k_earth_specular_map_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./assets/8k_earth_specular_map.jpg */ "./client/dist/assets/8k_earth_specular_map.jpg");
+/* harmony import */ var _assets_8k_earth_clouds_jpg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./assets/8k_earth_clouds.jpg */ "./client/dist/assets/8k_earth_clouds.jpg");
+/* harmony import */ var _assets_8k_earth_nightmap_jpg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./assets/8k_earth_nightmap.jpg */ "./client/dist/assets/8k_earth_nightmap.jpg");
+/* harmony import */ var _assets_Mercury_8k_mercury_jpg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./assets/Mercury/8k_mercury.jpg */ "./client/dist/assets/Mercury/8k_mercury.jpg");
+/* harmony import */ var _assets_Neptune_2k_neptune_jpg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./assets/Neptune/2k_neptune.jpg */ "./client/dist/assets/Neptune/2k_neptune.jpg");
+/* harmony import */ var _assets_Uranus_2k_uranus_jpg__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./assets/Uranus/2k_uranus.jpg */ "./client/dist/assets/Uranus/2k_uranus.jpg");
+/* harmony import */ var _assets_Mars_8k_mars_jpg__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./assets/Mars/8k_mars.jpg */ "./client/dist/assets/Mars/8k_mars.jpg");
+/* harmony import */ var _assets_Jupiter_8k_jupiter_jpg__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./assets/Jupiter/8k_jupiter.jpg */ "./client/dist/assets/Jupiter/8k_jupiter.jpg");
+/* harmony import */ var _assets_Saturn_8k_saturn_jpg__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./assets/Saturn/8k_saturn.jpg */ "./client/dist/assets/Saturn/8k_saturn.jpg");
+/* harmony import */ var _assets_Venus_8k_venus_surface_jpg__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./assets/Venus/8k_venus_surface.jpg */ "./client/dist/assets/Venus/8k_venus_surface.jpg");
+/* harmony import */ var _assets_Saturn_8k_saturn_ring_alpha_jpg__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./assets/Saturn/8k_saturn_ring_alpha.jpg */ "./client/dist/assets/Saturn/8k_saturn_ring_alpha.jpg");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/***/ }),
+
+/***/ "./client/src/components/App.js":
+/*!**************************************!*\
+  !*** ./client/src/components/App.js ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var _Imports_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Imports.js */ "./client/src/components/Imports.js");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+// Global Modules
+
+ // Containers
+
+
+
+var axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+
+var App = function App() {
+  // planet's state
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({
+    planetName: '',
+    data: [],
+    makeyourown: false,
+    hasRings: false,
+    build: false,
+    customPlanet: {
+      name: '',
+      color: '',
+      size: [0, 32, 32],
+      texture: '',
+      rings: '',
+      ringColor: ''
+    }
+  }),
+      _useState2 = _slicedToArray(_useState, 2),
+      state = _useState2[0],
+      updateState = _useState2[1]; //  retreives the planet data from the database
+
+
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    axios({
+      method: 'get',
+      url: "/planet/?name=".concat(state.planetName)
+    }).then(function (res) {
+      console.log('response:', res.data);
+    })["catch"](function (err) {
+      throw err;
+    });
+  }); // changes the planet skins, size and data when clicking on a card
+
+  var alertFunc = function alertFunc(event) {
+    axios({
+      method: 'get',
+      url: "/planet/?name=".concat(event)
+    }).then(function (res) {
+      console.log('response:', res.data);
+      updateState(_objectSpread(_objectSpread({}, state), {}, {
+        data: res.data,
+        planetName: event
+      }));
+    })["catch"](function (err) {
+      throw err;
+    });
+    console.log('event:', event, 'state:', state);
+  }; // Click Events
+
+
+  var makeyourownClick = function makeyourownClick() {
+    updateState(_objectSpread(_objectSpread({}, state), {}, {
+      makeyourown: true
+    }));
+  };
+
+  var mainMenu = function mainMenu() {
+    updateState(_objectSpread(_objectSpread({}, state), {}, {
+      makeyourown: false
+    }));
+  };
+
+  var buildPlanet = function buildPlanet() {
+    updateState(_objectSpread(_objectSpread({}, state), {}, {
+      build: true
+    }));
+  };
+
+  var returnHome = function returnHome() {
+    updateState(_objectSpread(_objectSpread({}, state), {}, {
+      build: false
+    }));
+  }; // Planet Criteria for CUSTOM
+
+
+  var getName = function getName(e) {
+    updateState(_objectSpread(_objectSpread({}, state), {}, {
+      customPlanet: _objectSpread(_objectSpread({}, state.customPlanet), {}, {
+        name: e
+      })
+    }));
+  };
+
+  var getColor = function getColor(e) {
+    updateState(_objectSpread(_objectSpread({}, state), {}, {
+      customPlanet: _objectSpread(_objectSpread({}, state.customPlanet), {}, {
+        color: e
+      })
+    }));
+  };
+
+  var getSize = function getSize(e) {
+    updateState(_objectSpread(_objectSpread({}, state), {}, {
+      customPlanet: _objectSpread(_objectSpread({}, state.customPlanet), {}, {
+        size: e
+      })
+    }));
+  };
+
+  var getTexture = function getTexture(e) {
+    updateState(_objectSpread(_objectSpread({}, state), {}, {
+      customPlanet: _objectSpread(_objectSpread({}, state.customPlanet), {}, {
+        texture: e
+      })
+    }));
+  };
+
+  var hasRings = function hasRings(e) {
+    updateState(_objectSpread(_objectSpread({}, state), {}, {
+      hasRings: true
+    }));
+    updateState(_objectSpread(_objectSpread({}, state), {}, {
+      customPlanet: _objectSpread(_objectSpread({}, state.customPlanet), {}, {
+        rings: e
+      })
+    }));
+  };
+
+  var ringColor = function ringColor(e) {
+    updateState(_objectSpread(_objectSpread({}, state), {}, {
+      customPlanet: _objectSpread(_objectSpread({}, state.customPlanet), {}, {
+        ringColor: e
+      })
+    }));
+  }; // Main function that renders the planet onto the page
+
+
+  var newPlanet = function newPlanet() {
+    if (state.build) {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+        id: "app"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Imports_js__WEBPACK_IMPORTED_MODULE_2__.NavBar, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+        id: "app-body"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Imports_js__WEBPACK_IMPORTED_MODULE_2__.CustomInfo, {
+        returnHome: returnHome,
+        name: state.customPlanet.name,
+        size: state.customPlanet.size
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Imports_js__WEBPACK_IMPORTED_MODULE_2__.CustomGlobe, {
+        customPlanet: state.customPlanet,
+        name: state.customPlanet.name,
+        size: state.customPlanet.size,
+        color: state.customPlanet.color,
+        texture: state.customPlanet.texture,
+        rings: state.customPlanet.rings,
+        ringColor: state.customPlanet.ringColor
+      })));
+    } else {
+      return state.makeyourown === true ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+        id: "app"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Imports_js__WEBPACK_IMPORTED_MODULE_2__.NavBar, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+        id: "app-body"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Imports_js__WEBPACK_IMPORTED_MODULE_2__.MakeYourOwn, {
+        mainMenu: mainMenu,
+        buildPlanet: buildPlanet,
+        getName: getName,
+        getColor: getColor,
+        getSize: getSize,
+        getTexture: getTexture,
+        hasRings: hasRings,
+        ringColor: ringColor
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Imports_js__WEBPACK_IMPORTED_MODULE_2__.Globe, {
+        planetName: state.planetName
+      }))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+        id: "app"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Imports_js__WEBPACK_IMPORTED_MODULE_2__.NavBar, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+        id: "app-body"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Imports_js__WEBPACK_IMPORTED_MODULE_2__.Info, {
+        func: alertFunc,
+        data: state.data,
+        makeyourown: makeyourownClick
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Imports_js__WEBPACK_IMPORTED_MODULE_2__.Globe, {
+        planetName: state.planetName
+      })));
+    }
+  };
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    id: "app"
+  }, newPlanet());
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (App);
+
+/***/ }),
+
+/***/ "./client/src/components/Imports.js":
+/*!******************************************!*\
+  !*** ./client/src/components/Imports.js ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "CustomGlobe": () => (/* reexport safe */ _customPlanet_CustomGlobe_js__WEBPACK_IMPORTED_MODULE_6__["default"]),
+/* harmony export */   "CustomInfo": () => (/* reexport safe */ _customPlanet_CustomInfo_js__WEBPACK_IMPORTED_MODULE_5__["default"]),
+/* harmony export */   "CustomPlanet": () => (/* reexport safe */ _customPlanet_CustomPlanet_js__WEBPACK_IMPORTED_MODULE_4__["default"]),
+/* harmony export */   "Globe": () => (/* reexport safe */ _solarSystem_Globe_js__WEBPACK_IMPORTED_MODULE_1__["default"]),
+/* harmony export */   "Info": () => (/* reexport safe */ _solarSystem_Info_js__WEBPACK_IMPORTED_MODULE_2__["default"]),
+/* harmony export */   "MakeYourOwn": () => (/* reexport safe */ _customPlanet_MakeYourOwn_js__WEBPACK_IMPORTED_MODULE_3__["default"]),
+/* harmony export */   "NavBar": () => (/* reexport safe */ _NavBar_js__WEBPACK_IMPORTED_MODULE_7__["default"])
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _solarSystem_Globe_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./solarSystem/Globe.js */ "./client/src/components/solarSystem/Globe.js");
+/* harmony import */ var _solarSystem_Info_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./solarSystem/Info.js */ "./client/src/components/solarSystem/Info.js");
+/* harmony import */ var _customPlanet_MakeYourOwn_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./customPlanet/MakeYourOwn.js */ "./client/src/components/customPlanet/MakeYourOwn.js");
+/* harmony import */ var _customPlanet_CustomPlanet_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./customPlanet/CustomPlanet.js */ "./client/src/components/customPlanet/CustomPlanet.js");
+/* harmony import */ var _customPlanet_CustomInfo_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./customPlanet/CustomInfo.js */ "./client/src/components/customPlanet/CustomInfo.js");
+/* harmony import */ var _customPlanet_CustomGlobe_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./customPlanet/CustomGlobe.js */ "./client/src/components/customPlanet/CustomGlobe.js");
+/* harmony import */ var _NavBar_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./NavBar.js */ "./client/src/components/NavBar.js");
+
+
+
+
+
+
+
+
+
+
+/***/ }),
+
+/***/ "./client/src/components/NavBar.js":
+/*!*****************************************!*\
+  !*** ./client/src/components/NavBar.js ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var NavBar = function NavBar() {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    id: "nav-bar"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, "Navbar under construction..."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    id: "logo"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    id: "search-bar"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
+    type: "text",
+    placeholder: "search..."
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
+    id: "search-button",
+    onClick: function onClick() {
+      alert('clicked!');
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
+    id: "mag",
+    src: "https://res.cloudinary.com/darp0mj9i/image/upload/v1666116514/samples/magnifying-glass-svgrepo-com_nflk4y.svg"
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    id: "user"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", null, "login"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", null, "signup")));
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (NavBar);
+
+/***/ }),
+
+/***/ "./client/src/components/customPlanet/CustomGlobe.js":
+/*!***********************************************************!*\
+  !*** ./client/src/components/customPlanet/CustomGlobe.js ***!
+  \***********************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -15,8 +377,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _react_three_fiber__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @react-three/fiber */ "./node_modules/@react-three/fiber/dist/react-three-fiber.esm.js");
-/* harmony import */ var _Sphere_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Sphere.js */ "./client/src/components/Sphere.js");
-/* harmony import */ var _CustomPlanet_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./CustomPlanet.js */ "./client/src/components/CustomPlanet.js");
+/* harmony import */ var _solarSystem_Sphere_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../solarSystem/Sphere.js */ "./client/src/components/solarSystem/Sphere.js");
+/* harmony import */ var _CustomPlanet_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./CustomPlanet.js */ "./client/src/components/customPlanet/CustomPlanet.js");
 
 
 
@@ -49,10 +411,10 @@ var CustomGlobe = function CustomGlobe(_ref) {
 
 /***/ }),
 
-/***/ "./client/src/components/CustomInfo.js":
-/*!*********************************************!*\
-  !*** ./client/src/components/CustomInfo.js ***!
-  \*********************************************/
+/***/ "./client/src/components/customPlanet/CustomInfo.js":
+/*!**********************************************************!*\
+  !*** ./client/src/components/customPlanet/CustomInfo.js ***!
+  \**********************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -87,10 +449,10 @@ var CustomInfo = function CustomInfo(_ref) {
 
 /***/ }),
 
-/***/ "./client/src/components/CustomPlanet.js":
-/*!***********************************************!*\
-  !*** ./client/src/components/CustomPlanet.js ***!
-  \***********************************************/
+/***/ "./client/src/components/customPlanet/CustomPlanet.js":
+/*!************************************************************!*\
+  !*** ./client/src/components/customPlanet/CustomPlanet.js ***!
+  \************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -100,11 +462,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _react_three_fiber__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @react-three/fiber */ "./node_modules/@react-three/fiber/dist/index-212b30d8.esm.js");
-/* harmony import */ var three__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! three */ "./node_modules/three/build/three.module.js");
-/* harmony import */ var _react_three_drei__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @react-three/drei */ "./node_modules/@react-three/drei/core/Stars.js");
-/* harmony import */ var _react_three_drei__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @react-three/drei */ "./node_modules/@react-three/drei/core/OrbitControls.js");
-/* harmony import */ var _dist_assets_Mercury_8k_mercury_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../../dist/assets/Mercury/8k_mercury.jpg */ "./client/dist/assets/Mercury/8k_mercury.jpg");
+/* harmony import */ var _react_three_fiber__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @react-three/fiber */ "./node_modules/@react-three/fiber/dist/index-212b30d8.esm.js");
+/* harmony import */ var three__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! three */ "./node_modules/three/build/three.module.js");
+/* harmony import */ var _react_three_drei__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @react-three/drei */ "./node_modules/@react-three/drei/core/Stars.js");
+/* harmony import */ var _react_three_drei__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @react-three/drei */ "./node_modules/@react-three/drei/core/OrbitControls.js");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -122,8 +483,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
-
-
+ // import MercuryMap from './../../dist/assets/Mercury/8k_mercury.jpg';
 
 var CustomPlanet = function CustomPlanet(_ref) {
   var size = _ref.size,
@@ -134,11 +494,11 @@ var CustomPlanet = function CustomPlanet(_ref) {
   // <meshPhongMaterial  specularMap={specularMap} transparent opacity={0.7} color='#D4DBE6'/>
   var mesh = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)();
 
-  var _useLoader = (0,_react_three_fiber__WEBPACK_IMPORTED_MODULE_2__.z)(three__WEBPACK_IMPORTED_MODULE_3__.TextureLoader, [texture]),
+  var _useLoader = (0,_react_three_fiber__WEBPACK_IMPORTED_MODULE_1__.z)(three__WEBPACK_IMPORTED_MODULE_2__.TextureLoader, [texture]),
       _useLoader2 = _slicedToArray(_useLoader, 1),
       colorMap = _useLoader2[0];
 
-  (0,_react_three_fiber__WEBPACK_IMPORTED_MODULE_2__.x)(function (state, delta) {
+  (0,_react_three_fiber__WEBPACK_IMPORTED_MODULE_1__.x)(function (state, delta) {
     return mesh.current.rotation.y += 0.01;
   });
   var ringMesh = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(); // useFrame((state, delta) => (ringMesh.current.rotation.x += 0.01));
@@ -149,7 +509,7 @@ var CustomPlanet = function CustomPlanet(_ref) {
     var yRot = 1;
     var zRot = 1;
 
-    var _useLoader3 = (0,_react_three_fiber__WEBPACK_IMPORTED_MODULE_2__.z)(three__WEBPACK_IMPORTED_MODULE_3__.TextureLoader, [rings]),
+    var _useLoader3 = (0,_react_three_fiber__WEBPACK_IMPORTED_MODULE_1__.z)(three__WEBPACK_IMPORTED_MODULE_2__.TextureLoader, [rings]),
         _useLoader4 = _slicedToArray(_useLoader3, 1),
         ringMap = _useLoader4[0];
 
@@ -166,10 +526,10 @@ var CustomPlanet = function CustomPlanet(_ref) {
       opacity: 1,
       depthWrite: true,
       transparent: true,
-      side: three__WEBPACK_IMPORTED_MODULE_3__.DoubleSide
+      side: three__WEBPACK_IMPORTED_MODULE_2__.DoubleSide
     })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ambientLight", {
       intensity: 1.4
-    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_react_three_drei__WEBPACK_IMPORTED_MODULE_4__.Stars, {
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_react_three_drei__WEBPACK_IMPORTED_MODULE_3__.Stars, {
       radius: 300,
       depth: 60,
       count: 20000,
@@ -183,7 +543,7 @@ var CustomPlanet = function CustomPlanet(_ref) {
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("meshPhongMaterial", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("meshStandardMaterial", {
       map: colorMap,
       color: color
-    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_react_three_drei__WEBPACK_IMPORTED_MODULE_5__.OrbitControls, {
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_react_three_drei__WEBPACK_IMPORTED_MODULE_4__.OrbitControls, {
       enableZoom: true,
       enablePan: true,
       zoomSpeed: 0.6,
@@ -194,7 +554,7 @@ var CustomPlanet = function CustomPlanet(_ref) {
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ambientLight", {
     intensity: 1.4
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_react_three_drei__WEBPACK_IMPORTED_MODULE_4__.Stars, {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_react_three_drei__WEBPACK_IMPORTED_MODULE_3__.Stars, {
     radius: 300,
     depth: 60,
     count: 20000,
@@ -208,7 +568,7 @@ var CustomPlanet = function CustomPlanet(_ref) {
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("meshPhongMaterial", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("meshStandardMaterial", {
     map: colorMap,
     color: color
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_react_three_drei__WEBPACK_IMPORTED_MODULE_5__.OrbitControls, {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_react_three_drei__WEBPACK_IMPORTED_MODULE_4__.OrbitControls, {
     enableZoom: true,
     enablePan: true,
     zoomSpeed: 0.6,
@@ -221,10 +581,136 @@ var CustomPlanet = function CustomPlanet(_ref) {
 
 /***/ }),
 
-/***/ "./client/src/components/Globe.js":
-/*!****************************************!*\
-  !*** ./client/src/components/Globe.js ***!
-  \****************************************/
+/***/ "./client/src/components/customPlanet/MakeYourOwn.js":
+/*!***********************************************************!*\
+  !*** ./client/src/components/customPlanet/MakeYourOwn.js ***!
+  \***********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _data_texturesData_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../../data/texturesData.js */ "./client/src/data/texturesData.js");
+/* harmony import */ var _data_texturesData_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_data_texturesData_js__WEBPACK_IMPORTED_MODULE_1__);
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+console.log(_data_texturesData_js__WEBPACK_IMPORTED_MODULE_1__.planetTextures, _data_texturesData_js__WEBPACK_IMPORTED_MODULE_1__.ringTextures);
+
+var MakeYourOwn = function MakeYourOwn(_ref) {
+  var mainMenu = _ref.mainMenu,
+      buildPlanet = _ref.buildPlanet,
+      getName = _ref.getName,
+      getColor = _ref.getColor,
+      getSize = _ref.getSize,
+      getTexture = _ref.getTexture,
+      hasRings = _ref.hasRings,
+      ringColor = _ref.ringColor;
+
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
+      _useState2 = _slicedToArray(_useState, 2),
+      style = _useState2[0],
+      setStyle = _useState2[1];
+
+  var changeStyle = function changeStyle() {
+    setStyle(true);
+  };
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    id: "make-your-own"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, "Make Your Own Planet!"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("form", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h4", null, "name"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
+    id: "item",
+    type: "text",
+    onChange: function onChange() {
+      console.log(event.target.value);
+      getName(event.target.value);
+    }
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h4", null, "color"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
+    id: "item",
+    type: "text",
+    onChange: function onChange() {
+      console.log(event.target.value);
+      getColor(event.target.value);
+    }
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h4", null, "size 'X Earths'")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
+    id: "item",
+    type: "text",
+    onChange: function onChange() {
+      var arg = [Number(event.target.value / 2), 32, 32];
+      console.log(arg);
+      getSize(arg);
+    }
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h4", null, "Textures"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    id: "textures"
+  }, _data_texturesData_js__WEBPACK_IMPORTED_MODULE_1__.planetTextures.map(function (texture) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+      id: texture.type
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, texture.type), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
+      id: style ? 'texture-thumb-clicked' : 'texture-thumb',
+      src: texture.img,
+      onClick: function onClick() {
+        console.log('event:', event.target.currentSrc);
+        getTexture(event.target.currentSrc);
+        changeStyle();
+      }
+    }));
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    id: "rings"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h4", null, "Rings"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    id: "ring-textures"
+  }, _data_texturesData_js__WEBPACK_IMPORTED_MODULE_1__.ringTextures.map(function (texture) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+      id: texture.type
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, texture.type), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
+      id: style ? 'texture-thumb-clicked' : 'texture-thumb',
+      src: texture.img,
+      onClick: function onClick() {
+        console.log('event:', event.target.currentSrc);
+        hasRings(event.target.currentSrc);
+        changeStyle();
+      }
+    }));
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    id: "ring-color"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h4", null, "Ring color"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
+    id: "item",
+    type: "text",
+    onChange: function onChange() {
+      console.log(event.target.value);
+      ringColor(event.target.value);
+    }
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    id: "buttons"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
+    onClick: buildPlanet
+  }, "Build!"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
+    onClick: mainMenu
+  }, "Home")));
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (MakeYourOwn); // https://stackoverflow.com/questions/43638938/updating-an-object-with-setstate-in-react
+
+/***/ }),
+
+/***/ "./client/src/components/solarSystem/Globe.js":
+/*!****************************************************!*\
+  !*** ./client/src/components/solarSystem/Globe.js ***!
+  \****************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -235,7 +721,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _react_three_fiber__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @react-three/fiber */ "./node_modules/@react-three/fiber/dist/react-three-fiber.esm.js");
-/* harmony import */ var _Sphere_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Sphere.js */ "./client/src/components/Sphere.js");
+/* harmony import */ var _Sphere_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Sphere.js */ "./client/src/components/solarSystem/Sphere.js");
 
 
 
@@ -258,48 +744,10 @@ var Globe = function Globe(_ref) {
 
 /***/ }),
 
-/***/ "./client/src/components/Imports.js":
-/*!******************************************!*\
-  !*** ./client/src/components/Imports.js ***!
-  \******************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "CustomGlobe": () => (/* reexport safe */ _CustomGlobe_js__WEBPACK_IMPORTED_MODULE_6__["default"]),
-/* harmony export */   "CustomInfo": () => (/* reexport safe */ _CustomInfo_js__WEBPACK_IMPORTED_MODULE_5__["default"]),
-/* harmony export */   "CustomPlanet": () => (/* reexport safe */ _CustomPlanet_js__WEBPACK_IMPORTED_MODULE_4__["default"]),
-/* harmony export */   "Globe": () => (/* reexport safe */ _Globe_js__WEBPACK_IMPORTED_MODULE_1__["default"]),
-/* harmony export */   "Info": () => (/* reexport safe */ _Info_js__WEBPACK_IMPORTED_MODULE_2__["default"]),
-/* harmony export */   "MakeYourOwn": () => (/* reexport safe */ _MakeYourOwn_js__WEBPACK_IMPORTED_MODULE_3__["default"]),
-/* harmony export */   "NavBar": () => (/* reexport safe */ _NavBar_js__WEBPACK_IMPORTED_MODULE_7__["default"])
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _Globe_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Globe.js */ "./client/src/components/Globe.js");
-/* harmony import */ var _Info_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Info.js */ "./client/src/components/Info.js");
-/* harmony import */ var _MakeYourOwn_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./MakeYourOwn.js */ "./client/src/components/MakeYourOwn.js");
-/* harmony import */ var _CustomPlanet_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./CustomPlanet.js */ "./client/src/components/CustomPlanet.js");
-/* harmony import */ var _CustomInfo_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./CustomInfo.js */ "./client/src/components/CustomInfo.js");
-/* harmony import */ var _CustomGlobe_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./CustomGlobe.js */ "./client/src/components/CustomGlobe.js");
-/* harmony import */ var _NavBar_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./NavBar.js */ "./client/src/components/NavBar.js");
-
-
-
-
-
-
-
-
-
-
-/***/ }),
-
-/***/ "./client/src/components/Info.js":
-/*!***************************************!*\
-  !*** ./client/src/components/Info.js ***!
-  \***************************************/
+/***/ "./client/src/components/solarSystem/Info.js":
+/*!***************************************************!*\
+  !*** ./client/src/components/solarSystem/Info.js ***!
+  \***************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -309,7 +757,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _data_planetCardsData_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../data/planetCardsData.js */ "./client/src/data/planetCardsData.js");
+/* harmony import */ var _data_planetCardsData_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../../data/planetCardsData.js */ "./client/src/data/planetCardsData.js");
 /* harmony import */ var _data_planetCardsData_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_data_planetCardsData_js__WEBPACK_IMPORTED_MODULE_1__);
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
@@ -419,10 +867,10 @@ var Info = function Info(_ref) {
 
 /***/ }),
 
-/***/ "./client/src/components/MakeYourOwn.js":
-/*!**********************************************!*\
-  !*** ./client/src/components/MakeYourOwn.js ***!
-  \**********************************************/
+/***/ "./client/src/components/solarSystem/Sphere.js":
+/*!*****************************************************!*\
+  !*** ./client/src/components/solarSystem/Sphere.js ***!
+  \*****************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -432,8 +880,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _data_texturesData_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../data/texturesData.js */ "./client/src/data/texturesData.js");
-/* harmony import */ var _data_texturesData_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_data_texturesData_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _react_three_fiber__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @react-three/fiber */ "./node_modules/@react-three/fiber/dist/index-212b30d8.esm.js");
+/* harmony import */ var three__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! three */ "./node_modules/three/build/three.module.js");
+/* harmony import */ var _react_three_drei__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @react-three/drei */ "./node_modules/@react-three/drei/core/Stars.js");
+/* harmony import */ var _react_three_drei__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @react-three/drei */ "./node_modules/@react-three/drei/core/OrbitControls.js");
+/* harmony import */ var _dist_mediaExports_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../../../dist/mediaExports.js */ "./client/dist/mediaExports.js");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -445,200 +896,6 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
-
-
-console.log(_data_texturesData_js__WEBPACK_IMPORTED_MODULE_1__.planetTextures, _data_texturesData_js__WEBPACK_IMPORTED_MODULE_1__.ringTextures);
-
-var MakeYourOwn = function MakeYourOwn(_ref) {
-  var mainMenu = _ref.mainMenu,
-      buildPlanet = _ref.buildPlanet,
-      getName = _ref.getName,
-      getColor = _ref.getColor,
-      getSize = _ref.getSize,
-      getTexture = _ref.getTexture,
-      hasRings = _ref.hasRings,
-      ringColor = _ref.ringColor;
-
-  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
-      _useState2 = _slicedToArray(_useState, 2),
-      style = _useState2[0],
-      setStyle = _useState2[1];
-
-  var changeStyle = function changeStyle() {
-    setStyle(true);
-  };
-
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    id: "make-your-own"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, "Make Your Own Planet!"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("form", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h4", null, "name"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
-    id: "item",
-    type: "text",
-    onChange: function onChange() {
-      console.log(event.target.value);
-      getName(event.target.value);
-    }
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h4", null, "color"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
-    id: "item",
-    type: "text",
-    onChange: function onChange() {
-      console.log(event.target.value);
-      getColor(event.target.value);
-    }
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h4", null, "size 'X Earths'")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
-    id: "item",
-    type: "text",
-    onChange: function onChange() {
-      console.log(event.target.value);
-      getSize(event.target.value);
-    }
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h4", null, "Textures"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    id: "textures"
-  }, _data_texturesData_js__WEBPACK_IMPORTED_MODULE_1__.planetTextures.map(function (texture) {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-      id: texture.type
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, texture.type), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
-      id: style ? 'texture-thumb-clicked' : 'texture-thumb',
-      src: texture.img,
-      onClick: function onClick() {
-        console.log('event:', event.target.currentSrc);
-        getTexture(event.target.currentSrc);
-        changeStyle();
-      }
-    }));
-  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    id: "rings"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h4", null, "Rings"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    id: "ring-textures"
-  }, _data_texturesData_js__WEBPACK_IMPORTED_MODULE_1__.ringTextures.map(function (texture) {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-      id: texture.type
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, texture.type), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
-      id: style ? 'texture-thumb-clicked' : 'texture-thumb',
-      src: texture.img,
-      onClick: function onClick() {
-        console.log('event:', event.target.currentSrc);
-        hasRings(event.target.currentSrc);
-        changeStyle();
-      }
-    }));
-  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    id: "ring-color"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h4", null, "Ring color"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
-    id: "item",
-    type: "text",
-    onChange: function onChange() {
-      console.log(event.target.value);
-      ringColor(event.target.value);
-    }
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    id: "buttons"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
-    onClick: buildPlanet
-  }, "Build!"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
-    onClick: mainMenu
-  }, "Home")));
-};
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (MakeYourOwn); // https://stackoverflow.com/questions/43638938/updating-an-object-with-setstate-in-react
-
-/***/ }),
-
-/***/ "./client/src/components/NavBar.js":
-/*!*****************************************!*\
-  !*** ./client/src/components/NavBar.js ***!
-  \*****************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-
-
-var NavBar = function NavBar() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    id: "nav-bar"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, "Navbar under construction..."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    id: "logo"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    id: "search-bar"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
-    type: "text",
-    placeholder: "search..."
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
-    id: "search-button",
-    onClick: function onClick() {
-      alert('clicked!');
-    }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
-    id: "mag",
-    src: "https://res.cloudinary.com/darp0mj9i/image/upload/v1666116514/samples/magnifying-glass-svgrepo-com_nflk4y.svg"
-  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    id: "user"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", null, "login"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", null, "signup")));
-};
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (NavBar);
-
-/***/ }),
-
-/***/ "./client/src/components/Sphere.js":
-/*!*****************************************!*\
-  !*** ./client/src/components/Sphere.js ***!
-  \*****************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _react_three_fiber__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @react-three/fiber */ "./node_modules/@react-three/fiber/dist/index-212b30d8.esm.js");
-/* harmony import */ var three__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! three */ "./node_modules/three/build/three.module.js");
-/* harmony import */ var _react_three_drei__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @react-three/drei */ "./node_modules/@react-three/drei/core/Stars.js");
-/* harmony import */ var _react_three_drei__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @react-three/drei */ "./node_modules/@react-three/drei/core/OrbitControls.js");
-/* harmony import */ var _dist_assets_8k_earth_daymap_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../../dist/assets/8k_earth_daymap.jpg */ "./client/dist/assets/8k_earth_daymap.jpg");
-/* harmony import */ var _dist_assets_8k_earth_normal_map_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../../dist/assets/8k_earth_normal_map.jpg */ "./client/dist/assets/8k_earth_normal_map.jpg");
-/* harmony import */ var _dist_assets_8k_earth_specular_map_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./../../dist/assets/8k_earth_specular_map.jpg */ "./client/dist/assets/8k_earth_specular_map.jpg");
-/* harmony import */ var _dist_assets_8k_earth_clouds_jpg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./../../dist/assets/8k_earth_clouds.jpg */ "./client/dist/assets/8k_earth_clouds.jpg");
-/* harmony import */ var _dist_assets_8k_earth_nightmap_jpg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./../../dist/assets/8k_earth_nightmap.jpg */ "./client/dist/assets/8k_earth_nightmap.jpg");
-/* harmony import */ var _dist_assets_Mercury_8k_mercury_jpg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./../../dist/assets/Mercury/8k_mercury.jpg */ "./client/dist/assets/Mercury/8k_mercury.jpg");
-/* harmony import */ var _dist_assets_Neptune_2k_neptune_jpg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./../../dist/assets/Neptune/2k_neptune.jpg */ "./client/dist/assets/Neptune/2k_neptune.jpg");
-/* harmony import */ var _dist_assets_Uranus_2k_uranus_jpg__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./../../dist/assets/Uranus/2k_uranus.jpg */ "./client/dist/assets/Uranus/2k_uranus.jpg");
-/* harmony import */ var _dist_assets_Mars_8k_mars_jpg__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./../../dist/assets/Mars/8k_mars.jpg */ "./client/dist/assets/Mars/8k_mars.jpg");
-/* harmony import */ var _dist_assets_Jupiter_8k_jupiter_jpg__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./../../dist/assets/Jupiter/8k_jupiter.jpg */ "./client/dist/assets/Jupiter/8k_jupiter.jpg");
-/* harmony import */ var _dist_assets_Saturn_8k_saturn_jpg__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./../../dist/assets/Saturn/8k_saturn.jpg */ "./client/dist/assets/Saturn/8k_saturn.jpg");
-/* harmony import */ var _dist_assets_Venus_8k_venus_surface_jpg__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./../../dist/assets/Venus/8k_venus_surface.jpg */ "./client/dist/assets/Venus/8k_venus_surface.jpg");
-/* harmony import */ var _dist_assets_Saturn_8k_saturn_ring_alpha_jpg__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./../../dist/assets/Saturn/8k_saturn_ring_alpha.jpg */ "./client/dist/assets/Saturn/8k_saturn_ring_alpha.jpg");
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
-
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
-function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -649,106 +906,88 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 var Sphere = function Sphere(_ref) {
   var planetName = _ref.planetName;
+  var planetMesh;
   var mesh = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)();
-  (0,_react_three_fiber__WEBPACK_IMPORTED_MODULE_14__.x)(function (state, delta) {
+  (0,_react_three_fiber__WEBPACK_IMPORTED_MODULE_2__.x)(function (state, delta) {
     return mesh.current.rotation.y += 0.01;
   });
   var planetSize = {
-    earth: {
+    Earth: {
       args: [.5, 32, 32]
     },
-    mercury: {
+    Mercury: {
       args: [.17, 32, 32]
     },
-    neptune: {
+    Neptune: {
       args: [2, 32, 32]
     },
-    uranus: {
+    Uranus: {
       args: [1.97, 32, 32]
     },
-    saturn: {
+    Saturn: {
       args: [4.5, 32, 32]
     },
-    jupiter: {
+    Jupiter: {
       args: [5.5, 32, 32]
     },
-    mars: {
+    Mars: {
       args: [.22, 32, 32]
     },
-    venus: {
+    Venus: {
       args: [.45, 32, 32]
     }
-  };
-  var planetMesh;
+  }; // picks the planet's size
 
   var choosePlanetSize = function choosePlanetSize() {
-    if (planetName === 'Mercury') {
-      return planetSize.mercury.args;
-    } else if (planetName === 'Neptune') {
-      return planetSize.neptune.args;
-    } else if (planetName === 'Uranus') {
-      return planetSize.uranus.args;
-    } else if (planetName === 'Saturn') {
-      return planetSize.saturn.args;
-    } else if (planetName === 'Jupiter') {
-      return planetSize.jupiter.args;
-    } else if (planetName === 'Venus') {
-      return planetSize.venus.args;
-    } else if (planetName === 'Mars') {
-      return planetSize.mars.args;
+    if (!planetName) {
+      return planetSize.Earth.args;
     } else {
-      return planetSize.earth.args;
+      return planetSize[planetName].args;
+    }
+  }; // pick's the planet's skin
+
+
+  var planetMap = {
+    Earth: _dist_mediaExports_js__WEBPACK_IMPORTED_MODULE_1__.EarthMap,
+    Mercury: _dist_mediaExports_js__WEBPACK_IMPORTED_MODULE_1__.MercuryMap,
+    Neptune: _dist_mediaExports_js__WEBPACK_IMPORTED_MODULE_1__.NeptuneMap,
+    Uranus: _dist_mediaExports_js__WEBPACK_IMPORTED_MODULE_1__.UranusMap,
+    Saturn: _dist_mediaExports_js__WEBPACK_IMPORTED_MODULE_1__.SaturnMap,
+    Jupiter: _dist_mediaExports_js__WEBPACK_IMPORTED_MODULE_1__.JupiterMap,
+    Mars: _dist_mediaExports_js__WEBPACK_IMPORTED_MODULE_1__.MarsMap,
+    Venus: _dist_mediaExports_js__WEBPACK_IMPORTED_MODULE_1__.VenusMap
+  };
+
+  var choosePlanetMap = function choosePlanetMap() {
+    if (!planetName) {
+      var _useLoader = (0,_react_three_fiber__WEBPACK_IMPORTED_MODULE_2__.z)(three__WEBPACK_IMPORTED_MODULE_3__.TextureLoader, [_dist_mediaExports_js__WEBPACK_IMPORTED_MODULE_1__.EarthMap]),
+          _useLoader2 = _slicedToArray(_useLoader, 1),
+          colorMap = _useLoader2[0];
+
+      return colorMap;
+    } else {
+      var _useLoader3 = (0,_react_three_fiber__WEBPACK_IMPORTED_MODULE_2__.z)(three__WEBPACK_IMPORTED_MODULE_3__.TextureLoader, [planetMap[planetName]]),
+          _useLoader4 = _slicedToArray(_useLoader3, 1),
+          _colorMap = _useLoader4[0];
+
+      return _colorMap;
     }
   };
 
-  if (planetName === 'Mercury') {
-    var _useLoader = (0,_react_three_fiber__WEBPACK_IMPORTED_MODULE_14__.z)(three__WEBPACK_IMPORTED_MODULE_15__.TextureLoader, [_dist_assets_Mercury_8k_mercury_jpg__WEBPACK_IMPORTED_MODULE_6__["default"]]),
-        _useLoader2 = _slicedToArray(_useLoader, 1),
-        colorMap = _useLoader2[0];
-  } else if (planetName === 'Neptune') {
-    var _useLoader3 = (0,_react_three_fiber__WEBPACK_IMPORTED_MODULE_14__.z)(three__WEBPACK_IMPORTED_MODULE_15__.TextureLoader, [_dist_assets_Neptune_2k_neptune_jpg__WEBPACK_IMPORTED_MODULE_7__["default"]]),
-        _useLoader4 = _slicedToArray(_useLoader3, 1),
-        colorMap = _useLoader4[0];
-  } else if (planetName === 'Uranus') {
-    var _useLoader5 = (0,_react_three_fiber__WEBPACK_IMPORTED_MODULE_14__.z)(three__WEBPACK_IMPORTED_MODULE_15__.TextureLoader, [_dist_assets_Uranus_2k_uranus_jpg__WEBPACK_IMPORTED_MODULE_8__["default"]]),
-        _useLoader6 = _slicedToArray(_useLoader5, 1),
-        colorMap = _useLoader6[0];
-  } else if (planetName === 'Saturn') {
-    var _useLoader7 = (0,_react_three_fiber__WEBPACK_IMPORTED_MODULE_14__.z)(three__WEBPACK_IMPORTED_MODULE_15__.TextureLoader, [_dist_assets_Saturn_8k_saturn_jpg__WEBPACK_IMPORTED_MODULE_11__["default"]]),
-        _useLoader8 = _slicedToArray(_useLoader7, 1),
-        colorMap = _useLoader8[0];
-  } else if (planetName === 'Jupiter') {
-    var _useLoader9 = (0,_react_three_fiber__WEBPACK_IMPORTED_MODULE_14__.z)(three__WEBPACK_IMPORTED_MODULE_15__.TextureLoader, [_dist_assets_Jupiter_8k_jupiter_jpg__WEBPACK_IMPORTED_MODULE_10__["default"]]),
-        _useLoader10 = _slicedToArray(_useLoader9, 1),
-        colorMap = _useLoader10[0];
-  } else if (planetName === 'Venus') {
-    var _useLoader11 = (0,_react_three_fiber__WEBPACK_IMPORTED_MODULE_14__.z)(three__WEBPACK_IMPORTED_MODULE_15__.TextureLoader, [_dist_assets_Venus_8k_venus_surface_jpg__WEBPACK_IMPORTED_MODULE_12__["default"]]),
-        _useLoader12 = _slicedToArray(_useLoader11, 1),
-        colorMap = _useLoader12[0];
-  } else if (planetName === 'Mars') {
-    var _useLoader13 = (0,_react_three_fiber__WEBPACK_IMPORTED_MODULE_14__.z)(three__WEBPACK_IMPORTED_MODULE_15__.TextureLoader, [_dist_assets_Mars_8k_mars_jpg__WEBPACK_IMPORTED_MODULE_9__["default"]]),
-        _useLoader14 = _slicedToArray(_useLoader13, 1),
-        colorMap = _useLoader14[0];
-  } else {
-    var _useLoader15 = (0,_react_three_fiber__WEBPACK_IMPORTED_MODULE_14__.z)(three__WEBPACK_IMPORTED_MODULE_15__.TextureLoader, [_dist_assets_8k_earth_daymap_jpg__WEBPACK_IMPORTED_MODULE_1__["default"]]),
-        _useLoader16 = _slicedToArray(_useLoader15, 1),
-        colorMap = _useLoader16[0];
-  }
+  var _useLoader5 = (0,_react_three_fiber__WEBPACK_IMPORTED_MODULE_2__.z)(three__WEBPACK_IMPORTED_MODULE_3__.TextureLoader, [_dist_mediaExports_js__WEBPACK_IMPORTED_MODULE_1__.EarthNormalMap, _dist_mediaExports_js__WEBPACK_IMPORTED_MODULE_1__.EarthSpecularMap, _dist_mediaExports_js__WEBPACK_IMPORTED_MODULE_1__.EarthCloudsMap]),
+      _useLoader6 = _slicedToArray(_useLoader5, 3),
+      normalMap = _useLoader6[0],
+      specularMap = _useLoader6[1],
+      cloudsMap = _useLoader6[2];
 
-  var _useLoader17 = (0,_react_three_fiber__WEBPACK_IMPORTED_MODULE_14__.z)(three__WEBPACK_IMPORTED_MODULE_15__.TextureLoader, [_dist_assets_8k_earth_normal_map_jpg__WEBPACK_IMPORTED_MODULE_2__["default"], _dist_assets_8k_earth_specular_map_jpg__WEBPACK_IMPORTED_MODULE_3__["default"], _dist_assets_8k_earth_clouds_jpg__WEBPACK_IMPORTED_MODULE_4__["default"]]),
-      _useLoader18 = _slicedToArray(_useLoader17, 3),
-      normalMap = _useLoader18[0],
-      specularMap = _useLoader18[1],
-      cloudsMap = _useLoader18[2];
-
-  var _useLoader19 = (0,_react_three_fiber__WEBPACK_IMPORTED_MODULE_14__.z)(three__WEBPACK_IMPORTED_MODULE_15__.TextureLoader, ['https://res.cloudinary.com/darp0mj9i/image/upload/v1661964645/samples/planet_thumbnails/textures/saturn_rings_cjduey.jpg']),
-      _useLoader20 = _slicedToArray(_useLoader19, 1),
-      ringMap = _useLoader20[0];
+  var _useLoader7 = (0,_react_three_fiber__WEBPACK_IMPORTED_MODULE_2__.z)(three__WEBPACK_IMPORTED_MODULE_3__.TextureLoader, ['https://res.cloudinary.com/darp0mj9i/image/upload/v1661964645/samples/planet_thumbnails/textures/saturn_rings_cjduey.jpg']),
+      _useLoader8 = _slicedToArray(_useLoader7, 1),
+      ringMap = _useLoader8[0];
 
   if (planetName !== 'Saturn') {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ambientLight", {
       intensity: 1.4
-    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_react_three_drei__WEBPACK_IMPORTED_MODULE_16__.Stars, {
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_react_three_drei__WEBPACK_IMPORTED_MODULE_4__.Stars, {
       radius: 300,
       depth: 60,
       count: 20000,
@@ -762,9 +1001,9 @@ var Sphere = function Sphere(_ref) {
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("meshPhongMaterial", {
       specularMap: specularMap
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("meshStandardMaterial", {
-      map: colorMap,
+      map: choosePlanetMap(),
       normalMap: normalMap
-    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_react_three_drei__WEBPACK_IMPORTED_MODULE_17__.OrbitControls, {
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_react_three_drei__WEBPACK_IMPORTED_MODULE_5__.OrbitControls, {
       enableZoom: true,
       enablePan: true,
       zoomSpeed: 0.6,
@@ -777,7 +1016,7 @@ var Sphere = function Sphere(_ref) {
     var zRot = 1;
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ambientLight", {
       intensity: 1.4
-    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_react_three_drei__WEBPACK_IMPORTED_MODULE_16__.Stars, {
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_react_three_drei__WEBPACK_IMPORTED_MODULE_4__.Stars, {
       radius: 300,
       depth: 60,
       count: 20000,
@@ -796,7 +1035,7 @@ var Sphere = function Sphere(_ref) {
       opacity: 1,
       depthWrite: true,
       transparent: true,
-      side: three__WEBPACK_IMPORTED_MODULE_15__.DoubleSide
+      side: three__WEBPACK_IMPORTED_MODULE_3__.DoubleSide
     })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("mesh", {
       ref: mesh
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("sphereBufferGeometry", {
@@ -805,9 +1044,9 @@ var Sphere = function Sphere(_ref) {
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("meshPhongMaterial", {
       specularMap: specularMap
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("meshStandardMaterial", {
-      map: colorMap,
+      map: choosePlanetMap(),
       normalMap: normalMap
-    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_react_three_drei__WEBPACK_IMPORTED_MODULE_17__.OrbitControls, {
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_react_three_drei__WEBPACK_IMPORTED_MODULE_5__.OrbitControls, {
       enableZoom: true,
       enablePan: true,
       zoomSpeed: 0.6,
@@ -11588,6 +11827,43 @@ function flushSync$1(fn){{if(isAlreadyRendering()){error('flushSync was called f
 if(navigator.userAgent.indexOf('Chrome')>-1&&navigator.userAgent.indexOf('Edge')===-1||navigator.userAgent.indexOf('Firefox')>-1){var protocol=window.location.protocol;// Don't warn in exotic cases like chrome-extension://.
 if(/^(https?|file):$/.test(protocol)){// eslint-disable-next-line react-internal/no-production-logging
 console.info('%cDownload the React DevTools '+'for a better development experience: '+'https://reactjs.org/link/react-devtools'+(protocol==='file:'?'\nYou might need to use a local HTTP server (instead of file://): '+'https://reactjs.org/link/react-devtools-faq':''),'font-weight:bold');}}}}exports.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED=Internals;exports.createPortal=createPortal$1;exports.createRoot=createRoot$1;exports.findDOMNode=findDOMNode;exports.flushSync=flushSync$1;exports.hydrate=hydrate;exports.hydrateRoot=hydrateRoot$1;exports.render=render;exports.unmountComponentAtNode=unmountComponentAtNode;exports.unstable_batchedUpdates=batchedUpdates$1;exports.unstable_renderSubtreeIntoContainer=renderSubtreeIntoContainer;exports.version=ReactVersion;/* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */if(typeof __REACT_DEVTOOLS_GLOBAL_HOOK__!=='undefined'&&typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop==='function'){__REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop(new Error());}})();}
+
+/***/ }),
+
+/***/ "./node_modules/react-dom/client.js":
+/*!******************************************!*\
+  !*** ./node_modules/react-dom/client.js ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+var m = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+
+if (false) {} else {
+  var i = m.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
+
+  exports.createRoot = function (c, o) {
+    i.usingClientEntryPoint = true;
+
+    try {
+      return m.createRoot(c, o);
+    } finally {
+      i.usingClientEntryPoint = false;
+    }
+  };
+
+  exports.hydrateRoot = function (c, h, o) {
+    i.usingClientEntryPoint = true;
+
+    try {
+      return m.hydrateRoot(c, h, o);
+    } finally {
+      i.usingClientEntryPoint = false;
+    }
+  };
+}
 
 /***/ }),
 
@@ -23740,288 +24016,14 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-/* harmony import */ var _components_Imports_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/Imports.js */ "./client/src/components/Imports.js");
-function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
-
-function _createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
+/* harmony import */ var react_dom_client__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom/client */ "./node_modules/react-dom/client.js");
+/* harmony import */ var _components_App_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/App.js */ "./client/src/components/App.js");
 // Global Modules
 
- // Containers
 
 
-
-var axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-
-var App = /*#__PURE__*/function (_React$Component) {
-  _inherits(App, _React$Component);
-
-  var _super = _createSuper(App);
-
-  function App(props) {
-    var _this;
-
-    _classCallCheck(this, App);
-
-    _this = _super.call(this, props);
-
-    _defineProperty(_assertThisInitialized(_this), "alertFunc", function (event) {
-      console.log('event:', event); // console.log(event.target.innerText);
-
-      _this.setState({
-        planetName: event
-      });
-
-      axios({
-        method: 'get',
-        url: "/planet/?name=".concat(event)
-      }).then(function (res) {
-        console.log('response:', res.data);
-
-        _this.setState({
-          data: res.data
-        });
-      })["catch"](function (err) {
-        throw err;
-      });
-    });
-
-    _defineProperty(_assertThisInitialized(_this), "makeyourownClick", function () {
-      _this.setState({
-        makeyourown: true
-      });
-    });
-
-    _defineProperty(_assertThisInitialized(_this), "mainMenu", function () {
-      _this.setState({
-        makeyourown: false
-      });
-    });
-
-    _defineProperty(_assertThisInitialized(_this), "buildPlanet", function () {
-      _this.setState({
-        build: true
-      });
-    });
-
-    _defineProperty(_assertThisInitialized(_this), "returnHome", function () {
-      _this.setState({
-        build: false
-      });
-    });
-
-    _defineProperty(_assertThisInitialized(_this), "getName", function (e) {
-      _this.setState(function (prevState) {
-        var customPlanet = Object.assign({}, prevState.customPlanet);
-        customPlanet.name = e;
-        return {
-          customPlanet: customPlanet
-        };
-      });
-    });
-
-    _defineProperty(_assertThisInitialized(_this), "getColor", function (e) {
-      _this.setState(function (prevState) {
-        var customPlanet = Object.assign({}, prevState.customPlanet);
-        customPlanet.color = e;
-        return {
-          customPlanet: customPlanet
-        };
-      });
-    });
-
-    _defineProperty(_assertThisInitialized(_this), "getSize", function (e) {
-      _this.setState(function (prevState) {
-        var customPlanet = Object.assign({}, prevState.customPlanet);
-        customPlanet.size[0] = e / 2;
-        return {
-          customPlanet: customPlanet
-        };
-      });
-    });
-
-    _defineProperty(_assertThisInitialized(_this), "getTexture", function (e) {
-      _this.setState(function (prevState) {
-        var customPlanet = Object.assign({}, prevState.customPlanet);
-        customPlanet.texture = e;
-        return {
-          customPlanet: customPlanet
-        };
-      });
-    });
-
-    _defineProperty(_assertThisInitialized(_this), "hasRings", function (e) {
-      _this.setState({
-        hasRings: true
-      });
-
-      _this.setState(function (prevState) {
-        var customPlanet = Object.assign({}, prevState.customPlanet);
-        customPlanet.rings = e;
-        return {
-          customPlanet: customPlanet
-        };
-      });
-    });
-
-    _defineProperty(_assertThisInitialized(_this), "ringColor", function (e) {
-      _this.setState(function (prevState) {
-        var customPlanet = Object.assign({}, prevState.customPlanet);
-        customPlanet.ringColor = e;
-        return {
-          customPlanet: customPlanet
-        };
-      });
-    });
-
-    _defineProperty(_assertThisInitialized(_this), "newPlanet", function () {
-      if (_this.state.build) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-          id: "app"
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Imports_js__WEBPACK_IMPORTED_MODULE_2__.NavBar, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-          id: "app-body"
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Imports_js__WEBPACK_IMPORTED_MODULE_2__.CustomInfo, {
-          returnHome: _this.returnHome,
-          name: _this.state.customPlanet.name,
-          size: _this.state.customPlanet.size
-        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Imports_js__WEBPACK_IMPORTED_MODULE_2__.CustomGlobe, {
-          customPlanet: _this.state.customPlanet,
-          name: _this.state.customPlanet.name,
-          size: _this.state.customPlanet.size,
-          color: _this.state.customPlanet.color,
-          texture: _this.state.customPlanet.texture,
-          rings: _this.state.customPlanet.rings,
-          ringColor: _this.state.customPlanet.ringColor
-        })));
-      } else {
-        return _this.state.makeyourown === true ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-          id: "app"
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Imports_js__WEBPACK_IMPORTED_MODULE_2__.NavBar, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-          id: "app-body"
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Imports_js__WEBPACK_IMPORTED_MODULE_2__.MakeYourOwn, {
-          mainMenu: _this.mainMenu,
-          buildPlanet: _this.buildPlanet,
-          getName: _this.getName,
-          getColor: _this.getColor,
-          getSize: _this.getSize,
-          getTexture: _this.getTexture,
-          hasRings: _this.hasRings,
-          ringColor: _this.ringColor
-        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Imports_js__WEBPACK_IMPORTED_MODULE_2__.Globe, {
-          planetName: _this.state.planetName
-        }))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-          id: "app"
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Imports_js__WEBPACK_IMPORTED_MODULE_2__.NavBar, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-          id: "app-body"
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Imports_js__WEBPACK_IMPORTED_MODULE_2__.Info, {
-          func: _this.alertFunc,
-          data: _this.state.data,
-          makeyourown: _this.makeyourownClick
-        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Imports_js__WEBPACK_IMPORTED_MODULE_2__.Globe, {
-          planetName: _this.state.planetName
-        })));
-      }
-    });
-
-    _this.state = {
-      planetName: '',
-      data: [],
-      makeyourown: false,
-      customPlanet: {
-        name: '',
-        color: '',
-        size: [0, 32, 32],
-        texture: '',
-        rings: '',
-        ringColor: ''
-      },
-      hasRings: false,
-      build: false
-    };
-    _this.alertFunc = _this.alertFunc.bind(_assertThisInitialized(_this));
-    _this.makeyourownClick = _this.makeyourownClick.bind(_assertThisInitialized(_this));
-    _this.mainMenu = _this.mainMenu.bind(_assertThisInitialized(_this));
-    _this.buildPlanet = _this.buildPlanet.bind(_assertThisInitialized(_this));
-    _this.newPlanet = _this.newPlanet.bind(_assertThisInitialized(_this));
-    _this.returnHome = _this.returnHome.bind(_assertThisInitialized(_this));
-    _this.getName = _this.getName.bind(_assertThisInitialized(_this));
-    _this.getColor = _this.getColor.bind(_assertThisInitialized(_this));
-    _this.getSize = _this.getSize.bind(_assertThisInitialized(_this));
-    _this.getTexture = _this.getTexture.bind(_assertThisInitialized(_this));
-    _this.hasRings = _this.hasRings.bind(_assertThisInitialized(_this));
-    _this.ringColor = _this.ringColor.bind(_assertThisInitialized(_this));
-    return _this;
-  }
-
-  _createClass(App, [{
-    key: "bindingFunc",
-    value: function bindingFunc(arr) {
-      var _iterator = _createForOfIteratorHelper(arr),
-          _step;
-
-      try {
-        for (_iterator.s(); !(_step = _iterator.n()).done;) {
-          var func = _step.value;
-          func = func.bind(this);
-        }
-      } catch (err) {
-        _iterator.e(err);
-      } finally {
-        _iterator.f();
-      }
-    }
-  }, {
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      axios({
-        method: 'get',
-        url: "/planet/?name=".concat(this.state.planetName)
-      }).then(function (res) {
-        console.log('response:', res.data);
-      })["catch"](function (err) {
-        throw err;
-      });
-    }
-  }, {
-    key: "render",
-    value: function render(props) {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-        id: "app"
-      }, this.newPlanet());
-    }
-  }]);
-
-  return App;
-}((react__WEBPACK_IMPORTED_MODULE_0___default().Component));
-
-react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(App, null), document.getElementById('root'));
+var root = react_dom_client__WEBPACK_IMPORTED_MODULE_1__.createRoot(document.getElementById('root'));
+root.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_App_js__WEBPACK_IMPORTED_MODULE_2__["default"], null));
 })();
 
 /******/ })()
