@@ -1,4 +1,4 @@
-#  This is a 3D planet simluator rendered on the broswer using a combination of react, threejs and react-three/fiber libraries
+#  This is a 3D planet simluator rendered on the browser using a combination of react, threejs and react-three/fiber libraries
 
 # Home Page
 
