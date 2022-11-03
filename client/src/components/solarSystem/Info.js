@@ -4,7 +4,7 @@ import {FaArrowAltCircleUp, FaArrowAltCircleDown} from 'react-icons/fa';
 
 console.log('planetCardsData:', planetCardsData);
 
-const Info = ({func, data, makeyourown}) => {
+const Info = ({ func, data, makeyourown }) => {
   var planet;
   if (data[0]) {
     planet = data[0]

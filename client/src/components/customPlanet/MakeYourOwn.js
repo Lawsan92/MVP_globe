@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import {planetTextures, ringTextures} from './../../data/texturesData.js';
 console.log(planetTextures, ringTextures);
 
-const MakeYourOwn = ({mainMenu, buildPlanet, getName, getColor, getSize, getTexture, hasRings, ringColor}) => {
+const MakeYourOwn = ({ mainMenu, buildPlanet, getName, getColor, getSize, getTexture, hasRings, ringColor }) => {
 
   const [style, setStyle] = useState(false);
 

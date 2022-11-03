@@ -4,11 +4,25 @@ import { TextureLoader } from 'three';
 import { OrbitControls, Stars } from '@react-three/drei';
 import * as THREE from 'three';
 
-import { EarthMap, EarthNormalMap, EarthSpecularMap, EarthCloudsMap, EarthNightMap, MercuryMap, NeptuneMap, UranusMap, MarsMap, JupiterMap, SaturnMap, VenusMap, Rings } from './../../../dist/mediaExports.js';
+// Media/planet skins
+import {
+  EarthMap,
+  EarthNormalMap,
+  EarthSpecularMap,
+  EarthCloudsMap,
+  EarthNightMap,
+  MercuryMap,
+  NeptuneMap,
+  UranusMap,
+  MarsMap,
+  JupiterMap,
+  SaturnMap,
+  VenusMap,
+  Rings
+} from './../../../dist/mediaExports.js';
 
 const Sphere = ({ planetName }) => {
 
-  let planetMesh;
   const mesh = useRef();
   useFrame((state, delta) => (mesh.current.rotation.y += 0.01));
 
@@ -32,7 +46,7 @@ const Sphere = ({ planetName }) => {
     }
   };
 
-  // pick's the planet's skin
+  // picks the planet's skin
   const planetMap = {
     Earth: EarthMap,
     Mercury: MercuryMap,
@@ -58,7 +72,7 @@ const Sphere = ({ planetName }) => {
 
   const [ringMap] = useLoader(TextureLoader,['https://res.cloudinary.com/darp0mj9i/image/upload/v1661964645/samples/planet_thumbnails/textures/saturn_rings_cjduey.jpg']);
 
-if (planetName !== 'Saturn') {
+if (planetName !== 'Saturn') { // renders planets that don't have rings
   return (
   <>
   <ambientLight intensity={1.4}/>
@@ -83,7 +97,7 @@ if (planetName !== 'Saturn') {
   </mesh>
   </>
   );
-} else {
+} else { // renders planets with rings
  var xRot = 1.34;
  var yRot = 1;
  var zRot = 1;

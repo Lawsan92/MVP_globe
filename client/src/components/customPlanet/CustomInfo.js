@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CustomInfo = ({planetInfo, returnHome, name, size}) => {
+const CustomInfo = ({ planetInfo, returnHome, name, size }) => {
   return (
     <div id = 'info'>
     <div id='custom-stats'>

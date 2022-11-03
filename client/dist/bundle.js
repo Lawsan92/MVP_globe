@@ -170,7 +170,7 @@ var App = function App() {
     updateState(_objectSpread(_objectSpread({}, state), {}, {
       build: false
     }));
-  }; // Planet Criteria for CUSTOM
+  }; // retrives planet criteria for CUSTOM planets
 
 
   var getName = function getName(e) {
@@ -227,6 +227,7 @@ var App = function App() {
 
   var newPlanet = function newPlanet() {
     if (state.build) {
+      // if we're done building our custom planet
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
         id: "app"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Imports_js__WEBPACK_IMPORTED_MODULE_2__.NavBar, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
@@ -245,7 +246,10 @@ var App = function App() {
         ringColor: state.customPlanet.ringColor
       })));
     } else {
-      return state.makeyourown === true ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+      return state.makeyourown === true ?
+      /*#__PURE__*/
+      // when we click on the 'make your own planet card'
+      react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
         id: "app"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Imports_js__WEBPACK_IMPORTED_MODULE_2__.NavBar, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
         id: "app-body"
@@ -260,7 +264,10 @@ var App = function App() {
         ringColor: ringColor
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Imports_js__WEBPACK_IMPORTED_MODULE_2__.Globe, {
         planetName: state.planetName
-      }))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+      }))) :
+      /*#__PURE__*/
+      // main menu
+      react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
         id: "app"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Imports_js__WEBPACK_IMPORTED_MODULE_2__.NavBar, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
         id: "app-body"
@@ -901,12 +908,12 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
+ // Media/planet skins
 
 
 
 var Sphere = function Sphere(_ref) {
   var planetName = _ref.planetName;
-  var planetMesh;
   var mesh = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)();
   (0,_react_three_fiber__WEBPACK_IMPORTED_MODULE_2__.x)(function (state, delta) {
     return mesh.current.rotation.y += 0.01;
@@ -944,7 +951,7 @@ var Sphere = function Sphere(_ref) {
     } else {
       return planetSize[planetName].args;
     }
-  }; // pick's the planet's skin
+  }; // picks the planet's skin
 
 
   var planetMap = {
@@ -985,6 +992,7 @@ var Sphere = function Sphere(_ref) {
       ringMap = _useLoader8[0];
 
   if (planetName !== 'Saturn') {
+    // renders planets that don't have rings
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ambientLight", {
       intensity: 1.4
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_react_three_drei__WEBPACK_IMPORTED_MODULE_4__.Stars, {
@@ -1011,6 +1019,7 @@ var Sphere = function Sphere(_ref) {
       rotateSpeed: 0.4
     })));
   } else {
+    // renders planets with rings
     var xRot = 1.34;
     var yRot = 1;
     var zRot = 1;

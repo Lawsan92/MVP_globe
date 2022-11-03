@@ -5,7 +5,7 @@ import { TextureLoader } from 'three';
 import { OrbitControls, Stars } from '@react-three/drei';
 import * as THREE from 'three';
 // import MercuryMap from './../../dist/assets/Mercury/8k_mercury.jpg';
-const CustomPlanet = ({size, color, texture, rings, ringColor}) => {
+const CustomPlanet = ({ size, color, texture, rings, ringColor }) => {
   // <meshPhongMaterial  specularMap={specularMap} transparent opacity={0.7} color='#D4DBE6'/>
 
   const mesh = useRef();

@@ -82,7 +82,7 @@ const App = () => {
     })
   }
 
-  // Planet Criteria for CUSTOM
+  // retrives planet criteria for CUSTOM planets
 
   const getName = (e) => {
     updateState({ ...state,
@@ -126,7 +126,7 @@ const App = () => {
 
   // Main function that renders the planet onto the page
   const newPlanet = () => {
-    if (state.build) {
+    if (state.build) { // if we're done building our custom planet
       return (
         <div id='app'>
           <NavBar/>
@@ -148,7 +148,7 @@ const App = () => {
         </div>
       )
     } else {
-      return state.makeyourown === true ?
+      return state.makeyourown === true ? // when we click on the 'make your own planet card'
     ( <div id='app'>
       <NavBar/>
       <div id='app-body'>
@@ -165,7 +165,7 @@ const App = () => {
         <Globe planetName={state.planetName} />
       </div>
     </div>)
-    :
+    : // main menu
    (
     <div id='app'>
       <NavBar/>
