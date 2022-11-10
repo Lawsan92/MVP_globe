@@ -4,7 +4,7 @@
 
 ## select a 3-D model of any of the 8 planets in our solar system
 
-<img src ='https://res.cloudinary.com/darp0mj9i/image/upload/v1661969805/samples/planet_thumbnails/textures/Screen_Shot_2022-08-31_at_13.13.13_tq2fe7.jpg'/>
+<img src ='https://res.cloudinary.com/darp0mj9i/image/upload/v1668106367/icons/homepages/Screen_Shot_2022-11-10_at_12.50.45_v05uza.jpg'/>
 
 # Planet Info
 
