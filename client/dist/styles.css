@@ -116,18 +116,11 @@ h3:hover {
   display: flex;
   flex-direction: column;
   justify-content: left;
-}
-
-#stats p {
-
+  align-items: center;
 }
 
 
-#custom-stats{
-  display: flex;
-  flex-direction: column;
-}
-
+/*////MAKE YOUR OWN////*/
 #make-your-own{
   background-color: #242F54; /* 293765 */
   color: white;
@@ -135,16 +128,32 @@ h3:hover {
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-  justify-content: left;
+  align-items: center;
+}
+
+#custom-stats{
+  display: flex;
+  flex-direction: column;
 }
 
 
-/* textures */
+
+/*////TEXTURES////*/
 #textures {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
 }
+
+#texture {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+}
+
+
 #rocky{
 width: 40px;
 height: 40px;
@@ -170,30 +179,40 @@ height: 40px;
   height: 40px;
   width: 40px;
   border-radius: 20px;
-  margin-left: 20px;
-  margin-bottom: 5px;
 }
 
 #texture-thumb-clicked{
   height: 40px;
   width: 40px;
   border-radius: 20px;
-  margin-left: 20px;
-  margin-bottom: 5px;
   border: solid 2px #ADD8E6;
 }
 
-#ring-textures{
+/*////RINGS////*/
+#rings {
   display: flex;
   flex-direction: row;
 }
 
-.left-arrow {
-  cursor: pointer;
+#ring {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
 }
 
 .right-arrow {
   cursor: pointer;
+}
+
+#ring-color {
+  display: flex;
+  flex-direction: column;
+}
+
+#ring-color input {
+  margin: 5px;
 }
 
 /*////NAVBAR////*/

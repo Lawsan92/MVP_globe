@@ -7,12 +7,12 @@ const MakeYourOwn = ({ mainMenu, buildPlanet, getName, getColor, getSize, getTex
   const [style, setStyle] = useState(false);
 
   const changeStyle = () => {
-    setStyle(true);
+    setStyle(prevStyle => !prevStyle);
   }
 
   return (
     <div id='make-your-own'>
-      <h1>Make Your Own Planet!</h1>
+      <h1>Make Your <br/>Own Planet!<br/></h1>
       <form>
         <div>
           <h4>name</h4>
@@ -34,7 +34,7 @@ const MakeYourOwn = ({ mainMenu, buildPlanet, getName, getColor, getSize, getTex
         <div id='textures'>
         {planetTextures.map((texture) => {
           return(
-            <div id={texture.type}>
+            <div id='texture' key={texture.type}>
               <p>{texture.type}</p>
               <img
               id = {style ? 'texture-thumb-clicked' : 'texture-thumb'}
@@ -49,13 +49,13 @@ const MakeYourOwn = ({ mainMenu, buildPlanet, getName, getColor, getSize, getTex
         })}
         </div>
       </div>
-      <div id='rings'>
+      <div>
         <h4>Rings</h4>
         {/* <input type='radio'/> */}
-        <div id='ring-textures'>
+        <div id='rings'>
         {ringTextures.map((texture) => {
           return(
-            <div id={texture.type}>
+            <div id='ring' key={texture.type}>
             <p>{texture.type}</p>
             <img
             id = {style ? 'texture-thumb-clicked' : 'texture-thumb'}
