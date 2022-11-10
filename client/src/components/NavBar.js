@@ -5,7 +5,7 @@ const NavBar = () =>  {
 
   return (
     <div id='nav-bar'>
-      <div id='logo'></div>
+      <div id='logo'><img src='https://res.cloudinary.com/darp0mj9i/image/upload/v1668059703/icons/Screen_Shot_2022-11-01_at_15.45.36_kzwlv1_sjvqta.svg'/></div>
       {/* <div id='search-bar'>
         <input type='text' placeholder='search...'></input>
         <button id='search-button' onClick={() => {alert('clicked!')}}>
