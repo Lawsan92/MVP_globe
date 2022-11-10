@@ -976,10 +976,7 @@ var Info = function Info(_ref) {
       volume: '108.32 X 10^10km^3',
       gravity: '9.8 m/s^2'
     }, _defineProperty(_planet, "diameter", "12,756km"), _defineProperty(_planet, "distance_from_the_sun", "150 million km."), _defineProperty(_planet, "gravity", "9.8 m/s^2"), _defineProperty(_planet, "id", "1"), _defineProperty(_planet, "mass", "5.97 X 10^24 kg"), _defineProperty(_planet, "name", "Earth"), _defineProperty(_planet, "order_from_the_sun", "3rd"), _defineProperty(_planet, "volume", "108.32 X 10^10km^3"), _planet);
-  } // console.log('planet:', planet);
-  // console.log('alertFunc:', func);
-  // card carousel
-
+  }
 
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(0),
       _useState2 = _slicedToArray(_useState, 2),
@@ -987,6 +984,23 @@ var Info = function Info(_ref) {
       setCurrentCard = _useState2[1];
 
   console.log('currentCard:', currentCard);
+
+  var mapCards = function mapCards() {
+    return _data_planetCardsData_js__WEBPACK_IMPORTED_MODULE_1___default().map(function (planet, index) {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+        className: index === currentCard ? 'card active' : 'card',
+        key: index
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
+        id: "planet-thumb",
+        src: planet.img
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", {
+        onClick: function onClick() {
+          func(event.target.innerText);
+          isClicked(true);
+        }
+      }, planet.name));
+    });
+  };
 
   var nextCard = function nextCard() {
     setCurrentCard(currentCard === (_data_planetCardsData_js__WEBPACK_IMPORTED_MODULE_1___default().length) - 1 ? 0 : currentCard + 1);
@@ -1017,20 +1031,9 @@ var Info = function Info(_ref) {
   } else {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
       id: "info"
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, "Choose a planet"), _data_planetCardsData_js__WEBPACK_IMPORTED_MODULE_1___default().map(function (planet, index) {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-        className: index === currentCard ? 'card active' : 'card',
-        key: index
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
-        id: "planet-thumb",
-        src: planet.img
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", {
-        onClick: function onClick() {
-          func(event.target.innerText);
-          isClicked(true);
-        }
-      }, planet.name));
-    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, "Choose a planet"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+      id: "cards"
+    }, mapCards(), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
       "class": "card"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
       src: "https://res.cloudinary.com/darp0mj9i/image/upload/v1661891307/samples/planet_thumbnails/make_your_own_thumb_wh6w9h.jpg",
@@ -1039,7 +1042,7 @@ var Info = function Info(_ref) {
       onClick: function onClick() {
         makeyourown();
       }
-    }, "Make your own!")));
+    }, "Make your own!"))));
   }
 };
 

@@ -20,14 +20,21 @@ const Info = ({ func, data, makeyourown }) => {
     volume: "108.32 X 10^10km^3"
   };
   }
-  // console.log('planet:', planet);
-  // console.log('alertFunc:', func);
-
-
-  // card carousel
 
   const [currentCard, setCurrentCard] = useState(0);
   console.log('currentCard:', currentCard);
+
+  const mapCards = () => {
+    return planetCardsData.map((planet, index) => {
+      return (
+        <div className={index === currentCard ? 'card active' : 'card'} key={index}>
+          <img id='planet-thumb' src={planet.img}/>
+          <h3 onClick={() => {func(event.target.innerText); isClicked(true);}}>{planet.name}</h3>
+      </div>
+      );
+    })
+  }
+
   const nextCard = () => {
     setCurrentCard(currentCard === planetCardsData.length - 1 ? 0 : currentCard + 1);
   };
@@ -57,18 +64,13 @@ const Info = ({ func, data, makeyourown }) => {
     return (
       <div id ='info'>
         <h1>Choose a planet</h1>
-           {planetCardsData.map((planet, index) => {
-              return (
-                <div className={index === currentCard ? 'card active' : 'card'} key={index}>
-                  <img id='planet-thumb' src={planet.img}/>
-                  <h3 onClick={() => {func(event.target.innerText); isClicked(true);}}>{planet.name}</h3>
-              </div>
-              )
-            })}
+        <div id='cards'>
+          {mapCards()}
           <div class='card'>
-              <img src='https://res.cloudinary.com/darp0mj9i/image/upload/v1661891307/samples/planet_thumbnails/make_your_own_thumb_wh6w9h.jpg' id='planet-thumb'/>
-              <h3 onClick={() => {makeyourown()}}>Make your own!</h3>
-            </div>
+            <img src='https://res.cloudinary.com/darp0mj9i/image/upload/v1661891307/samples/planet_thumbnails/make_your_own_thumb_wh6w9h.jpg' id='planet-thumb'/>
+            <h3 onClick={() => {makeyourown()}}>Make your own!</h3>
+          </div>
+        </div>
       </div>
     );
   }
