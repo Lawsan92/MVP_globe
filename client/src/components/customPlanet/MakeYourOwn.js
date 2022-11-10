@@ -43,7 +43,7 @@ const MakeYourOwn = ({ mainMenu, buildPlanet, getName, getColor, getSize, getTex
               console.log('event:', event.target.currentSrc);
               getTexture(event.target.currentSrc);
               changeStyle();
-              }}></img>
+              }}/>
             </div>
             )
         })}
@@ -63,7 +63,7 @@ const MakeYourOwn = ({ mainMenu, buildPlanet, getName, getColor, getSize, getTex
             onClick={() => {
               console.log('event:', event.target.currentSrc); hasRings(event.target.currentSrc);
               changeStyle();
-              }}></img>
+              }}/>
           </div>
             )
         })}
