@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 
 // Containers
-import { Globe, Info, MakeYourOwn, CustomPlanet, CustomInfo, CustomGlobe, NavBar } from './Imports.js';
+import { Globe, Info, MakeYourOwn, CustomPlanet, CustomInfo, CustomGlobe, NavBar, Footer } from './Imports.js';
 const axios = require('axios');
 
 const Home = () => {
@@ -144,6 +144,7 @@ const Home = () => {
             ringColor={state.customPlanet.ringColor}
           />
           </div>
+          <Footer/>
         </div>
       )
     } else {
@@ -163,6 +164,7 @@ const Home = () => {
         />
         <Globe planetName={state.planetName} />
       </div>
+      <Footer/>
     </div>)
     : // main menu
    (
@@ -175,12 +177,13 @@ const Home = () => {
         makeyourown={makeyourownClick}/>
         <Globe planetName={state.planetName} />
       </div>
+      <Footer/>
     </div>);
     }
   }
 
   return (
-    <div id='home'>
+    <div id='container'>
       {newPlanet()}
     </div>
   );

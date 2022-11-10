@@ -57,29 +57,17 @@ const Info = ({ func, data, makeyourown }) => {
     return (
       <div id ='info'>
         <h1>Choose a planet</h1>
-          {/* <section className='carousel'>
-            <FaArrowAltCircleUp className='left-arrow' onClick={prevCard}/>
-            {planetCardsData.map((planet, index) => {
-              return (
-                <div className={index === currentCard ? 'card active' : 'card'} key={index}>
-                 {index === currentCard && (<h3 onClick={() => {func(event.target.innerText); isClicked(true);}}>{planet.name}</h3>)}
-                {index === currentCard && (   <img id='planet-thumb' src={planet.img}/>)}
-               </div>
-              )
-            })}
-            <FaArrowAltCircleDown className='right-arrow' onClick={nextCard}/>
-          </section> */}
            {planetCardsData.map((planet, index) => {
               return (
                 <div className={index === currentCard ? 'card active' : 'card'} key={index}>
-                 <h3 onClick={() => {func(event.target.innerText); isClicked(true);}}>{planet.name}</h3>
-                 <img id='planet-thumb' src={planet.img}/>
+                  <img id='planet-thumb' src={planet.img}/>
+                  <h3 onClick={() => {func(event.target.innerText); isClicked(true);}}>{planet.name}</h3>
               </div>
               )
             })}
           <div class='card'>
+              <img src='https://res.cloudinary.com/darp0mj9i/image/upload/v1661891307/samples/planet_thumbnails/make_your_own_thumb_wh6w9h.jpg' id='planet-thumb'/>
               <h3 onClick={() => {makeyourown()}}>Make your own!</h3>
-              <img id='planet-thumb' src='https://res.cloudinary.com/darp0mj9i/image/upload/v1661891307/samples/planet_thumbnails/make_your_own_thumb_wh6w9h.jpg' id='planet-thumb'/>
             </div>
       </div>
     );

@@ -107,6 +107,31 @@ var App = function App() {
 
 /***/ }),
 
+/***/ "./client/src/components/Footer.js":
+/*!*****************************************!*\
+  !*** ./client/src/components/Footer.js ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var Footer = function Footer() {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("section", {
+    id: "footer"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "Built and Designed By Lawrence Sanzogni"));
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Footer);
+
+/***/ }),
+
 /***/ "./client/src/components/Home.js":
 /*!***************************************!*\
   !*** ./client/src/components/Home.js ***!
@@ -292,7 +317,7 @@ var Home = function Home() {
         texture: state.customPlanet.texture,
         rings: state.customPlanet.rings,
         ringColor: state.customPlanet.ringColor
-      })));
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Imports_js__WEBPACK_IMPORTED_MODULE_1__.Footer, null));
     } else {
       return state.makeyourown === true ?
       /*#__PURE__*/
@@ -312,7 +337,7 @@ var Home = function Home() {
         ringColor: ringColor
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Imports_js__WEBPACK_IMPORTED_MODULE_1__.Globe, {
         planetName: state.planetName
-      }))) :
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Imports_js__WEBPACK_IMPORTED_MODULE_1__.Footer, null)) :
       /*#__PURE__*/
       // main menu
       react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
@@ -325,12 +350,12 @@ var Home = function Home() {
         makeyourown: makeyourownClick
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Imports_js__WEBPACK_IMPORTED_MODULE_1__.Globe, {
         planetName: state.planetName
-      })));
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Imports_js__WEBPACK_IMPORTED_MODULE_1__.Footer, null));
     }
   };
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    id: "home"
+    id: "container"
   }, newPlanet());
 };
 
@@ -350,6 +375,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "CustomGlobe": () => (/* reexport safe */ _customPlanet_CustomGlobe_js__WEBPACK_IMPORTED_MODULE_6__["default"]),
 /* harmony export */   "CustomInfo": () => (/* reexport safe */ _customPlanet_CustomInfo_js__WEBPACK_IMPORTED_MODULE_5__["default"]),
 /* harmony export */   "CustomPlanet": () => (/* reexport safe */ _customPlanet_CustomPlanet_js__WEBPACK_IMPORTED_MODULE_4__["default"]),
+/* harmony export */   "Footer": () => (/* reexport safe */ _Footer_js__WEBPACK_IMPORTED_MODULE_8__["default"]),
 /* harmony export */   "Globe": () => (/* reexport safe */ _solarSystem_Globe_js__WEBPACK_IMPORTED_MODULE_1__["default"]),
 /* harmony export */   "Info": () => (/* reexport safe */ _solarSystem_Info_js__WEBPACK_IMPORTED_MODULE_2__["default"]),
 /* harmony export */   "MakeYourOwn": () => (/* reexport safe */ _customPlanet_MakeYourOwn_js__WEBPACK_IMPORTED_MODULE_3__["default"]),
@@ -364,6 +390,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _customPlanet_CustomInfo_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./customPlanet/CustomInfo.js */ "./client/src/components/customPlanet/CustomInfo.js");
 /* harmony import */ var _customPlanet_CustomGlobe_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./customPlanet/CustomGlobe.js */ "./client/src/components/customPlanet/CustomGlobe.js");
 /* harmony import */ var _NavBar_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./NavBar.js */ "./client/src/components/NavBar.js");
+/* harmony import */ var _Footer_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Footer.js */ "./client/src/components/Footer.js");
+
 
 
 
@@ -814,7 +842,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _NavBar_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../NavBar.js */ "./client/src/components/NavBar.js");
+/* harmony import */ var _Imports_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Imports.js */ "./client/src/components/Imports.js");
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
@@ -831,9 +859,9 @@ var Login = function Login(_ref) {
   console.log('userAuth:', userAuth);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     id: "login"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_NavBar_js__WEBPACK_IMPORTED_MODULE_1__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("form", {
-    id: "login-form"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Imports_js__WEBPACK_IMPORTED_MODULE_1__.NavBar, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("section", {
+    id: "login-main"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("form", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
     type: "text",
     placeholder: "username",
     onChange: function onChange() {
@@ -852,7 +880,7 @@ var Login = function Login(_ref) {
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
     type: "submit",
     value: "Submit"
-  })));
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Imports_js__WEBPACK_IMPORTED_MODULE_1__.Footer, null));
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Login);
@@ -993,25 +1021,25 @@ var Info = function Info(_ref) {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
         className: index === currentCard ? 'card active' : 'card',
         key: index
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
+        id: "planet-thumb",
+        src: planet.img
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", {
         onClick: function onClick() {
           func(event.target.innerText);
           isClicked(true);
         }
-      }, planet.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
-        id: "planet-thumb",
-        src: planet.img
-      }));
+      }, planet.name));
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
       "class": "card"
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", {
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
+      src: "https://res.cloudinary.com/darp0mj9i/image/upload/v1661891307/samples/planet_thumbnails/make_your_own_thumb_wh6w9h.jpg",
+      id: "planet-thumb"
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", {
       onClick: function onClick() {
         makeyourown();
       }
-    }, "Make your own!"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", _defineProperty({
-      id: "planet-thumb",
-      src: "https://res.cloudinary.com/darp0mj9i/image/upload/v1661891307/samples/planet_thumbnails/make_your_own_thumb_wh6w9h.jpg"
-    }, "id", "planet-thumb"))));
+    }, "Make your own!")));
   }
 };
 

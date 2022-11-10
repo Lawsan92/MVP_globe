@@ -6,6 +6,7 @@ import CustomPlanet from './customPlanet/CustomPlanet.js';
 import CustomInfo from './customPlanet/CustomInfo.js';
 import CustomGlobe from './customPlanet/CustomGlobe.js';
 import NavBar from './NavBar.js';
+import Footer from './Footer.js';
 
 export {
   Globe,
@@ -14,5 +15,6 @@ export {
   CustomPlanet,
   CustomInfo,
   CustomGlobe,
-  NavBar
+  NavBar,
+  Footer,
 };
