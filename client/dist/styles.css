@@ -107,6 +107,8 @@ h3:hover {
   min-height: 30vh;
 }
 
+/*////STATS////*/
+
 #stats{
   background-color: #242F54; /* 293765 */
   border: solid 1px whitesmoke;
@@ -114,6 +116,10 @@ h3:hover {
   display: flex;
   flex-direction: column;
   justify-content: left;
+}
+
+#stats p {
+
 }
 
 
@@ -132,9 +138,6 @@ h3:hover {
   justify-content: left;
 }
 
-/* #item{
-  flex-shrink: 3;
-} */
 
 /* textures */
 #textures {

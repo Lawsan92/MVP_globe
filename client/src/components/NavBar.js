@@ -1,17 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const NavBar = () =>  {
+const NavBar = ({ userAuth, getUserAuth }) =>  {
 
   return (
     <div id='nav-bar'>
       <div id='logo'><img src='https://res.cloudinary.com/darp0mj9i/image/upload/v1668059703/icons/Screen_Shot_2022-11-01_at_15.45.36_kzwlv1_sjvqta.svg'/></div>
-      {/* <div id='search-bar'>
-        <input type='text' placeholder='search...'></input>
-        <button id='search-button' onClick={() => {alert('clicked!')}}>
-          <img id ='mag' src='https://res.cloudinary.com/darp0mj9i/image/upload/v1666116514/samples/magnifying-glass-svgrepo-com_nflk4y.svg'></img>
-        </button>
-      </div> */}
       <div id='nav-links'>
       <Link to='/' id='link' className='link-login'>
           <p>Home</p>
@@ -25,3 +19,12 @@ const NavBar = () =>  {
 };
 
 export default NavBar;
+
+
+
+    /* <div id='search-bar'>
+        <input type='text' placeholder='search...'></input>
+        <button id='search-button' onClick={() => {alert('clicked!')}}>
+          <img id ='mag' src='https://res.cloudinary.com/darp0mj9i/image/upload/v1666116514/samples/magnifying-glass-svgrepo-com_nflk4y.svg'></img>
+        </button>
+      </div> */

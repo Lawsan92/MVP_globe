@@ -87,6 +87,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 var App = function App() {
+  // Login state
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({
     username: '',
     password: ''
@@ -95,11 +96,23 @@ var App = function App() {
       userAuth = _useState2[0],
       getUserAuth = _useState2[1];
 
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
+      _useState4 = _slicedToArray(_useState3, 2),
+      authorized = _useState4[0],
+      authorizeUser = _useState4[1];
+
+  var userLogin = function userLogin() {
+    if (userAuth.username.length > 3 && userAuth.password.length) {
+      authorizeUser(true);
+    }
+  };
+
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     id: "app"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Router_js__WEBPACK_IMPORTED_MODULE_1__["default"], {
     userAuth: userAuth,
-    getUserAuth: getUserAuth
+    getUserAuth: getUserAuth,
+    userLogin: userLogin
   }));
 };
 
@@ -171,7 +184,10 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 var axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 
-var Home = function Home() {
+var Home = function Home(_ref) {
+  var userAuth = _ref.userAuth,
+      getUserAuth = _ref.getUserAuth;
+
   // planet's state
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({
     planetName: '',
@@ -303,7 +319,10 @@ var Home = function Home() {
       // if we're done building our custom planet
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
         id: "home"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Imports_js__WEBPACK_IMPORTED_MODULE_1__.NavBar, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Imports_js__WEBPACK_IMPORTED_MODULE_1__.NavBar, {
+        userAuth: userAuth,
+        getUserAuth: getUserAuth
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
         id: "home-body"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Imports_js__WEBPACK_IMPORTED_MODULE_1__.CustomInfo, {
         returnHome: returnHome,
@@ -324,7 +343,10 @@ var Home = function Home() {
       // when we click on the 'make your own planet card'
       react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
         id: "home"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Imports_js__WEBPACK_IMPORTED_MODULE_1__.NavBar, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Imports_js__WEBPACK_IMPORTED_MODULE_1__.NavBar, {
+        userAuth: userAuth,
+        getUserAuth: getUserAuth
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
         id: "home-body"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Imports_js__WEBPACK_IMPORTED_MODULE_1__.MakeYourOwn, {
         mainMenu: mainMenu,
@@ -342,7 +364,10 @@ var Home = function Home() {
       // main menu
       react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
         id: "home"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Imports_js__WEBPACK_IMPORTED_MODULE_1__.NavBar, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Imports_js__WEBPACK_IMPORTED_MODULE_1__.NavBar, {
+        userAuth: userAuth,
+        getUserAuth: getUserAuth
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
         id: "home-body"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Imports_js__WEBPACK_IMPORTED_MODULE_1__.Info, {
         func: alertFunc,
@@ -421,7 +446,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var NavBar = function NavBar() {
+var NavBar = function NavBar(_ref) {
+  var userAuth = _ref.userAuth,
+      getUserAuth = _ref.getUserAuth;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     id: "nav-bar"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
@@ -442,6 +469,12 @@ var NavBar = function NavBar() {
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (NavBar);
+/* <div id='search-bar'>
+    <input type='text' placeholder='search...'></input>
+    <button id='search-button' onClick={() => {alert('clicked!')}}>
+      <img id ='mag' src='https://res.cloudinary.com/darp0mj9i/image/upload/v1666116514/samples/magnifying-glass-svgrepo-com_nflk4y.svg'></img>
+    </button>
+  </div> */
 
 /***/ }),
 
@@ -468,15 +501,20 @@ __webpack_require__.r(__webpack_exports__);
 
 var Router = function Router(_ref) {
   var userAuth = _ref.userAuth,
-      getUserAuth = _ref.getUserAuth;
+      getUserAuth = _ref.getUserAuth,
+      userLogin = _ref.userLogin;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Routes, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Route, {
     path: "/",
-    element: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Home_js__WEBPACK_IMPORTED_MODULE_1__["default"], null)
+    element: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Home_js__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      userAuth: userAuth,
+      getUserAuth: getUserAuth
+    })
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Route, {
     path: "/login",
     element: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_pages_Login_js__WEBPACK_IMPORTED_MODULE_2__["default"], {
       userAuth: userAuth,
-      getUserAuth: getUserAuth
+      getUserAuth: getUserAuth,
+      userLogin: userLogin
     })
   }));
 };
@@ -855,7 +893,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 var Login = function Login(_ref) {
   var userAuth = _ref.userAuth,
-      getUserAuth = _ref.getUserAuth;
+      getUserAuth = _ref.getUserAuth,
+      userLogin = _ref.userLogin;
   console.log('userAuth:', userAuth);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     id: "login"
@@ -879,7 +918,11 @@ var Login = function Login(_ref) {
     }
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
     type: "submit",
-    value: "Submit"
+    value: "Submit",
+    onClick: function onClick() {
+      event.preventDefault();
+      userLogin();
+    }
   }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Imports_js__WEBPACK_IMPORTED_MODULE_1__.Footer, null));
 };
 
