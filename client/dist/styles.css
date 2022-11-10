@@ -173,3 +173,13 @@ height: 40px;
   height: 10px;
 }
 
+#link {
+  text-decoration: none;
+  color: white;
+}
+
+#link:hover {
+  text-decoration: none;
+  background-color: #ADD8E6;
+  color: black;
+}

@@ -27,3 +27,11 @@ app.listen(process.env.PORT, (err) => {
     console.log(`connected to localhost:${process.env.PORT}...`);
   }
 })
+
+app.get('/*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'client/dist/index.html'), (err) => {
+    if (err) {
+      res.status(500).send(err);
+    }
+  })
+})
