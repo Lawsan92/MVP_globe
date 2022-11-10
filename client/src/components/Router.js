@@ -1,13 +1,13 @@
 import React from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
-import App from './App.js';
+import Home from './Home.js';
 import Login from './pages/Login.js'
 
-const Router = () => {
+const Router = ({ userAuth, getUserAuth }) => {
   return (
     <Routes>
-      <Route path='/' element={ <App/> }></Route>
-      <Route path='/login' element={ <Login/> }></Route>
+      <Route path='/' element={ <Home /> }/>
+      <Route path='/login' element={ <Login userAuth={userAuth} getUserAuth={getUserAuth} /> }/>
     </Routes>
   );
 };

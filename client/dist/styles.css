@@ -2,7 +2,13 @@
   font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
-html,#root,body, main, #app {
+html,#root,body, main, #home {
+  margin: 0;
+  width: 100%;
+  height: 100%
+}
+
+#app {
   margin: 0;
   width: 100%;
   height: 100%
@@ -24,12 +30,12 @@ html,#root,body, main, #app {
   width: 100%;
 }
 
-#app {
+#home {
   display: flex;
   flex-direction: column;
 }
 
-#app-body {
+#home-body {
   display: flex;
   flex-direction: row;
   margin: 0;
@@ -162,7 +168,7 @@ height: 40px;
 
 #nav-bar {
   width: 100%;
-  height: 10%;
+  height: 10vh;
   display: flex;
   justify-content: flex-end;
   align-items: stretch;
