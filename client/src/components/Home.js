@@ -5,7 +5,7 @@ import React, { useState, useEffect } from 'react';
 import { Globe, Info, MakeYourOwn, CustomPlanet, CustomInfo, CustomGlobe, NavBar, Footer } from './Imports.js';
 const axios = require('axios');
 
-const Home = ({ userAuth, getUserAuth }) => {
+const Home = ({ userAuth, getUserAuth, authorized }) => {
   // planet's state
   const [state, updateState] = useState ({
     planetName: '',
@@ -128,7 +128,7 @@ const Home = ({ userAuth, getUserAuth }) => {
     if (state.build) { // if we're done building our custom planet
       return (
         <div id='home'>
-          <NavBar userAuth={userAuth} getUserAuth={getUserAuth}/>
+          <NavBar userAuth={userAuth} getUserAuth={getUserAuth} authorized={authorized} />
           <div id='home-body'>
             <CustomInfo
             returnHome={returnHome}
@@ -150,7 +150,7 @@ const Home = ({ userAuth, getUserAuth }) => {
     } else {
       return state.makeyourown === true ? // when we click on the 'make your own planet card'
     ( <div id='home'>
-      <NavBar userAuth={userAuth} getUserAuth={getUserAuth}/>
+      <NavBar userAuth={userAuth} getUserAuth={getUserAuth} authorized={authorized} />
       <div id='home-body'>
         <MakeYourOwn
         mainMenu={mainMenu}
@@ -169,7 +169,7 @@ const Home = ({ userAuth, getUserAuth }) => {
     : // main menu
    (
     <div id='home'>
-      <NavBar userAuth={userAuth} getUserAuth={getUserAuth}/>
+      <NavBar userAuth={userAuth} getUserAuth={getUserAuth} authorized={authorized} />
       <div id='home-body'>
         <Info
         func={alertFunc}

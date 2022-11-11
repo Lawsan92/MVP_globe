@@ -227,6 +227,12 @@ height: 40px;
   color: whitesmoke;
 }
 
+#nav-bar p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 #nav-links {
   display: flex;
   justify-content: flex-end;

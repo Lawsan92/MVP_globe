@@ -112,7 +112,8 @@ var App = function App() {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Router_js__WEBPACK_IMPORTED_MODULE_1__["default"], {
     userAuth: userAuth,
     getUserAuth: getUserAuth,
-    userLogin: userLogin
+    userLogin: userLogin,
+    authorized: authorized
   }));
 };
 
@@ -186,7 +187,8 @@ var axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 
 var Home = function Home(_ref) {
   var userAuth = _ref.userAuth,
-      getUserAuth = _ref.getUserAuth;
+      getUserAuth = _ref.getUserAuth,
+      authorized = _ref.authorized;
 
   // planet's state
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({
@@ -321,7 +323,8 @@ var Home = function Home(_ref) {
         id: "home"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Imports_js__WEBPACK_IMPORTED_MODULE_1__.NavBar, {
         userAuth: userAuth,
-        getUserAuth: getUserAuth
+        getUserAuth: getUserAuth,
+        authorized: authorized
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
         id: "home-body"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Imports_js__WEBPACK_IMPORTED_MODULE_1__.CustomInfo, {
@@ -345,7 +348,8 @@ var Home = function Home(_ref) {
         id: "home"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Imports_js__WEBPACK_IMPORTED_MODULE_1__.NavBar, {
         userAuth: userAuth,
-        getUserAuth: getUserAuth
+        getUserAuth: getUserAuth,
+        authorized: authorized
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
         id: "home-body"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Imports_js__WEBPACK_IMPORTED_MODULE_1__.MakeYourOwn, {
@@ -366,7 +370,8 @@ var Home = function Home(_ref) {
         id: "home"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Imports_js__WEBPACK_IMPORTED_MODULE_1__.NavBar, {
         userAuth: userAuth,
-        getUserAuth: getUserAuth
+        getUserAuth: getUserAuth,
+        authorized: authorized
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
         id: "home-body"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Imports_js__WEBPACK_IMPORTED_MODULE_1__.Info, {
@@ -448,8 +453,9 @@ __webpack_require__.r(__webpack_exports__);
 
 var NavBar = function NavBar(_ref) {
   var userAuth = _ref.userAuth,
-      getUserAuth = _ref.getUserAuth;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+      getUserAuth = _ref.getUserAuth,
+      authorized = _ref.authorized;
+  return !authorized ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     id: "nav-bar"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     id: "logo"
@@ -457,7 +463,31 @@ var NavBar = function NavBar(_ref) {
     src: "https://res.cloudinary.com/darp0mj9i/image/upload/v1668059703/icons/Screen_Shot_2022-11-01_at_15.45.36_kzwlv1_sjvqta.svg"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     id: "nav-links"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
+    style: {
+      marginRight: '10px'
+    }
+  }, "Guest"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
+    to: "/",
+    id: "link",
+    className: "link-login"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "Home")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
+    to: "/login",
+    id: "link",
+    className: "link-login"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "Login")))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    id: "nav-bar"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    id: "logo"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
+    src: "https://res.cloudinary.com/darp0mj9i/image/upload/v1668059703/icons/Screen_Shot_2022-11-01_at_15.45.36_kzwlv1_sjvqta.svg"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    id: "nav-links"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
+    style: {
+      marginRight: '10px'
+    }
+  }, "Welcome ".concat(userAuth.username, " !")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
     to: "/",
     id: "link",
     className: "link-login"
@@ -502,19 +532,22 @@ __webpack_require__.r(__webpack_exports__);
 var Router = function Router(_ref) {
   var userAuth = _ref.userAuth,
       getUserAuth = _ref.getUserAuth,
-      userLogin = _ref.userLogin;
+      userLogin = _ref.userLogin,
+      authorized = _ref.authorized;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Routes, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Route, {
     path: "/",
     element: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Home_js__WEBPACK_IMPORTED_MODULE_1__["default"], {
       userAuth: userAuth,
-      getUserAuth: getUserAuth
+      getUserAuth: getUserAuth,
+      authorized: authorized
     })
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Route, {
     path: "/login",
     element: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_pages_Login_js__WEBPACK_IMPORTED_MODULE_2__["default"], {
       userAuth: userAuth,
       getUserAuth: getUserAuth,
-      userLogin: userLogin
+      userLogin: userLogin,
+      authorized: authorized
     })
   }));
 };
@@ -896,11 +929,16 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 var Login = function Login(_ref) {
   var userAuth = _ref.userAuth,
       getUserAuth = _ref.getUserAuth,
-      userLogin = _ref.userLogin;
+      userLogin = _ref.userLogin,
+      authorized = _ref.authorized;
   console.log('userAuth:', userAuth);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     id: "login"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Imports_js__WEBPACK_IMPORTED_MODULE_1__.NavBar, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("section", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Imports_js__WEBPACK_IMPORTED_MODULE_1__.NavBar, {
+    userAuth: userAuth,
+    getUserAuth: getUserAuth,
+    authorized: authorized
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("section", {
     id: "login-main"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("form", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
     type: "text",

@@ -15,7 +15,7 @@ const App = () => {
 
   return (
     <div id='app'>
-      <Router userAuth={userAuth} getUserAuth={getUserAuth} userLogin={userLogin}/>
+      <Router userAuth={userAuth} getUserAuth={getUserAuth} userLogin={userLogin} authorized={authorized} />
     </div>
   );
 }
