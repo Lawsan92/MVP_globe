@@ -1,3 +1,4 @@
 node_modules
 .env
-.pem
+sdcrr-170292.pem
+planetdbexport.pgsql
