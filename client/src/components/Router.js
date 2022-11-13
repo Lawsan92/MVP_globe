@@ -3,11 +3,11 @@ import { Routes, Route, Link } from 'react-router-dom';
 import Home from './Home.js';
 import Login from './pages/Login.js'
 
-const Router = ({ userAuth, getUserAuth, userLogin, authorized }) => {
+const Router = ({ userAuth, getUserAuth, userLogin, authorized, userRegister }) => {
   return (
     <Routes>
       <Route path='/' element={ <Home userAuth={userAuth} getUserAuth={getUserAuth} authorized={authorized} /> }/>
-      <Route path='/login' element={ <Login userAuth={userAuth} getUserAuth={getUserAuth} userLogin={userLogin}  authorized={authorized} /> }/>
+      <Route path='/login' element={ <Login userAuth={userAuth} getUserAuth={getUserAuth} userLogin={userLogin}  authorized={authorized} userRegister={userRegister} /> }/>
     </Routes>
   );
 };

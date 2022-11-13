@@ -2,9 +2,14 @@
 require('dotenv').config();
 const express = require('express');
 const path = require('path');
-const {getData} = require('./db/postgres.js');
+const { getData, getUser, addUser } = require('./db/postgres.js');
 
 const app = express();
+
+// ----- Middleware -----
+app.use(express.json())
+app.use(express.static(path.join(__dirname, "/client/dist")));
+
 app.get('/planet', (req, res) => {
   console.log('req:', req.query);
   if (req.query.name) {
@@ -14,11 +19,35 @@ app.get('/planet', (req, res) => {
       res.send(data.rows);
     })
   }
-  // res.status(200).send('Hello');
 });
-// ----- Middleware -----
-app.use(express.json())
-app.use(express.static(path.join(__dirname, "/client/dist")));
+
+// check if user exists
+app.get('/users', (req, res) => {
+  console.log('req.body:', req.query)
+  getUser(req.query)
+  .then((response) => {
+    console.log('response.rows:', response.rows);
+    res.send(response.rows);
+  })
+  .catch((err) => {
+    if (err) {
+      throw err;
+    }
+  });
+});
+
+// register user
+app.post('/register', (req, res) => {
+  addUser(req.body)
+  .then((response) => {
+    res.send(response);
+  })
+  .catch((err) => {
+    if (err) {
+      throw err;
+    }
+  });
+});
 
 app.listen(process.env.PORT, (err) => {
   if (err) {

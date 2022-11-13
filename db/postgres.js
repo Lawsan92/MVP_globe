@@ -23,7 +23,15 @@ const getData = ({name}) => {
   console.log('postgres:', name);
   if (name) {
   return client.query(`select * from planet where name='${name}'`)
-}
+  }
 };
 
-module.exports = {getData};
+const getUser = (user) => {
+  return client.query(`select * from users where username='${user.username}'`)
+};
+
+const addUser = (user) => {
+  return client.query(`insert into users (username, password) values ('${user.username}', '${user.password}')`)
+}
+
+module.exports = { getData, getUser, addUser };
