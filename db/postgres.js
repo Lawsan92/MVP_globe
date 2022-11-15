@@ -27,7 +27,9 @@ const getData = ({name}) => {
 };
 
 const getUser = (user) => {
-  return client.query(`select * from users where username='${user.username}'`)
+  const query = 'select * from users where username=($1)';
+  const values = [user.username];
+  return client.query(query, values)
 };
 
 const addUser = (user) => {

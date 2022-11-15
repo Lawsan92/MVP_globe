@@ -1,15 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Router from './Router.js';
 const axios = require('axios');
 
 const App = () => {
 
-  // Login state
+  // Login/user state
   const [userAuth, getUserAuth] = useState({username: '', password: ''});
   const [authorized, authorizeUser] = useState(false);
-
-  //user state
   const [alreadyRegistered, userExists] = useState(false);
+
 
   // check if password is valid
   const validPassword = () => {
@@ -27,8 +26,7 @@ const App = () => {
     if (check1 && check2 && check3 && check4) {
       return true;
     } else {
-      alert ('Invalid Password...check console');
-      console.log(` needs:
+      alert (` invalid password needs:
          a lower-cased letter
          an upper-cased letter
          an integer
@@ -38,58 +36,105 @@ const App = () => {
     }
   }
 
+  // check if username is valid
+  const validUsername = () => {
+    if (userAuth.username.length >= 2) {
+      return true;
+    } else {
+      alert (`invalid username:
+      needs to be at least 2 characters long`);
+      return false;
+    }
+  }
+
+
   // authorize user
   const userLogin = () => {
-    if (userAuth.username.length >= 2 && validPassword()) {
+    if (validUsername() && validPassword()) {
       authorizeUser(true);
     }
   }
 
   // new user register
   const userRegister = () => {
-    checkIfExists();
-    if (alreadyRegistered) {
-      alert('user already exists');
-    } else {
-      axios({
-        method: 'post',
-        url: '/register',
-        data: userAuth
-      })
-      .then((res) => {
-        if (res.data.command === 'INSERT') {
-          alert('You\'re now registered!');
-          userLogin();
-        }
-      })
-      .catch((err) => {
-        throw err;
-      })
+    if (validUsername() && validPassword()) {
+      checkIfExists();
+      console.log('alreadyRegistered:', alreadyRegistered);
+      // if (alreadyRegistered) {
+      //   alert('user already exists');
+      // } else {
+      // // //   axios({
+      // // //     method: 'post',
+      // // //     url: '/register',
+      // // //     data: userAuth
+      // // //   })
+      // // //   .then((res) => {
+      // // //     if (res.data.command === 'INSERT') {
+      // // //       alert('You\'re now registered!');
+      // // //       userLogin();
+      // // //     }
+      // // //   })
+      // // //   .catch((err) => {
+      // // //       throw err;
+      // // //   })
+      // console.log('ERROR: should update alreadyRegistered state to TRUE and invoke ALERT')
+      // }
     }
   }
 
   // check if username is already registered
   const checkIfExists = () => {
-    if (userAuth.username.length >= 2 && validPassword()) {
-      axios({
-        method: 'get',
-        url: '/users',
-        params: userAuth
-      })
-      .then((res) => {
-        console.log(res.data.length)
-        if (res.data.length) {
-          userExists(true);
-        }
-      })
-      .catch((err) => {
-        throw err;
-      })
-    } else {
-      return;
-    }
+    axios({
+      method: 'get',
+      url: '/users',
+      params: userAuth
+    })
+    .then((res) => {
+      console.log(res.data.length)
+      if (res.data.length) {
+        console.log('res.data.length', res.data.length);
+        const userFoundPromise = () => new Promise((res, rej) => {res(userExists(true))})
+        userFoundPromise()
+          .then(() => {
+            alreadyRegistered && alert('user already exists');
+          })
+      } else {
+        const userNotFoundPromise = () => new Promise((res, rej) => {res(userExists(false))})
+        userNotFoundPromise()
+          .then(() => {
+            console.log('alreadyRegistered:', alreadyRegistered);
+            alert('WELCOME');
+          })
+      }
+    })
+    .catch((err) => {
+      throw err;
+    })
   }
 
+/*
+  const checkIfExists = async () => {
+    const res = await axios({
+      method: 'get',
+      url: '/users',
+      params: userAuth
+    })
+
+    return !!res.data.length; // convert fetch result to boolean
+}
+
+// then call checkIfExists in userRegister
+const userRegister = async () => {
+    if (validUsername() && validPassword()) {
+      const alreadyRegistered = await checkIfExists();
+      if (alreadyRegistered) {
+        alert('user already exists');
+      } else {
+        console.log('ERROR: should update alreadyRegistered state to TRUE and invoke ALERT')
+      }
+    }
+  }
+*/
   return (
     <div id='app'>
       <Router userAuth={userAuth} getUserAuth={getUserAuth} userLogin={userLogin} authorized={authorized} userRegister={userRegister} />

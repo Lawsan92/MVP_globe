@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders <NavBar> correctly 1`] = `
+<section
+  id="footer"
+>
+  <p>
+    Built and Designed By Lawrence Sanzogni
+  </p>
+</section>
+`;

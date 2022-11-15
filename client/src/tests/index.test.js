@@ -1,9 +1,19 @@
-import { render, screen } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
-import '@testing-library/jest-dom';
-import Globe from './components/Globe.js';
+import renderer from 'react-test-renderer';
+import Globe from '../components/solarSystem/Globe.js';
+import Footer from '../components/Footer.js';
 
-test('should load and display 3D globe', async () => {
-  render(<Globe/>)
-  await userEvent.click(screen.getByText('Load Globe'));
+
+it('renders <Footerr> correctly', () => {
+  const tree = renderer
+    .create(<Footer/>)
+    .toJSON();
+  expect(tree).toMatchSnapshot();
+});
+
+
+it('renders <Globe> correctly', () => {
+  const tree = renderer
+    .create(<Globe/>)
+    .toJSON();
+  expect(tree).toMatchSnapshot();
 });
