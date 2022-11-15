@@ -4,7 +4,6 @@ import { NavBar, Footer } from'../Imports.js';
 
 
 const Login = ({ userAuth, getUserAuth, userLogin, authorized, userRegister }) => {
-  console.log('userAuth:', userAuth);
   return (
     <div id='login'>
       <NavBar userAuth={userAuth} getUserAuth={getUserAuth} authorized={authorized} />

@@ -2,8 +2,6 @@ import React, {useState} from 'react';
 import planetCardsData from './../../data/planetCardsData.js';
 import {FaArrowAltCircleUp, FaArrowAltCircleDown} from 'react-icons/fa';
 
-console.log('planetCardsData:', planetCardsData);
-
 const Info = ({ func, data, makeyourown }) => {
   var planet;
   if (data[0]) {

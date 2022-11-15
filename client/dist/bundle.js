@@ -1044,7 +1044,6 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
-console.log(_data_texturesData_js__WEBPACK_IMPORTED_MODULE_1__.planetTextures, _data_texturesData_js__WEBPACK_IMPORTED_MODULE_1__.ringTextures);
 
 var MakeYourOwn = function MakeYourOwn(_ref) {
   var mainMenu = _ref.mainMenu,
@@ -1213,7 +1212,6 @@ var Login = function Login(_ref) {
       userLogin = _ref.userLogin,
       authorized = _ref.authorized,
       userRegister = _ref.userRegister;
-  console.log('userAuth:', userAuth);
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
     id: "login",
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_Imports_js__WEBPACK_IMPORTED_MODULE_1__.NavBar, {
@@ -1339,7 +1337,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
-console.log('planetCardsData:', (_data_planetCardsData_js__WEBPACK_IMPORTED_MODULE_1___default()));
 
 var Info = function Info(_ref) {
   var func = _ref.func,
