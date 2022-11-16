@@ -1,7 +1,17 @@
+/**
+ * @jest-environment jsdom
+ */
+
 import renderer from 'react-test-renderer';
-import Login from '../components/pages/Login.js';
-import Footer from '../components/Footer.js';
-import NavBar from '../components/NavBar.js';
+
+import { App, Login, Footer, NavBar } from '../components/testExports.js';
+
+
+test('use jsdom in this test file', () => {
+  const element = document.createElement('div');
+  expect(element).not.toBeNull();
+});
+
 
 it('renders <Footer> correctly', () => {
   const tree = renderer
@@ -10,12 +20,20 @@ it('renders <Footer> correctly', () => {
   expect(tree).toMatchSnapshot();
 });
 
-it('renders <NavBar> correctly', () => {
-  const tree = renderer
-    .create(<NavBar/>)
+
+it('renders <App> correctly', () => {
+  const tree= renderer
+    .create(<App/>)
     .toJSON();
-  expect(tree).toMatchSnapshot();
-});
+    expect(tree).toMatchSnapshot();
+})
+
+// it('renders <NavBar> correctly', () => {
+//   const tree = renderer
+//     .create(<NavBar/>)
+//     .toJSON();
+//   expect(tree).toMatchSnapshot();
+// });
 
 
 // it('renders <Login> correctly', () => {

@@ -20,7 +20,6 @@ const Info = ({ func, data, makeyourown }) => {
   }
 
   const [currentCard, setCurrentCard] = useState(0);
-  console.log('currentCard:', currentCard);
 
   const mapCards = () => {
     return planetCardsData.map((planet, index) => {
