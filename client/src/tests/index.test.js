@@ -3,13 +3,46 @@
  */
 
 import renderer from 'react-test-renderer';
-
+import { MemoryRouter } from 'react-router-dom';
 import { App, Login, Footer, NavBar } from '../components/testExports.js';
 
 
 test('use jsdom in this test file', () => {
   const element = document.createElement('div');
   expect(element).not.toBeNull();
+});
+
+it('renders <App> correctly', () => {
+  const tree = renderer
+    .create(
+    <MemoryRouter>
+      <App/>
+    </MemoryRouter>
+    )
+    .toJSON();
+    expect(tree).toMatchSnapshot();
+})
+
+it('renders <NavBar> correctly', () => {
+  const tree = renderer
+    .create(
+    <MemoryRouter>
+      <NavBar/>
+    </MemoryRouter>)
+    .toJSON();
+  expect(tree).toMatchSnapshot();
+});
+
+
+it('renders <Login> correctly', () => {
+  const tree = renderer
+    .create(
+    <MemoryRouter>
+      <Login/>
+    </MemoryRouter>
+    )
+    .toJSON();
+  expect(tree).toMatchSnapshot();
 });
 
 
@@ -20,26 +53,4 @@ it('renders <Footer> correctly', () => {
   expect(tree).toMatchSnapshot();
 });
 
-
-it('renders <App> correctly', () => {
-  const tree= renderer
-    .create(<App/>)
-    .toJSON();
-    expect(tree).toMatchSnapshot();
-})
-
-// it('renders <NavBar> correctly', () => {
-//   const tree = renderer
-//     .create(<NavBar/>)
-//     .toJSON();
-//   expect(tree).toMatchSnapshot();
-// });
-
-
-// it('renders <Login> correctly', () => {
-//   const tree = renderer
-//     .create(<Login/>)
-//     .toJSON();
-//   expect(tree).toMatchSnapshot();
-// });
 

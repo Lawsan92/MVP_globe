@@ -1,11 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders <App> correctly 1`] = `
-<div
-  id="app"
-/>
-`;
-
 exports[`renders <Footer> correctly 1`] = `
 <section
   id="footer"
@@ -14,4 +8,135 @@ exports[`renders <Footer> correctly 1`] = `
     Built and Designed By Lawrence Sanzogni
   </p>
 </section>
+`;
+
+exports[`renders <Login> correctly 1`] = `
+<div
+  id="login"
+>
+  <div
+    id="nav-bar"
+  >
+    <div
+      id="logo"
+    >
+      <img
+        src="https://res.cloudinary.com/darp0mj9i/image/upload/v1668059703/icons/Screen_Shot_2022-11-01_at_15.45.36_kzwlv1_sjvqta.svg"
+      />
+    </div>
+    <div
+      id="nav-links"
+    >
+      <p
+        style={
+          Object {
+            "marginRight": "10px",
+          }
+        }
+      >
+        Guest
+      </p>
+      <a
+        className="link-login"
+        href="/"
+        id="link"
+        onClick={[Function]}
+      >
+        <p>
+          Home
+        </p>
+      </a>
+      <a
+        className="link-login"
+        href="/login"
+        id="link"
+        onClick={[Function]}
+      >
+        <p>
+          Login
+        </p>
+      </a>
+    </div>
+  </div>
+  <section
+    id="login-main"
+  >
+    <form>
+      <input
+        onChange={[Function]}
+        placeholder="username"
+        type="text"
+      />
+      <input
+        onChange={[Function]}
+        placeholder="password"
+        type="text"
+      />
+      <input
+        onClick={[Function]}
+        type="submit"
+        value="Login"
+      />
+      <input
+        onClick={[Function]}
+        type="submit"
+        value="Register"
+      />
+    </form>
+  </section>
+  <section
+    id="footer"
+  >
+    <p>
+      Built and Designed By Lawrence Sanzogni
+    </p>
+  </section>
+</div>
+`;
+
+exports[`renders <NavBar> correctly 1`] = `
+<div
+  id="nav-bar"
+>
+  <div
+    id="logo"
+  >
+    <img
+      src="https://res.cloudinary.com/darp0mj9i/image/upload/v1668059703/icons/Screen_Shot_2022-11-01_at_15.45.36_kzwlv1_sjvqta.svg"
+    />
+  </div>
+  <div
+    id="nav-links"
+  >
+    <p
+      style={
+        Object {
+          "marginRight": "10px",
+        }
+      }
+    >
+      Guest
+    </p>
+    <a
+      className="link-login"
+      href="/"
+      id="link"
+      onClick={[Function]}
+    >
+      <p>
+        Home
+      </p>
+    </a>
+    <a
+      className="link-login"
+      href="/login"
+      id="link"
+      onClick={[Function]}
+    >
+      <p>
+        Login
+      </p>
+    </a>
+  </div>
+</div>
 `;

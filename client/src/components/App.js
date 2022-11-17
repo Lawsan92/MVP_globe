@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Router from './Router.js';
 const axios = require('axios');
-import { BrowserRouter } from 'react-router-dom';
 const App = () => {
 
   // Login/user state
@@ -137,11 +136,15 @@ const userRegister = async () => {
 */
   return (
     <div id='app'>
-      <BrowserRouter>
       <Router userAuth={userAuth} getUserAuth={getUserAuth} userLogin={userLogin} authorized={authorized} userRegister={userRegister} />
-      </BrowserRouter>
     </div>
   );
 }
 
 export default App;
+
+
+
+
+
+
