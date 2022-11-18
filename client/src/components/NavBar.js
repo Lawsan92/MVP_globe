@@ -8,6 +8,9 @@ const NavBar = ({ userAuth, getUserAuth, authorized }) =>  {
       <div id='logo'><img src='https://res.cloudinary.com/darp0mj9i/image/upload/v1668059703/icons/Screen_Shot_2022-11-01_at_15.45.36_kzwlv1_sjvqta.svg'/></div>
       <div id='nav-links'>
         <p style={{marginRight: '10px'}}>Guest</p>
+        <Link to='/planets' id='link' className='link-login'>
+          <p>Planets</p>
+        </Link>
         <Link to='/' id='link' className='link-login'>
           <p>Home</p>
         </Link>

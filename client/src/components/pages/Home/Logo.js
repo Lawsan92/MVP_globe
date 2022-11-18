@@ -3,7 +3,6 @@ import { useFrame } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 import { TextureLoader } from 'three';
 
-
 export default function Logo () {
 
   const meshRef = useRef();

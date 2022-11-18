@@ -177,7 +177,7 @@ const Home = ({ userAuth, getUserAuth, authorized }) => {
         makeyourown={makeyourownClick}/>
         <Globe planetName={state.planetName} />
       </div>
-      <Landing/>
+      {/* <Landing/> */}
       <Footer/>
     </div>);
     }
