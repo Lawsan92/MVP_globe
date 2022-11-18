@@ -10,6 +10,12 @@ exports[`renders <Footer> correctly 1`] = `
 </section>
 `;
 
+exports[`renders <Globe> correctly 1`] = `
+<div
+  id="canvas"
+/>
+`;
+
 exports[`renders <Login> correctly 1`] = `
 <div
   id="login"

@@ -544,7 +544,7 @@ var Home = function Home(_ref) {
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_Imports_js__WEBPACK_IMPORTED_MODULE_1__.Globe, {
             planetName: state.planetName
           })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_Imports_js__WEBPACK_IMPORTED_MODULE_1__.Footer, {})]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_Imports_js__WEBPACK_IMPORTED_MODULE_1__.Landing, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_Imports_js__WEBPACK_IMPORTED_MODULE_1__.Footer, {})]
       });
     }
   };
@@ -574,6 +574,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "Footer": () => (/* reexport safe */ _Footer_js__WEBPACK_IMPORTED_MODULE_8__["default"]),
 /* harmony export */   "Globe": () => (/* reexport safe */ _solarSystem_Globe_js__WEBPACK_IMPORTED_MODULE_1__["default"]),
 /* harmony export */   "Info": () => (/* reexport safe */ _solarSystem_Info_js__WEBPACK_IMPORTED_MODULE_2__["default"]),
+/* harmony export */   "Landing": () => (/* reexport safe */ _pages_Home_Landing_js__WEBPACK_IMPORTED_MODULE_9__["default"]),
 /* harmony export */   "MakeYourOwn": () => (/* reexport safe */ _customPlanet_MakeYourOwn_js__WEBPACK_IMPORTED_MODULE_3__["default"]),
 /* harmony export */   "NavBar": () => (/* reexport safe */ _NavBar_js__WEBPACK_IMPORTED_MODULE_7__["default"])
 /* harmony export */ });
@@ -587,6 +588,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _customPlanet_CustomGlobe_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./customPlanet/CustomGlobe.js */ "./client/src/components/customPlanet/CustomGlobe.js");
 /* harmony import */ var _NavBar_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./NavBar.js */ "./client/src/components/NavBar.js");
 /* harmony import */ var _Footer_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Footer.js */ "./client/src/components/Footer.js");
+/* harmony import */ var _pages_Home_Landing_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./pages/Home/Landing.js */ "./client/src/components/pages/Home/Landing.js");
+
 
 
 
@@ -943,8 +946,8 @@ var CustomPlanet = function CustomPlanet(_ref) {
           transparent: true,
           side: three__WEBPACK_IMPORTED_MODULE_3__.DoubleSide
         })]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("ambientLight", {
-        intensity: 1.4
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("pointLight", {
+        position: [10, 10, 10]
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_react_three_drei__WEBPACK_IMPORTED_MODULE_4__.Stars, {
         radius: 300,
         depth: 60,
@@ -971,8 +974,8 @@ var CustomPlanet = function CustomPlanet(_ref) {
   }
 
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.Fragment, {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("ambientLight", {
-      intensity: 1.4
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("pointLight", {
+      position: [10, 10, 10]
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_react_three_drei__WEBPACK_IMPORTED_MODULE_4__.Stars, {
       radius: 300,
       depth: 60,
@@ -1166,6 +1169,103 @@ var MakeYourOwn = function MakeYourOwn(_ref) {
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (MakeYourOwn); // https://stackoverflow.com/questions/43638938/updating-an-object-with-setstate-in-react
+
+/***/ }),
+
+/***/ "./client/src/components/pages/Home/Landing.js":
+/*!*****************************************************!*\
+  !*** ./client/src/components/pages/Home/Landing.js ***!
+  \*****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Landing)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _react_three_fiber__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @react-three/fiber */ "./node_modules/@react-three/fiber/dist/react-three-fiber.esm.js");
+/* harmony import */ var _react_three_drei__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @react-three/drei */ "./node_modules/@react-three/drei/core/PerspectiveCamera.js");
+/* harmony import */ var _react_three_drei__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @react-three/drei */ "./node_modules/@react-three/drei/core/Stars.js");
+/* harmony import */ var _Logo_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Logo.js */ "./client/src/components/pages/Home/Logo.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+
+
+
+
+function Landing() {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+    id: "canvas-container",
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(_react_three_fiber__WEBPACK_IMPORTED_MODULE_3__.Canvas, {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_react_three_drei__WEBPACK_IMPORTED_MODULE_4__.PerspectiveCamera, {
+        makedefault: true,
+        fov: 75,
+        position: [0, 0, 5]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_react_three_drei__WEBPACK_IMPORTED_MODULE_5__.Stars, {
+        radius: 300,
+        depth: 60,
+        count: 2000,
+        factor: 7,
+        fade: true
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_Logo_js__WEBPACK_IMPORTED_MODULE_1__["default"], {})]
+    })
+  });
+}
+
+/***/ }),
+
+/***/ "./client/src/components/pages/Home/Logo.js":
+/*!**************************************************!*\
+  !*** ./client/src/components/pages/Home/Logo.js ***!
+  \**************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Logo)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _react_three_fiber__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @react-three/fiber */ "./node_modules/@react-three/fiber/dist/index-212b30d8.esm.js");
+/* harmony import */ var _react_three_drei__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @react-three/drei */ "./node_modules/@react-three/drei/core/OrbitControls.js");
+/* harmony import */ var three__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! three */ "./node_modules/three/build/three.module.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+
+
+
+function Logo() {
+  var meshRef = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)();
+  (0,_react_three_fiber__WEBPACK_IMPORTED_MODULE_2__.x)(function () {
+    meshRef.current.rotation.y += 0.02;
+    meshRef.current.rotation.x += 0.02;
+  });
+  var logoTexture = new three__WEBPACK_IMPORTED_MODULE_3__.TextureLoader().load('https://res.cloudinary.com/darp0mj9i/image/upload/v1668106566/icons/Screen_Shot_2022-11-10_at_12.55.28_otnqpi.jpg');
+  var metalTexture = new three__WEBPACK_IMPORTED_MODULE_3__.TextureLoader().load('https://res.cloudinary.com/darp0mj9i/image/upload/v1668795151/samples/planet_thumbnails/textures/metalblock_u0yooh');
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("mesh", {
+    ref: meshRef,
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("pointLight", {
+      position: [5, 5, 5],
+      intensity: 2
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("ambientLight", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("boxGeometry", {
+      args: [1, 1, 1],
+      color: 0xffffff
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("meshStandardMaterial", {
+      normalMap: metalTexture,
+      map: logoTexture
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_react_three_drei__WEBPACK_IMPORTED_MODULE_4__.OrbitControls, {
+      enableZoom: true,
+      enablePan: true
+    })]
+  });
+}
 
 /***/ }),
 
@@ -1578,8 +1678,8 @@ var Sphere = function Sphere(_ref) {
   if (planetName !== 'Saturn') {
     // renders planets that don't have rings
     return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.Fragment, {
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("ambientLight", {
-        intensity: 1.4
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("pointLight", {
+        position: [10, 10, 10]
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_react_three_drei__WEBPACK_IMPORTED_MODULE_5__.Stars, {
         radius: 300,
         depth: 60,
@@ -1611,8 +1711,8 @@ var Sphere = function Sphere(_ref) {
     var yRot = 1;
     var zRot = 1;
     return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.Fragment, {
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("ambientLight", {
-        intensity: 1.4
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("pointLight", {
+        position: [10, 10, 10]
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_react_three_drei__WEBPACK_IMPORTED_MODULE_5__.Stars, {
         radius: 300,
         depth: 60,
@@ -1814,6 +1914,71 @@ const OrbitControls = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.forwardRef
     object: controls,
     enableDamping: enableDamping
   }, restProps));
+});
+
+
+/***/ }),
+
+/***/ "./node_modules/@react-three/drei/core/PerspectiveCamera.js":
+/*!******************************************************************!*\
+  !*** ./node_modules/@react-three/drei/core/PerspectiveCamera.js ***!
+  \******************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "PerspectiveCamera": () => (/* binding */ PerspectiveCamera)
+/* harmony export */ });
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _react_three_fiber__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @react-three/fiber */ "./node_modules/@react-three/fiber/dist/index-212b30d8.esm.js");
+/* harmony import */ var react_merge_refs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-merge-refs */ "./node_modules/react-merge-refs/dist/react-merge-refs.esm.js");
+
+
+
+
+const PerspectiveCamera = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.forwardRef(({
+  makeDefault,
+  ...props
+}, ref) => {
+  const set = (0,_react_three_fiber__WEBPACK_IMPORTED_MODULE_3__.w)(({
+    set
+  }) => set);
+  const camera = (0,_react_three_fiber__WEBPACK_IMPORTED_MODULE_3__.w)(({
+    camera
+  }) => camera);
+  const size = (0,_react_three_fiber__WEBPACK_IMPORTED_MODULE_3__.w)(({
+    size
+  }) => size);
+  const cameraRef = react__WEBPACK_IMPORTED_MODULE_1__.useRef();
+  react__WEBPACK_IMPORTED_MODULE_1__.useLayoutEffect(() => {
+    const {
+      current: cam
+    } = cameraRef;
+
+    if (cam && !props.manual) {
+      cam.aspect = size.width / size.height;
+      cam.updateProjectionMatrix();
+    }
+  }, [size, props]);
+  react__WEBPACK_IMPORTED_MODULE_1__.useLayoutEffect(() => {
+    if (makeDefault && cameraRef.current) {
+      const oldCam = camera;
+      set(() => ({
+        camera: cameraRef.current
+      }));
+      return () => set(() => ({
+        camera: oldCam
+      }));
+    } // The camera should not be part of the dependency list because this components camera is a stable reference
+    // that must exchange the default, and clean up after itself on unmount.
+
+  }, [cameraRef, makeDefault, set]);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("perspectiveCamera", (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+    ref: (0,react_merge_refs__WEBPACK_IMPORTED_MODULE_2__["default"])([cameraRef, ref])
+  }, props));
 });
 
 
@@ -15921,6 +16086,33 @@ function checkDCE() {
 if (false) {} else {
   module.exports = __webpack_require__(/*! ./cjs/react-dom.development.js */ "./node_modules/react-dom/cjs/react-dom.development.js");
 }
+
+/***/ }),
+
+/***/ "./node_modules/react-merge-refs/dist/react-merge-refs.esm.js":
+/*!********************************************************************!*\
+  !*** ./node_modules/react-merge-refs/dist/react-merge-refs.esm.js ***!
+  \********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+function mergeRefs(refs) {
+  return function (value) {
+    refs.forEach(function (ref) {
+      if (typeof ref === "function") {
+        ref(value);
+      } else if (ref != null) {
+        ref.current = value;
+      }
+    });
+  };
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (mergeRefs);
 
 /***/ }),
 

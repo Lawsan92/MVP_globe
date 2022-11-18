@@ -7,6 +7,7 @@ import CustomInfo from './customPlanet/CustomInfo.js';
 import CustomGlobe from './customPlanet/CustomGlobe.js';
 import NavBar from './NavBar.js';
 import Footer from './Footer.js';
+import Landing from './pages/Home/Landing.js';
 
 export {
   Globe,
@@ -17,4 +18,5 @@ export {
   CustomGlobe,
   NavBar,
   Footer,
+  Landing
 };

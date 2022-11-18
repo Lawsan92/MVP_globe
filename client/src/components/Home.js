@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 
 // Containers
-import { Globe, Info, MakeYourOwn, CustomPlanet, CustomInfo, CustomGlobe, NavBar, Footer } from './Imports.js';
+import { Globe, Info, MakeYourOwn, CustomPlanet, CustomInfo, CustomGlobe, NavBar, Footer, Landing } from './Imports.js';
 const axios = require('axios');
 
 const Home = ({ userAuth, getUserAuth, authorized }) => {
@@ -177,6 +177,7 @@ const Home = ({ userAuth, getUserAuth, authorized }) => {
         makeyourown={makeyourownClick}/>
         <Globe planetName={state.planetName} />
       </div>
+      <Landing/>
       <Footer/>
     </div>);
     }

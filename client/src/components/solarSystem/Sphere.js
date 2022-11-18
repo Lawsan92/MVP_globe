@@ -1,9 +1,8 @@
 import React, { useRef, useState } from 'react';
 import { useLoader, useFrame } from '@react-three/fiber';
-import { TextureLoader } from 'three';
+import { TextureLoader, PointLight } from 'three';
 import { OrbitControls, Stars } from '@react-three/drei';
 import * as THREE from 'three';
-
 // Media/planet skins
 import {
   EarthMap,
@@ -75,7 +74,8 @@ const Sphere = ({ planetName }) => {
 if (planetName !== 'Saturn') { // renders planets that don't have rings
   return (
   <>
-  <ambientLight intensity={1.4}/>
+  {/* <ambientLight intensity={1.4}/> */}
+  <pointLight position={[10, 10, 10]} />
   <Stars
   radius={300}
   depth={60}
@@ -103,7 +103,8 @@ if (planetName !== 'Saturn') { // renders planets that don't have rings
  var zRot = 1;
   return (
     <>
-    <ambientLight intensity={1.4}/>
+    {/* <ambientLight intensity={1.4}/> */}
+    <pointLight position={[10, 10, 10]} />
     <Stars
     radius={300}
     depth={60}
