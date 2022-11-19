@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import {planetTextures, ringTextures} from './../../data/texturesData.js';
+import {planetTextures, ringTextures} from './../../../data/texturesData.js';
 
 const MakeYourOwn = ({ mainMenu, buildPlanet, getName, getColor, getSize, getTexture, hasRings, ringColor }) => {
 

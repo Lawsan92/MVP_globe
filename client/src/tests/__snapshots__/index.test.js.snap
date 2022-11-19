@@ -44,6 +44,16 @@ exports[`renders <Login> correctly 1`] = `
       </p>
       <a
         className="link-login"
+        href="/planets"
+        id="link"
+        onClick={[Function]}
+      >
+        <p>
+          Planets
+        </p>
+      </a>
+      <a
+        className="link-login"
         href="/"
         id="link"
         onClick={[Function]}
@@ -123,6 +133,16 @@ exports[`renders <NavBar> correctly 1`] = `
     >
       Guest
     </p>
+    <a
+      className="link-login"
+      href="/planets"
+      id="link"
+      onClick={[Function]}
+    >
+      <p>
+        Planets
+      </p>
+    </a>
     <a
       className="link-login"
       href="/"

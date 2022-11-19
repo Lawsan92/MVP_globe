@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import planetCardsData from './../../data/planetCardsData.js';
+import planetCardsData from './../../../data/planetCardsData.js';
 import {FaArrowAltCircleUp, FaArrowAltCircleDown} from 'react-icons/fa';
 
 const Info = ({ func, data, makeyourown }) => {

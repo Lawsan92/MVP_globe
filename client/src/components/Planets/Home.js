@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 
 // Containers
-import { Globe, Info, MakeYourOwn, CustomPlanet, CustomInfo, CustomGlobe, NavBar, Footer, Landing } from './Imports.js';
+import { Globe, Info, MakeYourOwn, CustomPlanet, CustomInfo, CustomGlobe, NavBar, Footer, Landing } from '../Imports.js';
 const axios = require('axios');
 
 const Home = ({ userAuth, getUserAuth, authorized }) => {

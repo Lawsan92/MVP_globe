@@ -9,7 +9,6 @@ export default function Logo () {
 
   useFrame(() => {
     meshRef.current.rotation.y += 0.02;
-    meshRef.current.rotation.x += 0.02;
   });
 
   const logoTexture = new TextureLoader().load('https://res.cloudinary.com/darp0mj9i/image/upload/v1668106566/icons/Screen_Shot_2022-11-10_at_12.55.28_otnqpi.jpg');

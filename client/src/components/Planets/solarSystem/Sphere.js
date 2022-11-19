@@ -18,7 +18,7 @@ import {
   SaturnMap,
   VenusMap,
   Rings
-} from './../../../dist/mediaExports.js';
+} from './../../../../dist/mediaExports.js';
 
 const Sphere = ({ planetName }) => {
 

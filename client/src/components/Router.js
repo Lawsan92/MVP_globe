@@ -1,6 +1,6 @@
 import React from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
-import Home from './Home.js';
+import Home from './Planets/Home.js';
 import Login from './pages/Login.js'
 import Landing from './pages/Home/Landing.js'
 
