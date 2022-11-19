@@ -1667,20 +1667,21 @@ __webpack_require__.r(__webpack_exports__);
 function Logo() {
   var meshRef = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)();
   (0,_react_three_fiber__WEBPACK_IMPORTED_MODULE_2__.x)(function () {
-    meshRef.current.rotation.y += 0.02;
+    meshRef.current.rotation.y += 0.03;
   });
-  var logoTexture = new three__WEBPACK_IMPORTED_MODULE_3__.TextureLoader().load('https://res.cloudinary.com/darp0mj9i/image/upload/v1668106566/icons/Screen_Shot_2022-11-10_at_12.55.28_otnqpi.jpg');
+  var logoTexture = new three__WEBPACK_IMPORTED_MODULE_3__.TextureLoader().load('https://res.cloudinary.com/darp0mj9i/image/upload/v1668828424/icons/Screen_Shot_2022-11-18_at_21.26.52_llemgz.jpg');
   var metalTexture = new three__WEBPACK_IMPORTED_MODULE_3__.TextureLoader().load('https://res.cloudinary.com/darp0mj9i/image/upload/v1668795151/samples/planet_thumbnails/textures/metalblock_u0yooh');
+  var rockTexture = new three__WEBPACK_IMPORTED_MODULE_3__.TextureLoader().load('https://res.cloudinary.com/darp0mj9i/image/upload/v1668797452/icons/textures/detailNormal_yybnnr.jpg');
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("mesh", {
     ref: meshRef,
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("pointLight", {
       position: [5, 5, 5],
-      intensity: 2
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("ambientLight", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("boxGeometry", {
-      args: [1, 1, 1],
+      intensity: 1
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("ambientLight", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("sphereGeometry", {
+      args: [2, 32, 32],
       color: 0xffffff
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("meshStandardMaterial", {
-      normalMap: metalTexture,
+      normalMap: rockTexture,
       map: logoTexture
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_react_three_drei__WEBPACK_IMPORTED_MODULE_4__.OrbitControls, {
       enableZoom: true,
