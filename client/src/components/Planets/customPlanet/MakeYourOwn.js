@@ -5,8 +5,11 @@ const MakeYourOwn = ({ mainMenu, buildPlanet, getName, getColor, getSize, getTex
 
   const [style, setStyle] = useState(false);
 
-  const changeStyle = () => {
-    setStyle(prevStyle => !prevStyle);
+  const changeStyle = (id) => {
+    setStyle((prevState) => ({
+      ...style,
+      [id]: !prevState[id]
+    }));
   }
 
   return (
@@ -31,17 +34,18 @@ const MakeYourOwn = ({ mainMenu, buildPlanet, getName, getColor, getSize, getTex
       <div>
         <h4>Textures</h4>
         <div id='textures'>
-        {planetTextures.map((texture) => {
+        {planetTextures.map((texture, i) => {
           return(
             <div id='texture' key={texture.type}>
               <p>{texture.type}</p>
               <img
-              id = {style ? 'texture-thumb-clicked' : 'texture-thumb'}
+              style={{border: style[`${i}`] && 'solid 2px #ADD8E6'}}
+              key={i}
               src={texture.img}
               onClick={() => {
               console.log('event:', event.target.currentSrc);
               getTexture(event.target.currentSrc);
-              changeStyle();
+              changeStyle(i);
               }}/>
             </div>
             )
@@ -52,16 +56,17 @@ const MakeYourOwn = ({ mainMenu, buildPlanet, getName, getColor, getSize, getTex
         <h4>Rings</h4>
         {/* <input type='radio'/> */}
         <div id='rings'>
-        {ringTextures.map((texture) => {
+        {ringTextures.map((texture, i) => {
           return(
             <div id='ring' key={texture.type}>
             <p>{texture.type}</p>
             <img
-            id = {style ? 'texture-thumb-clicked' : 'texture-thumb'}
+            key={i}
+            style={{border: style[`${i}`] && 'solid 2px #ADD8E6'}}
             src={texture.img}
             onClick={() => {
               console.log('event:', event.target.currentSrc); hasRings(event.target.currentSrc);
-              changeStyle();
+              changeStyle(i);
               }}/>
           </div>
             )

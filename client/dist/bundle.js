@@ -973,6 +973,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _data_texturesData_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../../../data/texturesData.js */ "./client/src/data/texturesData.js");
 /* harmony import */ var _data_texturesData_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_data_texturesData_js__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -1005,9 +1011,9 @@ var MakeYourOwn = function MakeYourOwn(_ref) {
       style = _useState2[0],
       setStyle = _useState2[1];
 
-  var changeStyle = function changeStyle() {
-    setStyle(function (prevStyle) {
-      return !prevStyle;
+  var changeStyle = function changeStyle(id) {
+    setStyle(function (prevState) {
+      return _objectSpread(_objectSpread({}, style), {}, _defineProperty({}, id, !prevState[id]));
     });
   };
 
@@ -1056,20 +1062,22 @@ var MakeYourOwn = function MakeYourOwn(_ref) {
         children: "Textures"
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
         id: "textures",
-        children: _data_texturesData_js__WEBPACK_IMPORTED_MODULE_1__.planetTextures.map(function (texture) {
+        children: _data_texturesData_js__WEBPACK_IMPORTED_MODULE_1__.planetTextures.map(function (texture, i) {
           return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
             id: "texture",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
               children: texture.type
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
-              id: style ? 'texture-thumb-clicked' : 'texture-thumb',
+              style: {
+                border: style["".concat(i)] && 'solid 2px #ADD8E6'
+              },
               src: texture.img,
               onClick: function onClick() {
                 console.log('event:', event.target.currentSrc);
                 getTexture(event.target.currentSrc);
-                changeStyle();
+                changeStyle(i);
               }
-            })]
+            }, i)]
           }, texture.type);
         })
       })]
@@ -1078,20 +1086,22 @@ var MakeYourOwn = function MakeYourOwn(_ref) {
         children: "Rings"
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
         id: "rings",
-        children: _data_texturesData_js__WEBPACK_IMPORTED_MODULE_1__.ringTextures.map(function (texture) {
+        children: _data_texturesData_js__WEBPACK_IMPORTED_MODULE_1__.ringTextures.map(function (texture, i) {
           return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
             id: "ring",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
               children: texture.type
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
-              id: style ? 'texture-thumb-clicked' : 'texture-thumb',
+              style: {
+                border: style["".concat(i)] && 'solid 2px #ADD8E6'
+              },
               src: texture.img,
               onClick: function onClick() {
                 console.log('event:', event.target.currentSrc);
                 hasRings(event.target.currentSrc);
-                changeStyle();
+                changeStyle(i);
               }
-            })]
+            }, i)]
           }, texture.type);
         })
       })]
@@ -1451,8 +1461,8 @@ var Sphere = function Sphere(_ref) {
   if (planetName !== 'Saturn') {
     // renders planets that don't have rings
     return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.Fragment, {
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("pointLight", {
-        position: [10, 10, 10]
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("ambientLight", {
+        intensity: 1.4
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_react_three_drei__WEBPACK_IMPORTED_MODULE_5__.Stars, {
         radius: 300,
         depth: 60,
@@ -1484,8 +1494,8 @@ var Sphere = function Sphere(_ref) {
     var yRot = 1;
     var zRot = 1;
     return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.Fragment, {
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("pointLight", {
-        position: [10, 10, 10]
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("ambientLight", {
+        intensity: 1.4
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_react_three_drei__WEBPACK_IMPORTED_MODULE_5__.Stars, {
         radius: 300,
         depth: 60,

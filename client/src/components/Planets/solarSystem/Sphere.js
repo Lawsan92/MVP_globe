@@ -74,8 +74,8 @@ const Sphere = ({ planetName }) => {
 if (planetName !== 'Saturn') { // renders planets that don't have rings
   return (
   <>
-  {/* <ambientLight intensity={1.4}/> */}
-  <pointLight position={[10, 10, 10]} />
+  <ambientLight intensity={1.4}/>
+  {/* <pointLight position={[10, 10, 10]} /> */}
   <Stars
   radius={300}
   depth={60}
@@ -103,8 +103,8 @@ if (planetName !== 'Saturn') { // renders planets that don't have rings
  var zRot = 1;
   return (
     <>
-    {/* <ambientLight intensity={1.4}/> */}
-    <pointLight position={[10, 10, 10]} />
+    <ambientLight intensity={1.4}/>
+    {/* <pointLight position={[10, 10, 10]} /> */}
     <Stars
     radius={300}
     depth={60}
