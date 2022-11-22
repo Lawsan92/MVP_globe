@@ -898,8 +898,8 @@ var CustomPlanet = function CustomPlanet(_ref) {
           transparent: true,
           side: three__WEBPACK_IMPORTED_MODULE_3__.DoubleSide
         })]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("pointLight", {
-        position: [10, 10, 10]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("ambientLight", {
+        intensity: 1.4
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_react_three_drei__WEBPACK_IMPORTED_MODULE_4__.Stars, {
         radius: 300,
         depth: 60,
@@ -926,8 +926,8 @@ var CustomPlanet = function CustomPlanet(_ref) {
   }
 
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.Fragment, {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("pointLight", {
-      position: [10, 10, 10]
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("ambientLight", {
+      intensity: 1.4
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_react_three_drei__WEBPACK_IMPORTED_MODULE_4__.Stars, {
       radius: 300,
       depth: 60,

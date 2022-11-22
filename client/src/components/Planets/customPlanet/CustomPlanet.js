@@ -33,8 +33,8 @@ const CustomPlanet = ({ size, color, texture, rings, ringColor }) => {
     transparent={true}
     side={THREE.DoubleSide}/>
   </mesh>
-  {/* <ambientLight intensity={1.4}/> */}
-  <pointLight position={[10, 10, 10]} />
+  <ambientLight intensity={1.4}/>
+  {/* <pointLight position={[10, 10, 10]} /> */}
     <Stars
     radius={300}
     depth={60}
@@ -58,8 +58,8 @@ const CustomPlanet = ({ size, color, texture, rings, ringColor }) => {
   }
   return (
   <>
-    {/* <ambientLight intensity={1.4}/> */}
-    <pointLight position={[10, 10, 10]} />
+    <ambientLight intensity={1.4}/>
+    {/* <pointLight position={[10, 10, 10]} /> */}
     <Stars
     radius={300}
     depth={60}
