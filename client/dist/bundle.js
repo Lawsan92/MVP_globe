@@ -1010,6 +1010,8 @@ var MakeYourOwn = function MakeYourOwn(_ref) {
       _useState2 = _slicedToArray(_useState, 2),
       style = _useState2[0],
       setStyle = _useState2[1];
+  /*////Adds border around textures and rings icons////*/
+
 
   var changeStyle = function changeStyle(id) {
     setStyle(function (prevState) {
@@ -1093,13 +1095,13 @@ var MakeYourOwn = function MakeYourOwn(_ref) {
               children: texture.type
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
               style: {
-                border: style["".concat(i)] && 'solid 2px #ADD8E6'
+                border: style["".concat(i + _data_texturesData_js__WEBPACK_IMPORTED_MODULE_1__.planetTextures.length)] && 'solid 2px #ADD8E6'
               },
               src: texture.img,
               onClick: function onClick() {
                 console.log('event:', event.target.currentSrc);
                 hasRings(event.target.currentSrc);
-                changeStyle(i);
+                changeStyle(i + _data_texturesData_js__WEBPACK_IMPORTED_MODULE_1__.planetTextures.length);
               }
             }, i)]
           }, texture.type);

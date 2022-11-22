@@ -5,6 +5,7 @@ const MakeYourOwn = ({ mainMenu, buildPlanet, getName, getColor, getSize, getTex
 
   const [style, setStyle] = useState(false);
 
+  /*////Adds border around textures and rings icons////*/
   const changeStyle = (id) => {
     setStyle((prevState) => ({
       ...style,
@@ -39,7 +40,7 @@ const MakeYourOwn = ({ mainMenu, buildPlanet, getName, getColor, getSize, getTex
             <div id='texture' key={texture.type}>
               <p>{texture.type}</p>
               <img
-              style={{border: style[`${i}`] && 'solid 2px #ADD8E6'}}
+              style={ { border: style[`${i}`] && 'solid 2px #ADD8E6' } }
               key={i}
               src={texture.img}
               onClick={() => {
@@ -62,11 +63,12 @@ const MakeYourOwn = ({ mainMenu, buildPlanet, getName, getColor, getSize, getTex
             <p>{texture.type}</p>
             <img
             key={i}
-            style={{border: style[`${i}`] && 'solid 2px #ADD8E6'}}
+            style={ { border: style[`${i+ planetTextures.length}`] && 'solid 2px #ADD8E6' } }
             src={texture.img}
             onClick={() => {
-              console.log('event:', event.target.currentSrc); hasRings(event.target.currentSrc);
-              changeStyle(i);
+              console.log('event:', event.target.currentSrc);
+              hasRings(event.target.currentSrc);
+              changeStyle(i + planetTextures.length);
               }}/>
           </div>
             )
